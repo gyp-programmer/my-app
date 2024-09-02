@@ -1,14 +1,25 @@
-import React from 'react';
+/*
+ * @Todo: 请补充模块描述
+ * 
+ * @Author: grayson<grayson.gao@bvox.com>
+ * @Date: 2024-09-02 11:12:21
+ * 
+ * Copyright © 2019-2024 bvox.com. All Rights Reserved.
+ */
+
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
+import AppMain from './App';
 import reportWebVitals from './reportWebVitals';
 
+// @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <AppMain />
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

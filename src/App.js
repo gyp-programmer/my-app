@@ -11,7 +11,7 @@ import logo from './logo.svg';
 import { useSyncExternalStore } from 'react';
 import store from './store';
 import browserApiStore from './broswer-api-store';
-import './App.less';
+import './App.scss';
 import React from 'react';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>{ onLineStatus ? 'online' : 'offline' }</div>
+        <div className='status'>{ onLineStatus ? 'online' : 'offline' }</div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>{ state }</code> and save to reload.

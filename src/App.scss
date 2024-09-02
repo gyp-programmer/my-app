@@ -1,3 +1,4 @@
+@import "./index.scss";
 .App {
   text-align: center;
 }
@@ -21,7 +22,15 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: tint($primary-color, 20%);
+  user-select: none;
+
+  .status {
+    &::before {
+      content: '状态：';
+      color: tint($primary-color, 70%);
+    }
+  }
 }
 
 .App-link {
