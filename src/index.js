@@ -1,5 +1,5 @@
 /*
- * @Todo: 请补充模块描述
+ * 入口文件
  * 
  * @Author: grayson<grayson.gao@bvox.com>
  * @Date: 2024-09-02 11:12:21
@@ -7,19 +7,35 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import AppMain from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import routers from './router';
+import '../mock';
 
 // @ts-ignore
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// const Home = routers[0].element;
+// const About = routers[1].element;
 
 root.render(
-  <StrictMode>
-    <AppMain />
-  </StrictMode>
+  // <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        {routers.map(item => (
+          <Route key={item.path} path={item.path} element={<item.element />} />
+        ))}
+        {/* 嵌套路由 */}
+        {/* <Route path="/" element={<Home />}>
+          <Route path="/about" element={<About />} />
+        </Route> */}
+
+      </Routes>
+    </BrowserRouter>
+  // </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
