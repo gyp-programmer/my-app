@@ -111,6 +111,12 @@ checkBrowsers(paths.appPath, isInteractive)
       ...createDevServerConfig(proxyConfig, urls.lanUrlForConfig),
       host: HOST,
       port,
+      proxy: {
+        '/qq_36579455': {
+          target: 'https://rss.csdn.net',
+          changeOrigin: true,
+        }
+      }
     };
     const devServer = new WebpackDevServer(serverConfig, compiler);
     // Launch WebpackDevServer.

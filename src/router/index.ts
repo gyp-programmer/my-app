@@ -6,8 +6,10 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
+import Rss from "../components/rss-subscrible";
 import Home from "../components/App";
 import About from "../components/about";
+import XScrollExample from "../components/x-scroll/example";
 
 const routers = [
   {
@@ -18,6 +20,14 @@ const routers = [
     path: "about",
     element: About,
   },
+  {
+    path: "/rss-subscribe",
+    element: Rss,
+  },
+  {
+    path: "/x-scroll-example",
+    element: XScrollExample,
+  }
 ];
 
 export default routers;

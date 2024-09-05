@@ -1,5 +1,5 @@
 /*
- * @Todo: 请补充模块描述
+ * 首页
  *
  * @Author: grayson<grayson.gao@bvox.com>
  * @Date: 2024-09-02 11:12:21
@@ -37,7 +37,13 @@ function App() {
           click
         </span>
         <Link to="/about">
-          <span className="App-link">Learn About</span>
+          <span className="App-link">关于我们</span>
+        </Link>
+        <Link to="/rss-subscribe">
+          <span className="App-link">csdn订阅文章</span>
+        </Link>
+        <Link to="/x-scroll-example">
+          <span className="App-link">纵向鼠标滚动，实现的横向滚动</span>
         </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}

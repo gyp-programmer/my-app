@@ -1,0 +1,8 @@
+.example {
+    display: flex;
+    align-items: center;
+
+    .ant-image {
+        flex-shrink: 0; // 不允许被缩小
+    }
+}

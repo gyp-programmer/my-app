@@ -1,0 +1,16 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .x-scroll {
+        transform-origin: left top;
+        overflow: hidden auto;
+    }
+
+    .content {
+        transform-origin: left top;
+        position: absolute;
+    }
+}

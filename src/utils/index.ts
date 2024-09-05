@@ -6,7 +6,8 @@
  * 
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-
+import { IRss, IRssChannel } from './types';
+import XMLToJson from './XMLToJson';
 /**
  * 是否为开发环境
  * @returns {boolean} true为是
@@ -22,4 +23,31 @@ export function isDev() {
  */
 export function isFunction(value: unknown) {
     return typeof value === 'function';
+}
+
+/**
+ * 解析xml 字符串为 dom 对象
+ * @param xml 
+ * @returns 
+ */
+export function xmlToDom(xml: string): XMLDocument {
+    let xmlDom: any;
+    if (window.DOMParser) {
+        const parser = new DOMParser();
+        xmlDom = parser.parseFromString(xml, 'text/xml');
+    } else if ((window as any).ActiveXObject) { // 兼容ie6或者更老的
+        const xmlDom = new (window as any).ActiveXObject('Microsoft.XMLDOM');
+        xmlDom.async = false;
+        xmlDom.loadXML(xml);
+    }
+    return xmlDom;
+}
+
+export function xmlToJson(xml: XMLDocument): IRss | null {
+    const obj = XMLToJson.parseXML(xml) as IRss;
+    if (obj.rss && obj.rss.length) {
+        return obj;
+    } else {
+        return null;
+    }
 }

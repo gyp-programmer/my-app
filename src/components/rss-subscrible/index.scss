@@ -1,0 +1,17 @@
+.rss-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  
+  .rss {
+    background-color: #282c34;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 8px 12px;
+
+    .ant-card {
+      flex: 1;
+    }
+  }
+}
