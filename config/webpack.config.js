@@ -36,6 +36,7 @@ const reactRefreshWebpackPluginRuntimeEntry = require.resolve(
   '@pmmmwh/react-refresh-webpack-plugin'
 );
 const babelRuntimeEntry = require.resolve('babel-preset-react-app');
+const RemoveConsolePlugin = require('./custom-plugin/consoleRemove');
 const babelRuntimeEntryHelpers = require.resolve(
   '@babel/runtime/helpers/esm/assertThisInitialized',
   { paths: [babelRuntimeEntry] }
@@ -722,6 +723,8 @@ module.exports = function (webpackEnv) {
             infrastructure: 'silent',
           },
         }),
+
+      
       !disableESLintPlugin &&
         new ESLintPlugin({
           // Plugin options
@@ -747,6 +750,9 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      !isEnvDevelopment && new RemoveConsolePlugin({
+        types: ['log']
+      }),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

@@ -14,7 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import routers from './router';
 import '../mock';
-
+console.log('11111')
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
