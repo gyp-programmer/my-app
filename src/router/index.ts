@@ -6,10 +6,8 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import Rss from "../components/rss-subscrible";
-import Home from "../components/App";
-import About from "../components/about";
-import XScrollExample from "../components/x-scroll/example";
+import { Home, About, Rss, XScrollExample, NotFound  } from '../components';
+import AuthRouter from './auth-router';
 
 const routers = [
   {
@@ -27,7 +25,12 @@ const routers = [
   {
     path: "/x-scroll-example",
     element: XScrollExample,
+  },
+  {
+    path: "*",
+    element: NotFound,
   }
 ];
 
+export { AuthRouter }
 export default routers;

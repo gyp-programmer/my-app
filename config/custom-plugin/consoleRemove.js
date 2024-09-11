@@ -28,6 +28,8 @@ class RemoveConsolePlugin {
                     }
                 })
             }
+        } else {
+            this.options.types = ['log', 'info', 'warn', 'error'];
         }
         this.options = options;
     }
@@ -68,6 +70,10 @@ class RemoveConsolePlugin {
 
             // https://webpack.docschina.org/api/compilation-hooks/#processassets
             // webpack5的钩子，不使用webpack4
+            // afterProcessAssets钩子的使用而不是processAssets，
+            // 是因为webpack包中的sourceMapDevToolPlugin.js使用processAssets钩子，
+            // 我们的插件会更改source对象，导致sourceMapDevToolPlugin.js插件无法正确使用asset.source
+            // 具体体现在node_modules/webpack/lib/SourceMapDevToolPlugin.js中getTaskForFile方法
             compilation.hooks.afterProcessAssets.tap({
                 name: pluginName,
             }, assets => handler(assets, compilation))

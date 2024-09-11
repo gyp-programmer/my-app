@@ -1,9 +1,9 @@
 /*
  * 入口文件
- * 
+ *
  * @Author: grayson<grayson.gao@bvox.com>
  * @Date: 2024-09-02 11:12:21
- * 
+ *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
@@ -12,9 +12,10 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import routers from './router';
-import '../mock';
-console.log('11111')
+import routers, { AuthRouter } from "./router";
+import 'nprogress/nprogress.css'
+import "../mock";
+
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -23,18 +24,25 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   // <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        {routers.map(item => (
-          <Route key={item.path} path={item.path} element={<item.element />} />
-        ))}
-        {/* 嵌套路由 */}
-        {/* <Route path="/" element={<Home />}>
+  <BrowserRouter>
+    <Routes>
+      {routers.map((item) => (
+        <Route
+          key={item.path}
+          path={item.path}
+          element={
+            <AuthRouter>
+              <item.element />
+            </AuthRouter>
+          }
+        />
+      ))}
+      {/* 嵌套路由 */}
+      {/* <Route path="/" element={<Home />}>
           <Route path="/about" element={<About />} />
         </Route> */}
-
-      </Routes>
-    </BrowserRouter>
+    </Routes>
+  </BrowserRouter>
   // </StrictMode>
 );
 
