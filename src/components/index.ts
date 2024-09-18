@@ -13,5 +13,6 @@ import XScrollExample from "./x-scroll/example";
 import NotFound from './404';
 import ScreenSaver from './screen-saver';
 import Byte from './byte-dance';
+import CircleCarousel from './circle-carousel';
 
-export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte }
+export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel }

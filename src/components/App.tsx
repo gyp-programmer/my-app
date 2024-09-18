@@ -48,6 +48,9 @@ function App() {
         <Link to="/byte-dance">
           <span className="App-link">字节抖音web端分析</span>
         </Link>
+        <Link to="/circle-carousel">
+          <span className="App-link">无缝轮播图</span>
+        </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}

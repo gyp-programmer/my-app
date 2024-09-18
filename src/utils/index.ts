@@ -78,3 +78,12 @@ export function parseGetParams(url: string) {
     url.replace(/([^?&=]+)=([^&]+)/g, (_, k, v) => q[k] = v);
     return q;
 }
+
+/**
+ * 随机生成16hex颜色
+ * @returns rgb
+ */
+export function genRandomColor() {
+    // 16777215 为 16进制ffffff
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
