@@ -7,13 +7,17 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NProgress from 'nprogress';
+import { useListenPage } from '../../hooks/useListenPage';
+import { ScreenSaver } from '../../components';
+
 
 
 function AuthRouter({children}: any) {
   const { pathname } = useLocation();
+  const isActive = useListenPage({ delay: 15 * 60 * 1000 });
 
   useEffect(() => {
     // 路由变化
@@ -23,7 +27,7 @@ function AuthRouter({children}: any) {
     }
   }, [pathname])
 
-  return children;
+  return isActive ? children : <ScreenSaver />;
 }
 
 export default AuthRouter;

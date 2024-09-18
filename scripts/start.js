@@ -115,6 +115,10 @@ checkBrowsers(paths.appPath, isInteractive)
         '/qq_36579455': {
           target: 'https://rss.csdn.net',
           changeOrigin: true,
+        },
+        '/discover': {
+          target: 'https://www.douyin.com',
+          changeOrigin: true,
         }
       }
     };

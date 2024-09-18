@@ -19,6 +19,15 @@ import "../mock";
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(registration => {
+      console.log('SW registered: ', registration);
+    })
+    .catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+}
 // const Home = routers[0].element;
 // const About = routers[1].element;
 

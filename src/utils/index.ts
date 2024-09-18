@@ -6,7 +6,7 @@
  * 
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import { IRss, IRssChannel } from './types';
+import { IRss } from './types';
 import XMLToJson from './XMLToJson';
 /**
  * 是否为开发环境
@@ -50,4 +50,31 @@ export function xmlToJson(xml: XMLDocument): IRss | null {
     } else {
         return null;
     }
+}
+
+/** 
+ * 防抖函数
+ * @param delay 默认1s
+ */
+export function debounce(fn: Function, delay: number = 1000) {
+    let timer: any = null;
+    return function (...args: any) {
+        //@ts-ignore
+        let _this = this;
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn.apply(_this, args);
+        }, delay);
+    }
+}
+
+/**
+ * 获取链接上的参数
+ * @param url 
+ * @returns 
+ */
+export function parseGetParams(url: string) {
+    const q: Record<string, string> = {}
+    url.replace(/([^?&=]+)=([^&]+)/g, (_, k, v) => q[k] = v);
+    return q;
 }

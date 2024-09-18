@@ -45,6 +45,9 @@ function App() {
         <Link to="/x-scroll-example">
           <span className="App-link">纵向鼠标滚动，实现的横向滚动</span>
         </Link>
+        <Link to="/byte-dance">
+          <span className="App-link">字节抖音web端分析</span>
+        </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}

@@ -11,5 +11,7 @@ import Home from "./App";
 import About from "./about";
 import XScrollExample from "./x-scroll/example";
 import NotFound from './404';
+import ScreenSaver from './screen-saver';
+import Byte from './byte-dance';
 
-export { Rss, Home, About, XScrollExample, NotFound }
+export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte }
