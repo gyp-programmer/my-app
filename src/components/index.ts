@@ -14,5 +14,6 @@ import NotFound from './404';
 import ScreenSaver from './screen-saver';
 import Byte from './byte-dance';
 import CircleCarousel from './circle-carousel';
+import Gpt from './gpt';
 
-export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel }
+export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel, Gpt }

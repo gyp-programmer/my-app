@@ -12,12 +12,15 @@
 - 实现保护屏功能
 - 通过服务器代理，实现iframe打开被拒绝的站点
 - 添加无缝轮播图
+- 接入iconfont(在线方式)
+- 接入groq语言大模型
 
 # 技术栈
 - react
 - react-router-dom
 - webpack
 - koa nodejs
+- groq [https://console.groq.com/docs/models]
 
 ## scripts
 ```bash

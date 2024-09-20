@@ -6,7 +6,6 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-
 import logo from "../logo.svg";
 import { useSyncExternalStore } from "react";
 import store from "../store";
@@ -50,6 +49,9 @@ function App() {
         </Link>
         <Link to="/circle-carousel">
           <span className="App-link">无缝轮播图</span>
+        </Link>
+        <Link to="/gpt">
+          <span className="App-link">GPT对话</span>
         </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}

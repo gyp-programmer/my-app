@@ -1,0 +1,84 @@
+.gpt-container {
+  background-color: #7c7a7a;
+  padding: 0 24px 24px;
+  &-top {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-weight: 600;
+    &-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+
+    .ant-select {
+      &-selector {
+        background: transparent !important;
+        border: none !important;
+        color: #ccc !important;
+      }
+    }
+  }
+
+  &-content {
+    background-color: #111827;
+    height: calc(100vh - 38px - 45px - 24px - 24px);
+    border-radius: 15px;
+    position: relative;
+    padding-top: 24px;
+
+    &-messages {
+      padding: 0 24px 12px;
+      overflow: auto;
+      height: calc(100% - 80px - 12px);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      scroll-behavior: smooth;
+
+      &-item {
+        transition: all 0.5s;
+        border-radius: 12px;
+        background-color: #7c7a7a;
+        padding: 8px 12px;
+
+        &-title {
+          font-weight: bolder;
+          color: #193560;
+          margin-bottom: 12px;
+        }
+
+        &-content {
+          color: #fff;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: calc(100% - 24px);
+      padding: 0 12px;
+      height: 80px;
+      border-top: 1px solid #ccc;
+      .ant-input {
+        background: transparent;
+        border: none;
+        color: #fff;
+
+        &::-webkit-input-placeholder {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import routers, { AuthRouter } from "./router";
 import 'nprogress/nprogress.css'
+// todo 后续优化，根据用户选择的样式 动态导入
+import 'highlight.js/styles/a11y-dark.css';
 import "../mock";
 
 // @ts-ignore
