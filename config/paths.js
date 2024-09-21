@@ -70,6 +70,12 @@ module.exports = {
   appTsBuildInfoFile: resolveApp('node_modules/.cache/tsconfig.tsbuildinfo'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
+  /** 补充多余的需要二次babel的包 */
+  extraBabelInclude: [
+    resolveApp('node_modules/highlight.js/lib/'),
+    resolveApp('node_modules/groq-sdk/'),
+    resolveApp('node_modules/marked/lib/'),
+  ],
 };
 
 

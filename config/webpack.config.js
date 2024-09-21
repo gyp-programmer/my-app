@@ -435,6 +435,21 @@ module.exports = function (webpackEnv) {
                 compact: isEnvProduction,
               },
             },
+            isEnvProduction && {
+              test: /\.(js|mjs)$/,
+              include: paths.extraBabelInclude,
+              loader: require.resolve('babel-loader'),
+              options: {
+                presets: [
+                  [
+                    require('@babel/preset-env').default,
+                    {
+                      forceAllTransforms: true
+                    }
+                  ]
+                ]
+              }
+            },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
             {
