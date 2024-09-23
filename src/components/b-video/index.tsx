@@ -7,7 +7,7 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import {
   LeftOutlined,
   UsergroupDeleteOutlined,
@@ -38,6 +38,17 @@ export function formatTime(time: number) {
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
+export function isMobile() {
+  return (
+    (typeof window !== "undefined" &&
+      typeof navigator !== "undefined" &&
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )) ||
+    typeof window.ontouchstart !== "undefined"
+  );
+}
+
 function BVideo() {
   /** 是否开启弹幕 */
   const [danmu, setDanmu] = useState(true);
@@ -45,6 +56,9 @@ function BVideo() {
   const [totalTime, setTotalTime] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const videoRef = React.useRef<HTMLVideoElement>(null);
+  const moveAreaRef = React.useRef<HTMLDivElement>(null);
+  const isCanSlider = useRef(false);
+  const firstPoint = useRef(0);
 
   const handleVideoLoaded = (e: any) => {
     setTotalTime(Math.floor(e.target?.duration || 0));
@@ -59,6 +73,70 @@ function BVideo() {
     setCurrentTime(0);
     videoRef.current?.pause();
   };
+
+  const handleMouseMove = useCallback(
+    (e: any) => {
+      if (!videoRef.current) return;
+      if (!isCanSlider.current) return;
+
+      const clientX = isMobile() ? e.touches[0].clientX : e.clientX;
+
+      /** 为=0 直接进入下一次 mousemove */
+      if (firstPoint.current === 0 || !firstPoint.current) {
+        firstPoint.current = clientX;
+        return;
+      }
+
+      const { width = 0 } = moveAreaRef.current?.getBoundingClientRect() || {};
+      const percent = (clientX - firstPoint.current) / width;
+
+      if (currentTime < totalTime && currentTime >= 0) {
+        if (!videoRef.current) return;
+        let updateValue =
+          currentTime + Math.floor(totalTime * percent) > 12
+            ? 12
+            : currentTime + Math.floor(totalTime * percent);
+        updateValue = updateValue > 0 ? updateValue : 0;
+        setCurrentTime(updateValue);
+        videoRef.current.currentTime = updateValue;
+      }
+    },
+    [currentTime, totalTime]
+  );
+
+  const openSliderFunc = () => {
+    isCanSlider.current = true;
+  };
+
+  const handleMouseUp = () => {
+    isCanSlider.current = false;
+    firstPoint.current = 0;
+  };
+
+  /** 由于需要在监听事件中读取state，所以在 useEffect 中监听，动态更新state */
+  useEffect(() => {
+    if (!moveAreaRef.current) return;
+
+    /** 判断是否为手机端 利用touch事件是否存在 */
+    if (isMobile()) {
+      moveAreaRef.current.addEventListener("touchmove", handleMouseMove);
+    } else {
+      moveAreaRef.current.addEventListener("mousemove", handleMouseMove);
+    }
+  }, [handleMouseMove]);
+
+  useMount(() => {
+    if (!moveAreaRef.current) return;
+    if (isMobile()) {
+      moveAreaRef.current.addEventListener("touchstart", openSliderFunc);
+      moveAreaRef.current.addEventListener("touchend", handleMouseUp);
+      moveAreaRef.current.addEventListener("touchcancel", handleMouseUp);
+    } else {
+      moveAreaRef.current.addEventListener("mousedown", openSliderFunc);
+      moveAreaRef.current.addEventListener("mouseup", handleMouseUp);
+      moveAreaRef.current.addEventListener("mouseleave", handleMouseUp);
+    }
+  });
 
   useMount(() => {
     if (!videoRef.current) return;
@@ -75,6 +153,18 @@ function BVideo() {
     videoRef.current?.removeEventListener("loadeddata", handleVideoLoaded);
     videoRef.current?.removeEventListener("timeupdate", handleTimeUpdate);
     videoRef.current?.removeEventListener("ended", handleVideoEnded);
+
+    if (isMobile()) {
+      moveAreaRef.current?.removeEventListener("touchmove", handleMouseMove);
+      moveAreaRef.current?.removeEventListener("touchstart", openSliderFunc);
+      moveAreaRef.current?.removeEventListener("touchend", handleMouseUp);
+      moveAreaRef.current?.removeEventListener("touchcancel", handleMouseUp);
+    } else {
+      moveAreaRef.current?.removeEventListener("mousemove", handleMouseMove);
+      moveAreaRef.current?.removeEventListener("mouseup", handleMouseUp);
+      moveAreaRef.current?.removeEventListener("mouseleave", handleMouseUp);
+      moveAreaRef.current?.removeEventListener("mousedown", openSliderFunc);
+    }
   });
 
   const handleChangeSlider = (value: number) => {
@@ -118,7 +208,7 @@ function BVideo() {
       </div>
 
       {/* 视频区域 */}
-      <div className={`${className}-video`}>
+      <div className={`${className}-video`} ref={moveAreaRef}>
         <video controls={false} ref={videoRef}>
           <source
             src="https://www.runoob.com/try/demo_source/movie.mp4"
@@ -192,7 +282,7 @@ function BVideo() {
             className={`${className}-bottom-operation-progress`}
             onChange={handleChangeSlider}
             onChangeComplete={handleBlur}
-            style={{visibility: !isPlay ? 'visible' : 'hidden'}}
+            style={{ visibility: !isPlay ? "visible" : "hidden" }}
           ></Slider>
 
           <div className={`${className}-bottom-operation-other`}>
