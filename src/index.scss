@@ -22,3 +22,30 @@ code {
 }
 
 $primary-color: #f5a623;
+
+@media screen and (min-width: 400px){
+  :root{
+    font-size: .7em
+  }
+}
+
+@media screen and (min-width: 350px){
+  :root{
+    font-size: .6em
+  }
+}
+
+@media (min-width: 600px){
+  :root{
+    font-size: 1em
+  }
+}
+/**
+ * 当屏幕小的时候，font-size 的大小会变成 10px ，但是我们好多系统最小字也就是 12px ，
+ * 10px 展示有问题，导致我们需要给所有的元素上设置 至少为 1.2rem 才能保证显示正常
+ */
+@media (min-width: 1200px){
+  :root{
+    font-size: 1.2em
+  }
+}

@@ -15,5 +15,6 @@ import ScreenSaver from './screen-saver';
 import Byte from './byte-dance';
 import CircleCarousel from './circle-carousel';
 import Gpt from './gpt';
+import BVideo from './b-video';
 
-export { Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel, Gpt }
+export { BVideo, Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel, Gpt }

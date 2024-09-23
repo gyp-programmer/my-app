@@ -6,7 +6,7 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import { Home, About, Rss, XScrollExample, NotFound, Byte, CircleCarousel, Gpt } from '../components';
+import { BVideo, Home, About, Rss, XScrollExample, NotFound, Byte, CircleCarousel, Gpt } from '../components';
 import AuthRouter from './auth-router';
 
 const routers = [
@@ -37,6 +37,10 @@ const routers = [
   {
     path: "/gpt",
     element: Gpt,
+  },
+  {
+    path: "/b-video",
+    element: BVideo,
   },
   {
     path: "*",

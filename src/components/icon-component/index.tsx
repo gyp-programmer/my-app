@@ -13,12 +13,13 @@ import './index.scss';
 interface IIconProps {
   icon: string;
   className?: string;
+  onClick?: () => void;
 }
 
 function IconComponent(props: IIconProps) {
-  const { className, icon } = props;
+  const { className, icon, onClick } = props;
   return (
-    <svg className={`icon ${className}`}>
+    <svg className={`icon ${className}`} onClick={onClick}>
       <use xlinkHref={`#${icon}`} />
     </svg>
   );

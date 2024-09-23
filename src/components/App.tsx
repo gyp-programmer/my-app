@@ -53,6 +53,9 @@ function App() {
         <Link to="/gpt">
           <span className="App-link">GPT对话</span>
         </Link>
+        <Link to="/b-video">
+          <span className="App-link">b站视频复原</span>
+        </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}
