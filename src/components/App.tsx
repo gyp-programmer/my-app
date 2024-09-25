@@ -56,6 +56,9 @@ function App() {
         <Link to="/b-video">
           <span className="App-link">b站视频复原</span>
         </Link>
+        <Link to="/b-video-by-frame">
+          <span className="App-link">b站视频按帧播放</span>
+        </Link>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}

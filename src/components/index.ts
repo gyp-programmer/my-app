@@ -16,5 +16,6 @@ import Byte from './byte-dance';
 import CircleCarousel from './circle-carousel';
 import Gpt from './gpt';
 import BVideo from './b-video';
+import BVideoByFrame from './b-video-by-frame';
 
-export { BVideo, Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel, Gpt }
+export { BVideo, Rss, Home, About, XScrollExample, NotFound, ScreenSaver, Byte, CircleCarousel, Gpt, BVideoByFrame }

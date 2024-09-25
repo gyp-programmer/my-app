@@ -6,7 +6,7 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import { BVideo, Home, About, Rss, XScrollExample, NotFound, Byte, CircleCarousel, Gpt } from '../components';
+import { BVideo, Home, About, Rss, XScrollExample, NotFound, Byte, CircleCarousel, Gpt, BVideoByFrame } from '../components';
 import AuthRouter from './auth-router';
 
 const routers = [
@@ -41,6 +41,10 @@ const routers = [
   {
     path: "/b-video",
     element: BVideo,
+  },
+  {
+    path: "/b-video-by-frame",
+    element: BVideoByFrame,
   },
   {
     path: "*",
