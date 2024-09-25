@@ -21,6 +21,12 @@
     -
 
   > 针对以上的两种方案实现短视频的播放功能，对于用户来说，体验上会有很大的区别，我猜测比较主流的短视频网站，他们的播放速度都是按帧播放的，
+- 大资源图片加载优化，预加载
+
+# 待办项
+- [ ] 接入eslist  [https://zh-hans.eslint.org/docs/latest/use/configure/configuration-files]
+- [ ] 接入prettier [https://www.prettier.cn/]
+
 # 技术栈
 - react
 - react-router-dom

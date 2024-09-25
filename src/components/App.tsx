@@ -35,6 +35,7 @@ function App() {
         <span className="App-link" onClick={() => store.dispatch()}>
           click
         </span>
+        <div className="function">
         <Link to="/about">
           <span className="App-link">关于我们</span>
         </Link>
@@ -59,9 +60,18 @@ function App() {
         <Link to="/b-video-by-frame">
           <span className="App-link">b站视频按帧播放</span>
         </Link>
+        </div>
+        
+        <div>
+        <h1>测试</h1>
+        <Link to="/load-image">
+          <span className="App-link">预加载大图片</span>
+        </Link>
+      </div>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}
+      
     </div>
   );
 }
