@@ -29,7 +29,8 @@ function LoadImage() {
   });
 
   useEffect(() => {
-    imgRef.current && imgContent && imgRef.current.appendChild(imgContent);
+    if (!imgContent || !imgRef.current) return;
+    imgRef.current.appendChild(imgContent);
   }, [imgRef, imgContent]);
 
   return (

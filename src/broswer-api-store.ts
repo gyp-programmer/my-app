@@ -17,8 +17,8 @@ const browserApiStore = {
         return () => {
             window.removeEventListener('online', listener);
             window.removeEventListener('offline', listener);
-        }
+        };
     }
-}
+};
 
 export default browserApiStore;

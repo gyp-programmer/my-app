@@ -31,40 +31,40 @@ export function useListenPage(props: IUseListenPage) {
                 setIsActive(false);
             }
         }, delay);
-    }
+    };
 
     const handleAction = () => {
         setIsActive(true);
         /** 重新开启监听 */
         startListener();
-    }
+    };
 
     const handleVisibilityChange = () => {
         if (document.hidden && isActive && isHidden) {// 页面不可见时，设置为不活跃
             setIsActive(false);
         }
-    }
+    };
 
     useMount(() => {
         /** 开始监听 */
         startListener();
         /** 监听页面是否可见 */
-        window.addEventListener("visibilitychange", handleVisibilityChange)
+        window.addEventListener("visibilitychange", handleVisibilityChange);
         /** 监听 滚动 鼠标 键盘事件 */
         window.addEventListener("scroll", debounce(handleAction));
         window.addEventListener("mousemove", debounce(handleAction));
         window.addEventListener("keydown", debounce(handleAction));
         window.addEventListener("click", debounce(handleAction));
-    })
+    });
 
     useUnMount(() => {
         /** 移除监听 */
-        window.removeEventListener("visibilitychange", handleVisibilityChange)
+        window.removeEventListener("visibilitychange", handleVisibilityChange);
         window.removeEventListener("scroll", debounce(handleAction));
         window.removeEventListener("mousemove", debounce(handleAction));
         window.removeEventListener("keydown", debounce(handleAction));
         window.removeEventListener("click", debounce(handleAction));
-    })
+    });
 
     return isActive;
 }

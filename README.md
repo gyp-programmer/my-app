@@ -24,7 +24,16 @@
 - 大资源图片加载优化，预加载
 
 # 待办项
-- [ ] 接入eslist  [https://zh-hans.eslint.org/docs/latest/use/configure/configuration-files]
+- [x] 接入eslist  [https://eslint.org/docs/latest/use/getting-started]
+  - 1. 最新版本9.x
+  - 2. 接入pre-commit, 用来提交前的代码格式检测
+    - package.json中增加一下配置，意思就是git commit之前会先跑npm run lint
+    ```
+      "pre-commit": [
+        "lint"
+      ]
+    ```
+    - 安装命令：`npm i -D pre-commit`
 - [ ] 接入prettier [https://www.prettier.cn/]
 
 # 技术栈

@@ -27,7 +27,8 @@ function Rss() {
       const xml = await getRssList();
       const xmlDom = xmlToDom(xml as unknown as string);
       const tempJson = xmlToJson(xmlDom);
-      tempJson && setFeeds(tempJson.rss[0].channel[0].item);
+      if (!tempJson) return;
+      setFeeds(tempJson.rss[0].channel[0].item);
     } catch (err: any) {
       console.log(err.message, "get rss error");
       setError(err.message || "get rss error");
@@ -53,7 +54,7 @@ function Rss() {
           <Card
             key={feed.guid[0]._text}
             actions={[
-              <a href={feed.link[0]._text} target="_blank">
+              <a href={feed.link[0]._text} target="_blank" rel="noreferrer" key={feed.title[0]._text}>
                 阅读全文
               </a>,
             ]}

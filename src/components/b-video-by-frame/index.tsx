@@ -172,7 +172,7 @@ function BVideoByFrame() {
         e.target.buffered.end(e.target.buffered.length - 1) /
         e.target?.duration;
       setProgress(a * 100);
-    } catch (err: any) {
+    } catch (_err: any) {
       // INDEX_SIZE_ERR 不存在指定索引值的时间范围 设置为最大值
       setProgress(100);
     }
@@ -220,7 +220,6 @@ function BVideoByFrame() {
 
   useMount(() => {
     if (!videoRef.current) return;
-    isPlay && videoRef.current.play();
 
     videoRef.current.addEventListener("loadeddata", handleVideoLoaded);
 

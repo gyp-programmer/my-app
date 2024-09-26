@@ -1,12 +1,3 @@
-/*
- * @Todo: 请补充模块描述
- * 
- * @Author: grayson<grayson.gao@bvox.com>
- * @Date: 2024-09-05 13:03:05
- * 
- * Copyright © 2019-2024 bvox.com. All Rights Reserved.
- */
-
 // @ts-nocheck
 var xmlToJSON = (function () {
 
@@ -47,7 +38,7 @@ var xmlToJSON = (function () {
 
     this.parseString = function (xmlString, opt) {
         return this.parseXML(this.stringToXML(xmlString), opt);
-    }
+    };
 
     this.parseXML = function (oXMLParent, opt) {
 
@@ -101,7 +92,7 @@ var xmlToJSON = (function () {
 
             if (options.attrsAsObject) {
                 vResult[options.attrKey] = vAttribs;
-            } else { }
+            }
         }
 
         // iterate over the children
@@ -187,7 +178,7 @@ var xmlToJSON = (function () {
         }
 
         return vResult;
-    }
+    };
 
 
     // Convert xmlDocument to a string
@@ -199,7 +190,7 @@ var xmlToJSON = (function () {
         } catch (err) {
             return null;
         }
-    }
+    };
 
     // Convert a string to XML Node Structure
     // Returns null on failure
@@ -223,7 +214,7 @@ var xmlToJSON = (function () {
         } catch (e) {
             return null;
         }
-    }
+    };
 
     return this;
 }).call({});

@@ -51,7 +51,7 @@ function Gpt() {
       question: searchText,
       model: currentModel,
     });
-    const parseRES = await marked.parse(res.choices[0].message.content || '')
+    const parseRES = await marked.parse(res.choices[0].message.content || '');
     setMessages([...messages, {...res, parseContent: parseRES}]);
     setLoading(false);
     setSearchText("");
@@ -66,7 +66,7 @@ function Gpt() {
       if (!messageRef.current) return;
       messageRef.current.scrollTop = messageRef.current.scrollHeight;
     }, 0);
-  }, [messages])
+  }, [messages]);
 
   useMount(() => {
     getModels().then((res: TModelResponse) => {

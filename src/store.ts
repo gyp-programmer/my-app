@@ -19,7 +19,7 @@ const store: IStore = {
 
         return () => {
             store.listeners = store.listeners.filter(item => item !== listener);
-        }
+        };
     },
     getSnapshot() {
         return store.count;
@@ -29,6 +29,6 @@ const store: IStore = {
         // 触发监听渲染页面
         store.listeners.forEach(listener => listener());
     }
-}
+};
 
 export default store;

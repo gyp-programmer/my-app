@@ -24,6 +24,6 @@ const marked = new Marked(
     breaks: true,
     pedantic: false,
   }
-)
+);
 
 export default marked;

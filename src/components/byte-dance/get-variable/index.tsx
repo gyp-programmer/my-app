@@ -17,7 +17,7 @@ function GetVariable() {
     if(iframe) {
       // console.log(iframe.contentWindow.window);
     }
-  }, [refIframe])
+  }, [refIframe]);
 
   return (
     <div>

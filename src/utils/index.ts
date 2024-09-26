@@ -57,11 +57,11 @@ export function xmlToJson(xml: XMLDocument): IRss | null {
  * 防抖函数
  * @param delay 默认1s
  */
-export function debounce(fn: Function, delay: number = 1000) {
+export function debounce(fn: () => any, delay: number = 1000) {
   let timer: any = null;
   return function (...args: any) {
-    //@ts-ignore
-    let _this = this;
+    // @ts-ignore
+    const _this = this as any;
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => {
       fn.apply(_this, args);

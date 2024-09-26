@@ -7,7 +7,7 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 import { BVideo, Home, About, Rss, XScrollExample, NotFound, Byte, CircleCarousel, Gpt, BVideoByFrame } from '../components';
-import LoadImage from '../practice/load-image'
+import LoadImage from '../practice/load-image';
 import AuthRouter from './auth-router';
 
 const routers = [
@@ -57,5 +57,5 @@ const routers = [
   }
 ];
 
-export { AuthRouter }
+export { AuthRouter };
 export default routers;

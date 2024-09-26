@@ -16,7 +16,7 @@ const groq = new Groq({ apiKey: GROQ_API_KEY, dangerouslyAllowBrowser: true });
 
 export const defaultModel = "llama3-8b-8192";
 
-const lover = ['简雯雯', 'jammy', '蚊子大人', '酒鬼蚊子']
+const lover = ['简雯雯', 'jammy', '蚊子大人', '酒鬼蚊子'];
 
 export const getModels = async () => {
   return await groq.models.list();

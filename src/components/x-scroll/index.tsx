@@ -16,7 +16,7 @@ function XScroll(props: { children: any, fresh?: boolean }) {
   const [size, setSize] = useState({
     width: 0,
     height: 0,
-  })
+  });
   const ref = useRef<HTMLDivElement>(null);
 
   const  handleResize = useCallback(debounce(() => {
@@ -24,27 +24,27 @@ function XScroll(props: { children: any, fresh?: boolean }) {
     setSize({
       width: ref.current.offsetWidth,
       height: ref.current.offsetHeight
-    })
-  }, 1000), [])
+    });
+  }, 1000), []);
 
   useEffect(() => {
     window.addEventListener('resize', () => {
       handleResize();
-    })
+    });
 
     // 默认开始 第一次进来强制刷新
     if (fresh) {
       setTimeout(() => {
         handleResize();
-      }, 300)
+      }, 300);
     }
 
     return () => {
       window.removeEventListener('resize', () => {
         handleResize();
-      })
-    }
-  }, [])
+      });
+    };
+  }, []);
 
   return (
     <div className='container' ref={ref}>

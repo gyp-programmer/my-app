@@ -24,8 +24,8 @@ function AuthRouter({children}: any) {
     NProgress.done();
     return () => {
       NProgress.start();
-    }
-  }, [pathname])
+    };
+  }, [pathname]);
 
   return isActive ? children : <ScreenSaver />;
 }

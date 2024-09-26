@@ -140,7 +140,6 @@ function BVideo() {
 
   useMount(() => {
     if (!videoRef.current) return;
-    isPlay && videoRef.current.play();
 
     videoRef.current.addEventListener("loadeddata", handleVideoLoaded);
 
