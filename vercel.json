@@ -1,8 +1,8 @@
 {
-    "routes": [
-        {
-            "src": "/qq_36579455/(.*)",
-            "dest": "https://rss.csdn.net/qq_36579455/$1"
-        }
-    ]
+  "routes": [
+    {
+      "src": "/qq_36579455/(.*)",
+      "dest": "https://rss.csdn.net/qq_36579455/$1"
+    }
+  ]
 }

@@ -11,6 +11,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tsEslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
@@ -20,6 +21,7 @@ export default [
   pluginJs.configs.recommended,
   ...tsEslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  eslintConfigPrettier,
   {
     rules: {
       /** 可以出现any类型 */

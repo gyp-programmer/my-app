@@ -108,9 +108,11 @@ export function previewLoadImg(url: string): Promise<HTMLImageElement> {
 
 /** 批量预加载图片 */
 export async function batchPreviewLoadImg(urlList: string[]) {
-  const imgList = await Promise.allSettled(urlList.map((url) => previewLoadImg(url)));
-  return imgList.map(item => ({
+  const imgList = await Promise.allSettled(
+    urlList.map((url) => previewLoadImg(url)),
+  );
+  return imgList.map((item) => ({
     status: item.status,
-    value: item.status === 'fulfilled' ? item.value : item.reason
+    value: item.status === "fulfilled" ? item.value : item.reason,
   }));
 }

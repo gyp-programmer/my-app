@@ -21,7 +21,7 @@ import {
   defaultModel,
 } from "../../utils/groq";
 import "./index.scss";
-import marked from '../../utils/marked';
+import marked from "../../utils/marked";
 import { useMount } from "hooks/useMount";
 
 const className = "gpt-container";
@@ -38,7 +38,7 @@ function Gpt() {
   const [modelList, setModelList] = useState([] as TModel[]);
   const [currentModel, setCurrentModel] = useState(defaultModel);
   const [searchText, setSearchText] = useState("");
-  const messageRef = useRef<HTMLDivElement>(null);  
+  const messageRef = useRef<HTMLDivElement>(null);
   const [messageApi, contextHolder] = message.useMessage();
   const handleAnswer = async () => {
     if (!searchText) {
@@ -51,8 +51,8 @@ function Gpt() {
       question: searchText,
       model: currentModel,
     });
-    const parseRES = await marked.parse(res.choices[0].message.content || '');
-    setMessages([...messages, {...res, parseContent: parseRES}]);
+    const parseRES = await marked.parse(res.choices[0].message.content || "");
+    setMessages([...messages, { ...res, parseContent: parseRES }]);
     setLoading(false);
     setSearchText("");
   };
@@ -103,9 +103,10 @@ function Gpt() {
                 <div className={`${className}-content-messages-item-title`}>
                   {questionList[ind]}
                 </div>
-                <div className={`${className}-content-messages-item-content`} dangerouslySetInnerHTML={{__html: item.parseContent}}>
-                  
-                </div>
+                <div
+                  className={`${className}-content-messages-item-content`}
+                  dangerouslySetInnerHTML={{ __html: item.parseContent }}
+                ></div>
               </div>
             ))}
           </div>

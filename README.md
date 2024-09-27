@@ -34,7 +34,13 @@
       ]
     ```
     - 安装命令：`npm i -D pre-commit`
-- [ ] 接入prettier [https://www.prettier.cn/]
+- [x] 接入prettier [https://www.prettier.cn/]
+  - 1. 固定版本安装 `--save-exact` 记录该软件包的精确版本号
+  - 2. 默认会按照.gitignore文件过滤，当我们加入了.prettierignore文件，也会过滤，两个是同时配置规则
+  - 3. 配合eslint使用，使用eslint-config-prettier
+  - 4. 接入到pre-commit钩子，在提交前检测代码格式
+- [ ] 配置当前项目的node使用版本
+- [ ] 接入qiankun框架，感受微前端的魅力
 
 # 技术栈
 - react
@@ -50,4 +56,10 @@ npm run build
 npm run start
 # 运行后自动打开浏览器
 npm run start --open
+# eslint的检测和修复
+npm run lint
+npm run lint:fix
+# prettier的检测和修复
+npm run format:check
+npm run format:fix
 ```

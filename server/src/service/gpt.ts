@@ -42,10 +42,10 @@ export const getGptReply = (ctx: any) => {
       "https://api.groq.com/openai/v1/chat/completions",
       {
         headers: {
-        //   ":authority": "api.groq.com",
-        //   ":method": "POST",
-        //   ":path": "/openai/v1/chat/completions",
-        //   ":scheme": "https",
+          //   ":authority": "api.groq.com",
+          //   ":method": "POST",
+          //   ":path": "/openai/v1/chat/completions",
+          //   ":scheme": "https",
           "accept-encoding": "gzip, deflate, br, zstd",
           accept: "*/*",
           "accept-language": "zh,zh-CN;q=0.9,en;q=0.8",
@@ -89,7 +89,7 @@ export const getGptReply = (ctx: any) => {
           };
           resolve(true);
         }
-      }
+      },
     );
   });
 };

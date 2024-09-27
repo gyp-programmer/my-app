@@ -25,13 +25,13 @@ export interface IRssText {
 }
 
 export interface IRssChannel {
-   copyright: IRssText[];
-   description: Record<string, any>[];
-   generator: IRssText[];
-   item: IRssItem[];
-   language: IRssText[];
-   link: IRssText[];
-   title: IRssText[];
+  copyright: IRssText[];
+  description: Record<string, any>[];
+  generator: IRssText[];
+  item: IRssItem[];
+  language: IRssText[];
+  link: IRssText[];
+  title: IRssText[];
 }
 
 export interface IRssItem {

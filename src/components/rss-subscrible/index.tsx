@@ -54,7 +54,12 @@ function Rss() {
           <Card
             key={feed.guid[0]._text}
             actions={[
-              <a href={feed.link[0]._text} target="_blank" rel="noreferrer" key={feed.title[0]._text}>
+              <a
+                href={feed.link[0]._text}
+                target="_blank"
+                rel="noreferrer"
+                key={feed.title[0]._text}
+              >
                 阅读全文
               </a>,
             ]}

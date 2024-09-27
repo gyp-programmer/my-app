@@ -36,7 +36,7 @@ function About() {
         <List
           itemLayout="horizontal"
           dataSource={data}
-          renderItem={item => (
+          renderItem={(item) => (
             <List.Item>
               <List.Item.Meta
                 avatar={<Avatar src={item.avatar} />}

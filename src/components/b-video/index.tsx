@@ -43,7 +43,7 @@ export function isMobile() {
     (typeof window !== "undefined" &&
       typeof navigator !== "undefined" &&
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )) ||
     typeof window.ontouchstart !== "undefined"
   );
@@ -101,7 +101,7 @@ function BVideo() {
         videoRef.current.currentTime = updateValue;
       }
     },
-    [currentTime, totalTime]
+    [currentTime, totalTime],
   );
 
   const openSliderFunc = () => {

@@ -17,11 +17,11 @@ import { Link } from "react-router-dom";
 function App() {
   const state: number = useSyncExternalStore(
     store.subscribe,
-    store.getSnapshot
+    store.getSnapshot,
   );
   const onLineStatus = useSyncExternalStore(
     browserApiStore.subscribe,
-    browserApiStore.getSnapshot
+    browserApiStore.getSnapshot,
   );
 
   return (
@@ -36,42 +36,41 @@ function App() {
           click
         </span>
         <div className="function">
-        <Link to="/about">
-          <span className="App-link">关于我们</span>
-        </Link>
-        <Link to="/rss-subscribe">
-          <span className="App-link">csdn订阅文章</span>
-        </Link>
-        <Link to="/x-scroll-example">
-          <span className="App-link">纵向鼠标滚动，实现的横向滚动</span>
-        </Link>
-        <Link to="/byte-dance">
-          <span className="App-link">字节抖音web端分析</span>
-        </Link>
-        <Link to="/circle-carousel">
-          <span className="App-link">无缝轮播图</span>
-        </Link>
-        <Link to="/gpt">
-          <span className="App-link">GPT对话</span>
-        </Link>
-        <Link to="/b-video">
-          <span className="App-link">b站视频复原</span>
-        </Link>
-        <Link to="/b-video-by-frame">
-          <span className="App-link">b站视频按帧播放</span>
-        </Link>
+          <Link to="/about">
+            <span className="App-link">关于我们</span>
+          </Link>
+          <Link to="/rss-subscribe">
+            <span className="App-link">csdn订阅文章</span>
+          </Link>
+          <Link to="/x-scroll-example">
+            <span className="App-link">纵向鼠标滚动，实现的横向滚动</span>
+          </Link>
+          <Link to="/byte-dance">
+            <span className="App-link">字节抖音web端分析</span>
+          </Link>
+          <Link to="/circle-carousel">
+            <span className="App-link">无缝轮播图</span>
+          </Link>
+          <Link to="/gpt">
+            <span className="App-link">GPT对话</span>
+          </Link>
+          <Link to="/b-video">
+            <span className="App-link">b站视频复原</span>
+          </Link>
+          <Link to="/b-video-by-frame">
+            <span className="App-link">b站视频按帧播放</span>
+          </Link>
         </div>
-        
+
         <div>
-        <h1>测试</h1>
-        <Link to="/load-image">
-          <span className="App-link">预加载大图片</span>
-        </Link>
-      </div>
+          <h1>测试</h1>
+          <Link to="/load-image">
+            <span className="App-link">预加载大图片</span>
+          </Link>
+        </div>
       </header>
       {/* 适用于嵌套路由时，装载的容器 */}
       {/* <Outlet /> */}
-      
     </div>
   );
 }

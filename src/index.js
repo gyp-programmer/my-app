@@ -13,21 +13,22 @@ import "./index.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import routers, { AuthRouter } from "./router";
-import 'nprogress/nprogress.css';
+import "nprogress/nprogress.css";
 // todo 后续优化，根据用户选择的样式 动态导入
-import 'highlight.js/styles/a11y-dark.css';
+import "highlight.js/styles/a11y-dark.css";
 import "../mock";
 
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(registration => {
-      console.log('SW registered: ', registration);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./sw.js")
+    .then((registration) => {
+      console.log("SW registered: ", registration);
     })
-    .catch(registrationError => {
-      console.log('SW registration failed: ', registrationError);
+    .catch((registrationError) => {
+      console.log("SW registration failed: ", registrationError);
     });
 }
 // const Home = routers[0].element;
@@ -53,7 +54,7 @@ root.render(
           <Route path="/about" element={<About />} />
         </Route> */}
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
   // </StrictMode>
 );
 

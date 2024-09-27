@@ -38,7 +38,7 @@ export function isMobile() {
     (typeof window !== "undefined" &&
       typeof navigator !== "undefined" &&
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )) ||
     typeof window.ontouchstart !== "undefined"
   );
@@ -90,7 +90,7 @@ function BVideoByFrame() {
           : Math.round(value / muchFrameBySecond);
       setCurrentFrame(currentF);
     },
-    [isDragging]
+    [isDragging],
   );
 
   const handleVideoEnded = () => {
@@ -142,7 +142,7 @@ function BVideoByFrame() {
         }
       }
     },
-    [currentTime, totalTime, frames]
+    [currentTime, totalTime, frames],
   );
 
   const openSliderFunc = useCallback(() => {
@@ -260,7 +260,7 @@ function BVideoByFrame() {
     setCurrentTime(
       value * muchFrameBySecond > 0 && value * muchFrameBySecond < 1
         ? 1
-        : Math.round(value * muchFrameBySecond)
+        : Math.round(value * muchFrameBySecond),
     );
     // 在监听的timeupdate事件中，更新即可
     if (!videoRef.current) return;

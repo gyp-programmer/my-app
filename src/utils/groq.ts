@@ -7,8 +7,8 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 import Groq from "groq-sdk";
-import { ChatCompletion } from 'groq-sdk/resources/chat/completions';
-import { ModelListResponse, Model } from 'groq-sdk/resources/models';
+import { ChatCompletion } from "groq-sdk/resources/chat/completions";
+import { ModelListResponse, Model } from "groq-sdk/resources/models";
 
 const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY || "";
 
@@ -16,7 +16,7 @@ const groq = new Groq({ apiKey: GROQ_API_KEY, dangerouslyAllowBrowser: true });
 
 export const defaultModel = "llama3-8b-8192";
 
-const lover = ['简雯雯', 'jammy', '蚊子大人', '酒鬼蚊子'];
+const lover = ["简雯雯", "jammy", "蚊子大人", "酒鬼蚊子"];
 
 export const getModels = async () => {
   return await groq.models.list();
@@ -31,7 +31,7 @@ interface IChatCompletionParams {
 export async function getGroqChatCompletion(params: IChatCompletionParams) {
   const { question, model = defaultModel } = params;
   // 如果question中包含lover中的一项
-  if (lover.some(item => question.includes(item))) {
+  if (lover.some((item) => question.includes(item))) {
     return await groq.chat.completions.create({
       messages: [
         {
@@ -46,7 +46,7 @@ export async function getGroqChatCompletion(params: IChatCompletionParams) {
     messages: [
       {
         role: "user",
-        content: question + ', 用中文回答',
+        content: question + ", 用中文回答",
       },
     ],
     model,
@@ -54,7 +54,7 @@ export async function getGroqChatCompletion(params: IChatCompletionParams) {
 }
 
 export type TChatMessage = ChatCompletion & {
-    parseContent: string;
+  parseContent: string;
 };
 export type TModelResponse = ModelListResponse;
 export type TModel = Model;

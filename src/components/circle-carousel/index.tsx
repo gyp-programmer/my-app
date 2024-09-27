@@ -116,7 +116,7 @@ function CircleCarousel(props: ICircleCarouselProps) {
               className={cx(
                 "circle-carousel-indicator-item",
                 index + 1 === currentIndex &&
-                  "circle-carousel-indicator-item-active"
+                  "circle-carousel-indicator-item-active",
               )}
               key={index}
               onClick={() => handleClick(index + 1)}

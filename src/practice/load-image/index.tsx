@@ -13,8 +13,7 @@ import { previewLoadImg } from "../../utils";
 import "./index.scss";
 import { useMount } from "hooks/useMount";
 
-const testUrl =
-  "https://w.wallhaven.cc/full/qz/wallhaven-qzgr7r.jpg";
+const testUrl = "https://w.wallhaven.cc/full/qz/wallhaven-qzgr7r.jpg";
 
 function LoadImage() {
   const [url, setUrl] = useState("");
@@ -44,16 +43,16 @@ function LoadImage() {
         切换测试
       </button>
 
-        <div ref={imgRef} style={{display: useImg ? 'block' : 'none'}}></div>
+      <div ref={imgRef} style={{ display: useImg ? "block" : "none" }}></div>
 
-        <div
-          className="bg"
-          style={{
-            background: `url(${url})  center / 1920px auto no-repeat`,
-            opacity: url && 1,
-            display: useImg ? 'none' : 'block',
-          }}
-        ></div>
+      <div
+        className="bg"
+        style={{
+          background: `url(${url})  center / 1920px auto no-repeat`,
+          opacity: url && 1,
+          display: useImg ? "none" : "block",
+        }}
+      ></div>
     </div>
   );
 }
