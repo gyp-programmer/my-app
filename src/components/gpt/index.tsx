@@ -117,7 +117,7 @@ function Gpt() {
               loading={loading}
               value={searchText}
               onSearch={handleAnswer}
-              onChange={(e) => setSearchText(e.target.value)}
+              onChange={e => setSearchText(e.target.value)}
             />
             <Button icon={<ArrowUpOutlined />} onClick={() => handleAnswer()} />
           </div>

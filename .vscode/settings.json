@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["antd", "groq", "qiankun", "Usergroup"]
+  "cSpell.words": ["antd", "groq", "Parens", "qiankun", "Usergroup"],
+  // Set the default
+  "editor.formatOnSave": true,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
 }

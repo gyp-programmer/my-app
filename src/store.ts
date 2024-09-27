@@ -18,7 +18,7 @@ const store: IStore = {
     store.listeners.push(listener);
 
     return () => {
-      store.listeners = store.listeners.filter((item) => item !== listener);
+      store.listeners = store.listeners.filter(item => item !== listener);
     };
   },
   getSnapshot() {
@@ -27,7 +27,7 @@ const store: IStore = {
   dispatch() {
     store.count += 1;
     // 触发监听渲染页面
-    store.listeners.forEach((listener) => listener());
+    store.listeners.forEach(listener => listener());
   },
 };
 

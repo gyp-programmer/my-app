@@ -17,7 +17,7 @@ const mocks = [
     response: () => {
       return {
         code: 200,
-        data: Array.from({ length: 10 }, (_) => ({
+        data: Array.from({ length: 10 }, _ => ({
           name: random.cname(),
           age: random.integer(18, 60),
           sex: random.boolean() ? "男" : "女",

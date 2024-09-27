@@ -7,7 +7,7 @@
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
 
-self.addEventListener("document", async (event) => {
+self.addEventListener("document", async event => {
   // @ts-ignore
   const { request } = event;
   if (request.url.startsWith("https://www.douyin.com")) {

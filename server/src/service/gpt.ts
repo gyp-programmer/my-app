@@ -37,7 +37,7 @@ export const getGptReply = (ctx: any) => {
   //         }
   //     });
   // })
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     request(
       "https://api.groq.com/openai/v1/chat/completions",
       {

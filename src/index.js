@@ -24,10 +24,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("./sw.js")
-    .then((registration) => {
+    .then(registration => {
       console.log("SW registered: ", registration);
     })
-    .catch((registrationError) => {
+    .catch(registrationError => {
       console.log("SW registration failed: ", registrationError);
     });
 }
@@ -38,7 +38,7 @@ root.render(
   // <StrictMode>
   <BrowserRouter>
     <Routes>
-      {routers.map((item) => (
+      {routers.map(item => (
         <Route
           key={item.path}
           path={item.path}

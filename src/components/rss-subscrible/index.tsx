@@ -50,7 +50,7 @@ function Rss() {
       <Header name="CSDN订阅文章" />
 
       <div className="rss">
-        {feeds.map((feed) => (
+        {feeds.map(feed => (
           <Card
             key={feed.guid[0]._text}
             actions={[

@@ -17,21 +17,21 @@ const request = axios.create({
 
 /** 请求拦截器 */
 request.interceptors.request.use(
-  (config) => {
+  config => {
     return config;
   },
-  (error) => {
+  error => {
     return Promise.reject(error);
   },
 );
 
 /** 响应拦截器 */
 request.interceptors.response.use(
-  (response) => {
+  response => {
     const res = response.data;
     return res;
   },
-  (error) => {
+  error => {
     return Promise.reject(error);
   },
 );

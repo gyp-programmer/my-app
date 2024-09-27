@@ -35,7 +35,7 @@ function Byte() {
   };
 
   const childComp = useMemo(() => {
-    return items.find((item) => item.key === currentKey)?.comp;
+    return items.find(item => item.key === currentKey)?.comp;
   }, [currentKey]);
 
   return (
@@ -45,7 +45,7 @@ function Byte() {
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
-          onBreakpoint={(broken) => {
+          onBreakpoint={broken => {
             console.log(broken);
           }}
           onCollapse={(collapsed, type) => {

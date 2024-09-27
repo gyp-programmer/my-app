@@ -22,7 +22,7 @@ class RemoveConsolePlugin {
         if (options.types.includes("*")) {
           options.types = ["log", "info", "warn", "error"];
         }
-        options.types.forEach((type) => {
+        options.types.forEach(type => {
           if (!["log", "info", "warn", "error"].includes(type)) {
             throw new Error(
               "【consoleRemovePlugin】error: types must be log, info, warn, error",
@@ -68,7 +68,7 @@ class RemoveConsolePlugin {
      *  compilation钩子
      *  compilation 创建之后执行
      */
-    compiler.hooks.compilation.tap(pluginName, (compilation) => {
+    compiler.hooks.compilation.tap(pluginName, compilation => {
       // https://webpack.docschina.org/api/compilation-hooks/#processassets
       // webpack5的钩子，不使用webpack4
       // afterProcessAssets钩子的使用而不是processAssets，
@@ -79,7 +79,7 @@ class RemoveConsolePlugin {
         {
           name: pluginName,
         },
-        (assets) => handler(assets, compilation),
+        assets => handler(assets, compilation),
       );
     });
   }

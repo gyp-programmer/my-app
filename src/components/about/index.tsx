@@ -24,7 +24,7 @@ function About() {
   const [data, setData] = useState([] as IUser[]);
 
   useEffect(() => {
-    getList().then((res) => {
+    getList().then(res => {
       setData(res.data);
     });
   }, []);
@@ -36,7 +36,7 @@ function About() {
         <List
           itemLayout="horizontal"
           dataSource={data}
-          renderItem={(item) => (
+          renderItem={item => (
             <List.Item>
               <List.Item.Meta
                 avatar={<Avatar src={item.avatar} />}

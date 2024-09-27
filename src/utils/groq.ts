@@ -31,7 +31,7 @@ interface IChatCompletionParams {
 export async function getGroqChatCompletion(params: IChatCompletionParams) {
   const { question, model = defaultModel } = params;
   // 如果question中包含lover中的一项
-  if (lover.some((item) => question.includes(item))) {
+  if (lover.some(item => question.includes(item))) {
     return await groq.chat.completions.create({
       messages: [
         {
