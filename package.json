@@ -177,6 +177,6 @@
     "check:lockfile"
   ],
   "engines": {
-    "node": ">=22.0"
+    "node": ">=20.0"
   }
 }
