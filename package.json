@@ -63,7 +63,8 @@
     "lint": "eslint . --color",
     "fix:lint": "eslint . --fix",
     "format:check": "prettier --check \"./**/*.{js,ts,tsx,json}\"",
-    "format:fix": "prettier --write \"./**/*.{js,ts,tsx,json}\""
+    "format:fix": "prettier --write \"./**/*.{js,ts,tsx,json}\"",
+    "check:lockfile": "node scripts/check-lockfile.js"
   },
   "browserslist": {
     "production": [
@@ -172,6 +173,10 @@
   },
   "pre-commit": [
     "lint",
-    "format:check"
-  ]
+    "format:check",
+    "check:lockfile"
+  ],
+  "engines": {
+    "node": ">=22.0"
+  }
 }
