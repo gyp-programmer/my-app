@@ -12,21 +12,35 @@ import { UserOutlined } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import Header from "../header";
 import GetVariable from "./get-variable";
+import MicroApp from "./micro-app";
 import "./index.scss";
 
 const { Content, Sider } = Layout;
+
+interface IItem {
+  key: string;
+  icon: React.ReactNode;
+  label: string;
+  comp: React.ReactNode | null;
+}
 
 function Byte() {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   const [currentKey, setCurrentKey] = useState("1");
-  const items = [
+  const items: IItem[] = [
     {
       key: "1",
       icon: <UserOutlined />,
       label: "页面中自定义的变量",
       comp: <GetVariable />,
+    },
+    {
+      key: "2",
+      icon: <UserOutlined />,
+      label: "音乐播放器",
+      comp: MicroApp && <MicroApp />,
     },
   ];
 
@@ -64,11 +78,13 @@ function Byte() {
         <Layout>
           <Content style={{ margin: "24px 16px 0" }}>
             <div
+              id="qiankun-container"
               style={{
                 padding: 24,
-                minHeight: 360,
+                height: 360,
                 background: colorBgContainer,
                 borderRadius: borderRadiusLG,
+                overflow: "auto",
               }}
             >
               {childComp}

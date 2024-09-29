@@ -6,7 +6,6 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
@@ -31,8 +30,6 @@ if ("serviceWorker" in navigator) {
       console.log("SW registration failed: ", registrationError);
     });
 }
-// const Home = routers[0].element;
-// const About = routers[1].element;
 
 root.render(
   // <StrictMode>

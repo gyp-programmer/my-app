@@ -120,6 +120,11 @@ checkBrowsers(paths.appPath, isInteractive)
           target: "https://www.douyin.com",
           changeOrigin: true,
         },
+        "/music": {
+          target: "http://localhost:555",
+          changeOrigin: true,
+          pathRewrite: { "^/music": "" },
+        },
       },
     };
     const devServer = new WebpackDevServer(serverConfig, compiler);
