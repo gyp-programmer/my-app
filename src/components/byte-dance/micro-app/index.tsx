@@ -21,11 +21,14 @@ function MicroAppComp() {
   useEffect(() => {
     const init = () => {
       if (!microAppRef.current) return;
-      microApp.current = loadMicroApp({
-        name: "music",
-        entry: musicUrl,
-        container: microAppRef.current,
-      });
+      microApp.current = loadMicroApp(
+        {
+          name: "music",
+          entry: musicUrl,
+          container: microAppRef.current,
+        },
+        { $$cacheLifecycleByAppName: false },
+      );
     };
     init();
 
