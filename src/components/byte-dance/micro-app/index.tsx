@@ -10,11 +10,21 @@
 import React, { useRef, useEffect } from "react";
 import { loadMicroApp, type MicroApp } from "qiankun";
 
-const musicUrl = "https://music-player-ivory-six.vercel.app/";
+interface IProps {
+  /** 微服务url */
+  url: string;
+  /** 微服务是否缓存  默认不开启 */
+  isCache?: boolean;
+  /** 微服务名称 */
+  name: string;
+  strictStyleIsolation?: boolean;
+}
+
 /**
  * @abstract https://qiankun.umijs.org/zh/api#loadmicroappapp-configuration
  */
-function MicroAppComp() {
+function MicroAppComp(props: IProps) {
+  const { url, isCache = false, name, strictStyleIsolation = false } = props;
   const microAppRef = useRef<HTMLDivElement>(null);
   const microApp = useRef<MicroApp>();
 
@@ -23,11 +33,14 @@ function MicroAppComp() {
       if (!microAppRef.current) return;
       microApp.current = loadMicroApp(
         {
-          name: "music",
-          entry: musicUrl,
+          name,
+          entry: url,
           container: microAppRef.current,
         },
-        { $$cacheLifecycleByAppName: false },
+        {
+          $$cacheLifecycleByAppName: isCache,
+          sandbox: { strictStyleIsolation },
+        },
       );
     };
     init();
@@ -35,9 +48,9 @@ function MicroAppComp() {
     return () => {
       microApp.current?.unmount();
     };
-  }, []);
+  }, [url]);
 
-  return <div ref={microAppRef} />;
+  return <div ref={microAppRef} key={url} />;
 }
 
 export default MicroAppComp;

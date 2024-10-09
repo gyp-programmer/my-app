@@ -46,7 +46,7 @@ function App() {
             <span className="App-link">纵向鼠标滚动，实现的横向滚动</span>
           </Link>
           <Link to="/byte-dance">
-            <span className="App-link">字节抖音web端分析</span>
+            <span className="App-link">微前端</span>
           </Link>
           <Link to="/circle-carousel">
             <span className="App-link">无缝轮播图</span>

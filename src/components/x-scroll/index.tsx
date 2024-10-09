@@ -9,7 +9,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import debounce from "lodash/debounce";
-import "./index.scss";
+import styles from "./index.module.scss";
 
 function XScroll(props: { children: any; fresh?: boolean }) {
   const { children, fresh = true } = props;
@@ -50,9 +50,9 @@ function XScroll(props: { children: any; fresh?: boolean }) {
   }, []);
 
   return (
-    <div className="container" ref={ref}>
+    <div className={styles.container} ref={ref}>
       <div
-        className="x-scroll"
+        className={styles["x-scroll"]}
         style={{
           width: size.height + "px",
           height: size.width + "px",
@@ -60,7 +60,7 @@ function XScroll(props: { children: any; fresh?: boolean }) {
         }}
       >
         <div
-          className="content"
+          className={styles.content}
           style={{
             width: size.width + "px",
             height: size.height + "px",

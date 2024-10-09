@@ -3,6 +3,10 @@
     {
       "src": "/qq_36579455/(.*)",
       "dest": "https://rss.csdn.net/qq_36579455/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "http://web.juhe.cn:8080/$1"
     }
   ]
 }

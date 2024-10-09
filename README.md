@@ -48,7 +48,8 @@
   - [x] 微应用为：原生的js项目
     - 1. 禁用缓存，不让缓存已经加载的内容
   - [ ] 微应用为：react项目
-  - [ ] 微应用为：vue项目
+  - [x] 微应用为：vue项目
+    - 1. 开启缓存，并且设置样式隔离 打开shodow-dom
 - [x] 限制项目使用指定的node版本
   - 1. 配置package.json文件，配置engines字段，指定node版本
   - 2. .npmrc文件中，开启严格node版本检测 `engine-strict=true`
@@ -81,3 +82,11 @@ npm run format:fix
 # 检查lockfile的版本
 npm run check:lockfile
 ```
+
+## git commit追加
+
+```bash
+git commit --amend --no-edit
+```
+## 采用scss module开发
+- 避免样式出现和微应用的样式混乱

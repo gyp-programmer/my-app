@@ -16,6 +16,8 @@ import MicroApp from "./micro-app";
 import "./index.scss";
 
 const { Content, Sider } = Layout;
+const musicUrl = "https://music-player-ivory-six.vercel.app/";
+const cpUrl = "https://constellation-pro-eta.vercel.app/";
 
 interface IItem {
   key: string;
@@ -33,18 +35,35 @@ function Byte() {
     {
       key: "1",
       icon: <UserOutlined />,
-      label: "页面中自定义的变量",
+      label: "字节抖音web端分析",
       comp: <GetVariable />,
     },
     {
       key: "2",
       icon: <UserOutlined />,
       label: "音乐播放器",
-      comp: MicroApp && <MicroApp />,
+      comp: MicroApp && <MicroApp url={musicUrl} name="music" />,
+    },
+    {
+      key: "3",
+      icon: <UserOutlined />,
+      label: "星空物语",
+      comp: MicroApp && (
+        <MicroApp
+          url={cpUrl}
+          name="star"
+          isCache={true}
+          strictStyleIsolation={true}
+        />
+      ),
     },
   ];
 
   const handleMenuClick = ({ key }: { key: string }) => {
+    if (key === "3") {
+      document.documentElement.style.fontSize =
+        document.documentElement.clientWidth / 3.75 + "px";
+    }
     setCurrentKey(key);
   };
 
@@ -54,7 +73,7 @@ function Byte() {
 
   return (
     <div className="byte-dance">
-      <Header name="从技术角度分析抖音" />
+      <Header name="微前端" />
       <Layout>
         <Sider
           breakpoint="lg"
@@ -81,10 +100,12 @@ function Byte() {
               id="qiankun-container"
               style={{
                 padding: 24,
-                height: 360,
+                height: "100%",
                 background: colorBgContainer,
                 borderRadius: borderRadiusLG,
                 overflow: "auto",
+                // 用来指定内部元素的fixed定位的祖先
+                transform: "rotate(0)",
               }}
             >
               {childComp}

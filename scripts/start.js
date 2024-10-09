@@ -125,6 +125,11 @@ checkBrowsers(paths.appPath, isInteractive)
           changeOrigin: true,
           pathRewrite: { "^/music": "" },
         },
+        "/api": {
+          target: "http://web.juhe.cn:8080/",
+          changeOrigin: true,
+          pathRewrite: { "^/api": "" },
+        },
       },
     };
     const devServer = new WebpackDevServer(serverConfig, compiler);
