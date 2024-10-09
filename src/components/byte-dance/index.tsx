@@ -14,6 +14,7 @@ import Header from "../header";
 import GetVariable from "./get-variable";
 import MicroApp from "./micro-app";
 import "./index.scss";
+import { useUnMount } from "hooks/useUnMount";
 
 const { Content, Sider } = Layout;
 const musicUrl = "https://music-player-ivory-six.vercel.app/";
@@ -63,6 +64,8 @@ function Byte() {
     if (key === "3") {
       document.documentElement.style.fontSize =
         document.documentElement.clientWidth / 3.75 + "px";
+    } else {
+      document.documentElement.style.fontSize = "16px";
     }
     setCurrentKey(key);
   };
@@ -70,6 +73,11 @@ function Byte() {
   const childComp = useMemo(() => {
     return items.find(item => item.key === currentKey)?.comp;
   }, [currentKey]);
+
+  useUnMount(() => {
+    // 恢复fontsize
+    document.documentElement.style.fontSize = "16px";
+  });
 
   return (
     <div className="byte-dance">
