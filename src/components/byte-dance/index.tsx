@@ -19,6 +19,7 @@ import { useUnMount } from "hooks/useUnMount";
 const { Content, Sider } = Layout;
 const musicUrl = "https://music-player-ivory-six.vercel.app/";
 const cpUrl = "https://constellation-pro-eta.vercel.app/";
+const umiUrl = "https://my-umi-app-kappa.vercel.app/";
 
 interface IItem {
   key: string;
@@ -53,6 +54,19 @@ function Byte() {
         <MicroApp
           url={cpUrl}
           name="star"
+          isCache={true}
+          strictStyleIsolation={true}
+        />
+      ),
+    },
+    {
+      key: "4",
+      icon: <UserOutlined />,
+      label: "umi应用",
+      comp: MicroApp && (
+        <MicroApp
+          url={umiUrl}
+          name="my-umi-app"
           isCache={true}
           strictStyleIsolation={true}
         />

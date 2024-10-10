@@ -17,6 +17,7 @@ interface IProps {
   isCache?: boolean;
   /** 微服务名称 */
   name: string;
+  /** 开启样式隔离，默认关闭 */
   strictStyleIsolation?: boolean;
 }
 

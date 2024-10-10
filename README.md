@@ -45,17 +45,21 @@
   - 3. 配合eslint使用，使用eslint-config-prettier
   - 4. 接入到pre-commit钩子，在提交前检测代码格式
 - [x] 接入qiankun框架，感受微前端的魅力
+
   - [x] 微应用为：原生的js项目
     - 1. 禁用缓存，不让缓存已经加载的内容
   - [ ] 微应用为：react项目
   - [x] 微应用为：vue项目
     - 1. 开启缓存，并且设置样式隔离 打开shodow-dom
+  - [x] 微应用为：umi项目
+
 - [x] 限制项目使用指定的node版本
   - 1. 配置package.json文件，配置engines字段，指定node版本
   - 2. .npmrc文件中，开启严格node版本检测 `engine-strict=true`
   - 3. package-lock.json文件版本校验，确保 多人开发时 package-lock.json 的冲突
   - 4. 接入到pre-commit钩子，在提交前package-lock.json文件版本校验
 - [ ] 实现自己的组件库
+- [ ] nextjs 服务端渲染应用
 
 # 技术栈
 
@@ -88,5 +92,7 @@ npm run check:lockfile
 ```bash
 git commit --amend --no-edit
 ```
+
 ## 采用scss module开发
+
 - 避免样式出现和微应用的样式混乱
