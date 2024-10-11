@@ -58,8 +58,11 @@
   - 2. .npmrc文件中，开启严格node版本检测 `engine-strict=true`
   - 3. package-lock.json文件版本校验，确保 多人开发时 package-lock.json 的冲突
   - 4. 接入到pre-commit钩子，在提交前package-lock.json文件版本校验
-- [ ] 实现自己的组件库
+- [x] 实现自己的组件库 ==gyp-gao-ui==
+  - 1. 开发一个编写博客的组件
+  - 2. `npm i gyp-gao-ui`
 - [ ] nextjs 服务端渲染应用
+  - 1. 实现服务端渲染的博客应用
 
 # 技术栈
 

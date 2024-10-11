@@ -60,6 +60,9 @@ function App() {
           <Link to="/b-video-by-frame">
             <span className="App-link">b站视频按帧播放</span>
           </Link>
+          <Link to="/use-own-component">
+            <span className="App-link">使用自己的组件库</span>
+          </Link>
         </div>
 
         <div>

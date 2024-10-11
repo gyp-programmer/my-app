@@ -17,6 +17,7 @@ import {
   CircleCarousel,
   Gpt,
   BVideoByFrame,
+  ownComponent,
 } from "../components";
 import LoadImage from "../practice/load-image";
 import AuthRouter from "./auth-router";
@@ -57,6 +58,10 @@ const routers = [
   {
     path: "/b-video-by-frame",
     element: BVideoByFrame,
+  },
+  {
+    path: "/use-own-component",
+    element: ownComponent,
   },
   {
     path: "/load-image",

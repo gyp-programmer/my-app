@@ -17,6 +17,7 @@ import CircleCarousel from "./circle-carousel";
 import Gpt from "./gpt";
 import BVideo from "./b-video";
 import BVideoByFrame from "./b-video-by-frame";
+import ownComponent from "./own-component";
 
 export {
   BVideo,
@@ -30,4 +31,5 @@ export {
   CircleCarousel,
   Gpt,
   BVideoByFrame,
+  ownComponent,
 };

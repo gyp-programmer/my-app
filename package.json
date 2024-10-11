@@ -54,7 +54,8 @@
     "semver": "^7.3.5",
     "tailwindcss": "^3.0.2",
     "web-vitals": "^2.1.4",
-    "workbox-webpack-plugin": "^6.4.1"
+    "workbox-webpack-plugin": "^6.4.1",
+    "gyp-gao-ui": "^0.0.1"
   },
   "scripts": {
     "start": "npm run pre:run && node scripts/start.js",
