@@ -18,6 +18,7 @@ import {
   Gpt,
   BVideoByFrame,
   ownComponent,
+  Three,
 } from "../components";
 import LoadImage from "../practice/load-image";
 import AuthRouter from "./auth-router";
@@ -66,6 +67,10 @@ const routers = [
   {
     path: "/load-image",
     element: LoadImage,
+  },
+  {
+    path: "/three-demo",
+    element: Three,
   },
   {
     path: "*",

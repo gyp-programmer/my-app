@@ -6,7 +6,6 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import logo from "../logo.svg";
 import { useSyncExternalStore } from "react";
 import store from "../store";
 import browserApiStore from "../broswer-api-store";
@@ -24,17 +23,21 @@ function App() {
     browserApiStore.getSnapshot,
   );
 
+  const changeState = () => {
+    store.dispatch();
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="status">{onLineStatus ? "online" : "offline"}</div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>{state}</code> and save to reload.
-        </p>
-        <span className="App-link" onClick={() => store.dispatch()}>
-          click
-        </span>
+        <div className="count" onClick={changeState}>
+          {state}
+        </div>
+      </header>
+      {/* 适用于嵌套路由时，装载的容器 */}
+      {/* <Outlet /> */}
+      <div className="content">
         <div className="function">
           <Link to="/about">
             <span className="App-link">关于我们</span>
@@ -63,17 +66,18 @@ function App() {
           <Link to="/use-own-component">
             <span className="App-link">使用自己的组件库</span>
           </Link>
+          <Link to="/three-demo">
+            <span className="App-link">3D案例</span>
+          </Link>
         </div>
 
-        <div>
+        <div className="test">
           <h1>测试</h1>
           <Link to="/load-image">
             <span className="App-link">预加载大图片</span>
           </Link>
         </div>
-      </header>
-      {/* 适用于嵌套路由时，装载的容器 */}
-      {/* <Outlet /> */}
+      </div>
     </div>
   );
 }

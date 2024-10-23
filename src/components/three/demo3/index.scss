@@ -1,0 +1,12 @@
+#info {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  // CSS来将其绝对定位在其它具有z-index的元素之上，尤其是当你全屏运行three.js的时候
+  z-index: 100;
+  display: block;
+  color: aliceblue;
+  font-family: Monospace;
+  font-size: 13px;
+}

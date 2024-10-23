@@ -1,12 +1,17 @@
 .header {
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 12px;
-    background-color: #fc5531;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  background-color: #282c34;
+  color: #fff;
 
-    h1 {
-        margin: 0;
-    }
+  .back {
+    color: #fff;
+  }
+
+  h1 {
+    margin: 0;
+  }
 }

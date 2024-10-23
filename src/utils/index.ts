@@ -6,8 +6,9 @@
  *
  * Copyright © 2019-2024 bvox.com. All Rights Reserved.
  */
-import { IRss } from "./types";
+import { IRss, IWebGLCompatibility } from "./types";
 import XMLToJson from "./XMLToJson";
+import WebGL from "three/addons/capabilities/WebGL.js";
 /**
  * 是否为开发环境
  * @returns {boolean} true为是
@@ -96,6 +97,7 @@ export function genRandomColor() {
 export function previewLoadImg(url: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
+    img.crossOrigin = "anonymous";
     img.src = url;
     img.onload = function () {
       resolve(img);
@@ -116,3 +118,15 @@ export async function batchPreviewLoadImg(urlList: string[]) {
     value: item.status === "fulfilled" ? item.value : item.reason,
   }));
 }
+
+/**
+ * WebGL兼容性检查
+ * @description https://threejs.org/docs/index.html#manual/zh/introduction/WebGL-compatibility-check
+ * @returns {} 检测是否支持webgl
+ */
+export const checkWebGLCompatibility = (): IWebGLCompatibility => {
+  return {
+    isAvailable: WebGL.isWebGL2Available(),
+    warning: WebGL.getWebGL2ErrorMessage(),
+  };
+};

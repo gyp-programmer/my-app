@@ -43,3 +43,8 @@ export interface IRssItem {
   category: any[];
   guid: IRssText[];
 }
+
+export interface IWebGLCompatibility {
+  isAvailable: boolean;
+  warning: HTMLDivElement;
+}

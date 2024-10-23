@@ -20,7 +20,9 @@ function Header(props: IProps) {
 
   return (
     <div className="header">
-      <Link to="/">返回</Link>
+      <Link className="back" to="/">
+        返回
+      </Link>
       <h1>{name}</h1>
     </div>
   );

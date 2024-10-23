@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,39 +13,43 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+.lil-gui.autoPlace {
+  top: 45px;
+}
+
 @function tint($color, $percentage) {
-  @return mix(#FFF, $color, $percentage);
+  @return mix(#fff, $color, $percentage);
 }
 
 $primary-color: #f5a623;
 
-@media screen and (min-width: 400px){
-  :root{
-    font-size: .7em
+@media screen and (min-width: 400px) {
+  :root {
+    font-size: 0.7em;
   }
 }
 
-@media screen and (min-width: 350px){
-  :root{
-    font-size: .6em
+@media screen and (min-width: 350px) {
+  :root {
+    font-size: 0.6em;
   }
 }
 
-@media (min-width: 600px){
-  :root{
-    font-size: 1em
+@media (min-width: 600px) {
+  :root {
+    font-size: 1em;
   }
 }
 /**
  * 当屏幕小的时候，font-size 的大小会变成 10px ，但是我们好多系统最小字也就是 12px ，
  * 10px 展示有问题，导致我们需要给所有的元素上设置 至少为 1.2rem 才能保证显示正常
  */
-@media (min-width: 1200px){
-  :root{
-    font-size: 1.2em
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1.2em;
   }
 }
