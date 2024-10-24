@@ -1,0 +1,19 @@
+#three_demo7 {
+  div {
+    top: 45px !important;
+  }
+}
+.colorPickerContainer {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  display: flex;
+  gap: 20px;
+
+  .colorPicker {
+    display: flex;
+    gap: 8px;
+  }
+}

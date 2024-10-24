@@ -67,7 +67,10 @@ function App() {
             <span className="App-link">使用自己的组件库</span>
           </Link>
           <Link to="/three-demo">
-            <span className="App-link">3D案例</span>
+            <span className="App-link">3D案例-汽车</span>
+          </Link>
+          <Link to="/three-demo2">
+            <span className="App-link">3D案例-机器人</span>
           </Link>
         </div>
 

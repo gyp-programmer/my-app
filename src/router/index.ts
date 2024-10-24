@@ -19,6 +19,7 @@ import {
   BVideoByFrame,
   ownComponent,
   Three,
+  Three2,
 } from "../components";
 import LoadImage from "../practice/load-image";
 import AuthRouter from "./auth-router";
@@ -71,6 +72,10 @@ const routers = [
   {
     path: "/three-demo",
     element: Three,
+  },
+  {
+    path: "/three-demo2",
+    element: Three2,
   },
   {
     path: "*",

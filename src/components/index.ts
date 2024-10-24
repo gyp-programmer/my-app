@@ -19,6 +19,7 @@ import BVideo from "./b-video";
 import BVideoByFrame from "./b-video-by-frame";
 import ownComponent from "./own-component";
 import Three from "./three";
+import Three2 from "./three/index2";
 
 export {
   BVideo,
@@ -34,4 +35,5 @@ export {
   BVideoByFrame,
   ownComponent,
   Three,
+  Three2,
 };
