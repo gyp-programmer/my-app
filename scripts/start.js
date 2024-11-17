@@ -130,6 +130,14 @@ checkBrowsers(paths.appPath, isInteractive)
           changeOrigin: true,
           pathRewrite: { "^/api": "" },
         },
+        "/monitor_web/settings/browser-settings": {
+          target: "http://localhost:10010/",
+          changeOrigin: true,
+        },
+        "/ttwid/check": {
+          target: "http://localhost:10010/",
+          changeOrigin: true,
+        },
       },
     };
     const devServer = new WebpackDevServer(serverConfig, compiler);
