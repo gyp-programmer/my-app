@@ -6,6 +6,20 @@
 }
 
 .App-header {
+  // 格子灰色背景
+  background-image: linear-gradient(
+      45deg,
+      #eee 25%,
+      transparent 0,
+      transparent 75%,
+      #eee 0,
+      #eee
+    ),
+    linear-gradient(45deg, #eee 25%, #fff 0, #fff 75%, #eee 0, #eee);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
   height: 50px;
   display: flex;
   align-items: center;

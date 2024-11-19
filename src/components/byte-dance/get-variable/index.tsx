@@ -12,7 +12,7 @@ import React, { useRef, useEffect, useCallback } from "react";
 // const github =
 //   "https://localhost:10101/proxy-two/?target=https%3A%2F%2Fgithub.com";
 const tiktok =
-  "https://localhost:10101/proxy/?target=https%3A%2F%2Fwww.tiktok.com";
+  "https://gyp.mytiktok.com/proxy/?target=https%3A%2F%2Fwww.tiktok.com";
 const tiktokHost = "www.tiktok.com";
 
 function GetVariable() {
