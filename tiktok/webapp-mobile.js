@@ -1,5 +1,6 @@
-/*! For license information please see webapp-mobile.b345320b124654c749a6.js.LICENSE.txt */
+/*! For license information please see webapp-mobile.1ab1e2207ec7ba0a8e86.js.LICENSE.txt */
 "use strict";
+
 (self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([[7307], {
     68691: (e, t, n) => {
         n.d(t, {
@@ -591,7 +592,7 @@
                 l.D)(t);
                 return "v0" !== (null !== (e = (0,
                 a.d)("user_bundle_opt")) && void 0 !== e ? e : "v0") && (0,
-                o.cj)(window.location.pathname) ? u : d
+                o.cj)('/' || window.location.pathname) ? u : d
             } catch (e) {
                 return console.error("Error getting user bundle exp vid:", e),
                 d
@@ -1036,6 +1037,7 @@
                     l((a = a.apply(t, n || [])).next())
                 }
                 ));
+                var t, n, i, a
             }
         });
         var ie = function(e, t, n, i) {
@@ -2486,7 +2488,7 @@
                     Jt.A.set(Yt.WU, e, {
                         secure: !0,
                         expires: 300,
-                        domain: ".tiktok.com"
+                        domain: location.host
                     }),
                     window.location.replace(t)
                 }({
@@ -3633,6 +3635,7 @@
                     l((s = s.apply(a, o || [])).next())
                 }
                 ));
+                var a, o, r, s
             },
             resetWebFooterData() {
                 t(vi, gi)
@@ -4228,6 +4231,7 @@
                     l((a = a.apply(t, n || [])).next())
                 }
                 ));
+                var t, n, i, a
             }
             ), [e])
               , F = (0,
@@ -5246,6 +5250,7 @@
                     fontWeight: "700"
                 }
             })])];
+            var t
         }
         ), "label:ButtonRefuseOrLogin;")
     }
@@ -6469,7 +6474,7 @@
           , z = n(4929)
           , H = n(34099);
         const V = {
-            isPhoenix: "object" == typeof window && "www.tiktok.com" === window.location.host,
+            isPhoenix: "object" == typeof window && "www.tiktok.in" === window.location.host,
             textReplace: "undefined" == typeof window ? null : new (n(17283).A)({
                 condition: {
                     APPID: "8660"
@@ -6592,6 +6597,7 @@
                 l((o = o.apply(n, i || [])).next())
             }
             ));
+            var n, i, a, o
         }
         function ee() {
             const e = (0,
@@ -7153,7 +7159,7 @@
           , Ye = n.n(Je)
           , Qe = n(11060)
           , Xe = n(23650);
-        const et = n.p + "919fbbd0fb75b6c1443d.css";
+        const et = n.p + "fa87655e31d32184e800.css";
         var tt = n(50970)
           , nt = n(30721)
           , it = n(27106)
@@ -7439,7 +7445,7 @@
             e.ChooseTime = "custom-choose-time"
         }(Tt || (Tt = {}));
         const Ot = function() {
-            return window.location.href = `/404?fromUrl=${encodeURIComponent(window.location.pathname)}`,
+            return window.location.href = `/404?fromUrl=${encodeURIComponent('/' || window.location.pathname)}`,
             null
         };
         var It, jt;
@@ -8151,7 +8157,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(6119), n.e(4279)]).then(n.bind(n, 59826)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(6119), n.e(4279)]).then(n.bind(n, 59826)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8175,7 +8181,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(6401), n.e(82), n.e(6119), n.e(9524)]).then(n.bind(n, 88413)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(6401), n.e(82), n.e(6119), n.e(9524)]).then(n.bind(n, 88413)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8200,7 +8206,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(6192), n.e(9771), n.e(2581), n.e(2798), n.e(5842), n.e(8410)]).then(n.bind(n, 80218)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(6192), n.e(9771), n.e(2581), n.e(2798), n.e(5842), n.e(8410)]).then(n.bind(n, 80218)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8224,7 +8230,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(1702), n.e(5548), n.e(8375)]).then(n.bind(n, 80043)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(6192), n.e(3820), n.e(6092), n.e(740), n.e(1702), n.e(5548), n.e(8375)]).then(n.bind(n, 80043)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8249,7 +8255,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(9302), n.e(744), n.e(272), n.e(35), n.e(9289), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(3551), n.e(4195), n.e(6075), n.e(8577), n.e(1739), n.e(9318), n.e(3508), n.e(6192), n.e(5166), n.e(2581), n.e(377), n.e(391), n.e(2798), n.e(5842), n.e(7195), n.e(3152), n.e(5548), n.e(6806)]).then(n.bind(n, 16228)),
+            importAsync: () => Promise.all([n.e(4563), n.e(9302), n.e(744), n.e(272), n.e(35), n.e(9289), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(3551), n.e(4195), n.e(6075), n.e(8577), n.e(1739), n.e(9318), n.e(6192), n.e(2581), n.e(377), n.e(391), n.e(2798), n.e(5842), n.e(3152), n.e(5548), n.e(6806)]).then(n.bind(n, 16228)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8294,7 +8300,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(3508), n.e(6192), n.e(9771), n.e(2581), n.e(2798), n.e(6408), n.e(5842), n.e(3553), n.e(5692)]).then(n.bind(n, 50923)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(6192), n.e(9771), n.e(2581), n.e(2798), n.e(6408), n.e(5842), n.e(3553), n.e(5692)]).then(n.bind(n, 50923)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8319,7 +8325,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(2945), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(6620), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(3820), n.e(2581), n.e(6092), n.e(3553), n.e(2815), n.e(227)]).then(n.bind(n, 34841)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2515), n.e(2396), n.e(9302), n.e(2924), n.e(5877), n.e(744), n.e(1735), n.e(8014), n.e(272), n.e(4161), n.e(8871), n.e(7485), n.e(35), n.e(7383), n.e(2945), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(5412), n.e(7905), n.e(289), n.e(7659), n.e(4195), n.e(822), n.e(5495), n.e(6075), n.e(8225), n.e(8577), n.e(1739), n.e(9318), n.e(3820), n.e(2581), n.e(6092), n.e(3553), n.e(2815), n.e(227)]).then(n.bind(n, 34841)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8490,7 +8496,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(5198), n.e(4563), n.e(8481), n.e(6536), n.e(8704), n.e(2297), n.e(8063), n.e(9659), n.e(7569), n.e(8068), n.e(2513), n.e(4186), n.e(4394), n.e(8478), n.e(4555), n.e(3840), n.e(5515), n.e(9687), n.e(6620), n.e(3508), n.e(5166), n.e(7195), n.e(6401), n.e(4589), n.e(629), n.e(7926), n.e(1603), n.e(82), n.e(3613), n.e(3086)]).then(n.bind(n, 7537)),
+            importAsync: () => Promise.all([n.e(5198), n.e(4563), n.e(8481), n.e(6536), n.e(8704), n.e(2297), n.e(8063), n.e(9659), n.e(7569), n.e(8068), n.e(2513), n.e(4186), n.e(4394), n.e(8478), n.e(4555), n.e(3840), n.e(5515), n.e(9687), n.e(6401), n.e(4589), n.e(629), n.e(7926), n.e(1603), n.e(82), n.e(3613), n.e(3086)]).then(n.bind(n, 7537)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8739,7 +8745,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(5633), n.e(1739), n.e(3508), n.e(5166), n.e(391), n.e(630), n.e(4848), n.e(4518)]).then(n.bind(n, 30287)),
+            importAsync: () => Promise.all([n.e(4563), n.e(5633), n.e(1739), n.e(391), n.e(630), n.e(4848), n.e(4518)]).then(n.bind(n, 30287)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8760,7 +8766,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(5633), n.e(1739), n.e(3508), n.e(5166), n.e(391), n.e(630), n.e(4848), n.e(5878)]).then(n.bind(n, 64359)),
+            importAsync: () => Promise.all([n.e(4563), n.e(5633), n.e(1739), n.e(391), n.e(630), n.e(4848), n.e(5878)]).then(n.bind(n, 64359)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8781,7 +8787,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(272), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(1739), n.e(9318), n.e(3508), n.e(5166), n.e(9771), n.e(377), n.e(391), n.e(3413), n.e(630), n.e(629), n.e(1541), n.e(8347)]).then(n.bind(n, 85253)),
+            importAsync: () => Promise.all([n.e(4563), n.e(272), n.e(5515), n.e(9687), n.e(574), n.e(7169), n.e(5633), n.e(3551), n.e(1739), n.e(9318), n.e(9771), n.e(377), n.e(391), n.e(3413), n.e(630), n.e(629), n.e(1541), n.e(8347)]).then(n.bind(n, 85253)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8824,7 +8830,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(2396), n.e(8481), n.e(9289), n.e(6536), n.e(1648), n.e(7104), n.e(5515), n.e(7169), n.e(6620), n.e(4195), n.e(3508), n.e(5166), n.e(7195), n.e(4589), n.e(1603), n.e(1636)]).then(n.bind(n, 96778)),
+            importAsync: () => Promise.all([n.e(4563), n.e(2396), n.e(8481), n.e(9289), n.e(6536), n.e(1648), n.e(7104), n.e(5515), n.e(7169), n.e(4195), n.e(4589), n.e(1603), n.e(1636)]).then(n.bind(n, 96778)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -8836,8 +8842,9 @@
                 return n(t)
             },
             resolve: () => 96778
-        }, Object.assign({}, fi.K))
-          , bi = (0,
+        }, Object.assign({}, fi.K));
+        var bi = n(77195);
+        const yi = (0,
         m.jsx)((function(e) {
             return i.createElement("svg", Pt({
                 xmlns: "http://www.w3.org/2000/svg",
@@ -8872,25 +8879,25 @@
                 height: "88px"
             }
         });
-        var yi;
-        function xi() {
+        var xi;
+        function wi() {
             return (0,
             m.jsx)("link", {
                 rel: "stylesheet",
                 href: Xe
             })
         }
-        function wi() {
+        function ki() {
             return (0,
             m.jsx)("link", {
                 rel: "stylesheet",
                 href: et
             })
         }
-        function ki() {
+        function Si() {
             window.location.reload()
         }
-        function Si({location: e}) {
+        function Fi({location: e}) {
             const t = (0,
             i.useMemo)(( () => ({
                 pathname: e.pathname.replace(/\/\/+/g, "/"),
@@ -8901,7 +8908,7 @@
                 to: t
             })
         }
-        function Fi() {
+        function Ci() {
             var e, t, n, a, o;
             const {appContext: r} = (0,
             Be.Ph)(tt.L)
@@ -8974,7 +8981,9 @@
             i.useEffect)(( () => {
                 "v1" === l && ut.init()
             }
-            ), [l]);
+            ), [l]),
+            (0,
+            bi.s4)();
             const {clusterRegion: c} = (0,
             pt.L$)(r)
               , d = "TTP" === c
@@ -8983,7 +8992,7 @@
             Qe.zy)()
               , h = null !== (a = null === (n = (0,
             Ze.a2)(p)) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : "home"
-              , g = null !== (o = yi[h]) && void 0 !== o ? o : h;
+              , g = null !== (o = xi[h]) && void 0 !== o ? o : h;
             return u ? (0,
             m.jsx)(_.a, {
                 theme: re.pz,
@@ -8999,12 +9008,12 @@
                         fill: "rgba(128, 130, 133, 1)"
                     }),
                     buttonText: "Try again",
-                    onButtonClick: ki
+                    onButtonClick: Si
                 })
             }) : (0,
             m.jsxs)(pn, {
                 isMobile: !0,
-                loading: bi,
+                loading: yi,
                 path2PidFunc: ht.oN,
                 children: [(0,
                 m.jsx)(_i, {}), (0,
@@ -9012,8 +9021,8 @@
                     type: "mobile",
                     pageName: g
                 }), (0,
-                m.jsx)(xi, {}), (0,
                 m.jsx)(wi, {}), (0,
+                m.jsx)(ki, {}), (0,
                 m.jsx)(vi, {
                     children: (0,
                     m.jsx)(hn.U, {
@@ -9024,7 +9033,7 @@
                                 path: "(.*//+.*)",
                                 exact: !0,
                                 strict: !0,
-                                component: Si
+                                component: Fi
                             }), (0,
                             m.jsx)(Qe.qh, {
                                 path: [Ze.Ob.video, Ze.Ob.photo],
@@ -9139,9 +9148,9 @@
             e.setting = "setting",
             e.topics = "topic",
             e.home = "homepage_hot"
-        }(yi || (yi = {}));
-        const Ci = Ye()(Object.values(Ze.Ob));
-        var Ai, Ei = n(47521), Ti = n(17478), Oi = n(62302), Ii = n(13326), ji = n.n(Ii), Pi = n(16469);
+        }(xi || (xi = {}));
+        const Ai = Ye()(Object.values(Ze.Ob));
+        var Ei, Ti = n(47521), Oi = n(17478), Ii = n(62302), ji = n(13326), Pi = n.n(ji), Li = n(16469);
         !function(e) {
             e[e.CacheValid = 0] = "CacheValid",
             e[e.CacheExpired = 1] = "CacheExpired",
@@ -9149,9 +9158,9 @@
             e[e.UserChange = 3] = "UserChange",
             e[e.CacheUpdateSuccess = 4] = "CacheUpdateSuccess",
             e[e.NoCacheWithUpdatedPush = 8] = "NoCacheWithUpdatedPush"
-        }(Ai || (Ai = {}));
-        const Li = "webapp.updated-items";
-        function Mi(e) {
+        }(Ei || (Ei = {}));
+        const Mi = "webapp.updated-items";
+        function Di(e) {
             if (0 === e.length)
                 return 0;
             const t = e.map((e => function(e) {
@@ -9162,26 +9171,26 @@
             }(e)));
             return Math.min(...t)
         }
-        const Di = y.l.getInstance(E.V);
-        function Bi(e) {
+        const Bi = y.l.getInstance(E.V);
+        function Ri(e) {
             ge.f.event("feed_fetch_error", {
                 error_code: e
             })
         }
-        function Ri(e) {
-            Di.emitEvent("feed_cache_fetch", {
+        function Ni(e) {
+            Bi.emitEvent("feed_cache_fetch", {
                 count: 1
             }, {
                 statusCode: String(e)
             })
         }
-        var Ni = n(10598)
-          , Ui = n(99374)
-          , zi = n(14576);
-        const Hi = "perf_feed_cache";
-        var Vi = n(80938)
-          , $i = n(87538)
-          , Wi = function(e, t, n, i) {
+        var Ui = n(10598)
+          , zi = n(99374)
+          , Hi = n(14576);
+        const Vi = "perf_feed_cache";
+        var $i = n(80938)
+          , Wi = n(87538)
+          , Gi = function(e, t, n, i) {
             return new (n || (n = Promise))((function(a, o) {
                 function r(e) {
                     try {
@@ -9209,20 +9218,20 @@
             }
             ))
         };
-        const Gi = 2;
-        function qi(e, t) {
-            return Wi(this, void 0, void 0, (function*() {
-                if (Pi.lL.getItem("itemList"))
+        const qi = 2;
+        function Zi(e, t) {
+            return Gi(this, void 0, void 0, (function*() {
+                if (Li.lL.getItem("itemList"))
                     return;
                 const n = (0,
                 K.qm)()
                   , [{videoCoverSettings: i},{abTestVersion: a}] = yield Promise.all([(0,
-                Ni.x)(), (0,
-                Oi.zI)(n)])
+                Ui.x)(), (0,
+                Ii.zI)(n)])
                   , o = (0,
-                Ui.mx)(a, e);
-                y.l.getInstance(zi.j).getFeedCacheList({
-                    count: Gi,
+                zi.mx)(a, e);
+                y.l.getInstance(Hi.j).getFeedCacheList({
+                    count: qi,
                     language: n,
                     coverFormat: null == i ? void 0 : i.format,
                     isNonPersonalized: o
@@ -9230,53 +9239,53 @@
                     next({statusCode: n, itemList: i=[]}) {
                         var a;
                         if (0 === n) {
-                            const n = null === (a = i.slice) || void 0 === a ? void 0 : a.call(i, 0, Gi);
-                            Pi.lL.setItem("itemList", n),
+                            const n = null === (a = i.slice) || void 0 === a ? void 0 : a.call(i, 0, qi);
+                            Li.lL.setItem("itemList", n),
                             function(e, t) {
-                                Pi.lL.setItem("cacheUid", e),
-                                Pi.lL.setItem("cacheWid", t);
+                                Li.lL.setItem("cacheUid", e),
+                                Li.lL.setItem("cacheWid", t);
                                 const n = (0,
                                 Ze.a2)('/' || window.location.pathname);
-                                Pi.lL.setItem("pageName", null == n ? void 0 : n.name)
+                                Li.lL.setItem("pageName", null == n ? void 0 : n.name)
                             }(e, t),
                             function(e) {
                                 try {
-                                    ji().remove(Hi, {
-                                        domain: "www.tiktok.com"
+                                    Pi().remove(Vi, {
+                                        domain: location.host
                                     });
                                     const t = JSON.stringify({
-                                        expireTimestamp: Mi(e),
+                                        expireTimestamp: Di(e),
                                         itemIds: e.map((e => e.id))
                                     });
-                                    ji().set(Hi, t, {
+                                    Pi().set(Vi, t, {
                                         secure: !0,
                                         expires: 5,
-                                        domain: "www.tiktok.com"
+                                        domain: location.host
                                     })
                                 } catch (e) {
                                     console.warn(`[Cookie] Set Feed Cache Cookie Error: ${e}`)
                                 }
                             }(n)
                         } else
-                            Bi(n);
-                        Ri(n)
+                            Ri(n);
+                        Ni(n)
                     },
                     error() {
-                        Bi(10111),
-                        Ri(10111)
+                        Ri(10111),
+                        Ni(10111)
                     }
                 })
             }
             ))
         }
-        function Zi() {
+        function Ki() {
             return e = this,
             t = void 0,
             i = function*() {
                 const e = (0,
                 K.qm)()
                   , {user: t, wid: n} = yield(0,
-                Oi.zI)(e);
+                Ii.zI)(e);
                 try {
                     (function() {
                         const e = (0,
@@ -9284,12 +9293,12 @@
                         return ["foryou", "foryouWithLang", "home"].includes(null == e ? void 0 : e.name)
                     }
                     )() && function({user: e, wid: t}) {
-                        const {cacheUid: n, itemList: i, cacheWid: a, pageName: o="unknown"} = Pi.lL.getStorage();
-                        Pi.lL.removeAll();
+                        const {cacheUid: n, itemList: i, cacheWid: a, pageName: o="unknown"} = Li.lL.getStorage();
+                        Li.lL.removeAll();
                         const {status: r, validItemList: s} = function({itemList: e, cacheUid: t, uid: n, cacheWid: i, wid: a}) {
                             var o, r;
                             let s = (0,
-                            Q.YI)(Li);
+                            Q.YI)(Mi);
                             const {abTestVersion: l} = (0,
                             Gt.x)()
                               , c = null !== (o = (0,
@@ -9344,7 +9353,7 @@
                         });
                         [0, 4, 8].includes(r) && function(e, t) {
                             var n, i, a;
-                            const o = y.l.getInstance(Vi.Y)
+                            const o = y.l.getInstance($i.Y)
                               , r = o.getActions().setList({
                                 key: "foryou",
                                 response: {
@@ -9365,8 +9374,8 @@
                             }(null === (a = null === (i = null === (n = e[0]) || void 0 === n ? void 0 : n.video) || void 0 === i ? void 0 : i.zoomCover) || void 0 === a ? void 0 : a[720])
                         }(s, e),
                         0 === r && function(e) {
-                            const t = y.l.getInstance(Vi.Y);
-                            y.l.getInstance($i.J).checkItemValidation({
+                            const t = y.l.getInstance($i.Y);
+                            y.l.getInstance(Wi.J).checkItemValidation({
                                 itemIds: e.map((e => e.id)).join(",")
                             }).subscribe(( ({statusCode: n, availabities: i=[]}) => {
                                 if (0 === n) {
@@ -9385,7 +9394,7 @@
                                             invalid_count: t,
                                             allInvalid: t >= e ? 1 : 0
                                         }),
-                                        Di.emitEvent("feed_top_cache_invalid", {
+                                        Bi.emitEvent("feed_top_cache_invalid", {
                                             count: 1
                                         }, {
                                             checkCount: String(e),
@@ -9401,10 +9410,10 @@
                             ge.f.event("feed_top_cache", {
                                 valid: e
                             }),
-                            Di.context({
+                            Bi.context({
                                 use_data_prefetched: e
                             }),
-                            Di.emitEvent("feed_top_cache", {
+                            Bi.emitEvent("feed_top_cache", {
                                 count: 1
                             }, {
                                 status: String(e),
@@ -9418,9 +9427,9 @@
                     }),
                     function(e, t) {
                         "requestIdleCallback"in window ? window.requestIdleCallback(( () => {
-                            qi(e, t)
+                            Zi(e, t)
                         }
-                        )) : qi(e, t)
+                        )) : Zi(e, t)
                     }(null == t ? void 0 : t.uid, n)
                 } catch (e) {
                     console.warn("[Error]feed cache logic error:", e)
@@ -9453,35 +9462,36 @@
                 l((i = i.apply(e, t || [])).next())
             }
             ));
+            var e, t, n, i
         }
-        var Ki, Ji = n(97487), Yi = n(16493), Qi = n(38838);
+        var Ji, Yi = n(97487), Qi = n(16493), Xi = n(38838);
         !function(e) {
             e[e.Show = 1] = "Show",
             e[e.NotShow = 0] = "NotShow",
             e[e.Error = -1] = "Error"
-        }(Ki || (Ki = {}));
-        var Xi = n(12381)
-          , ea = n(26325)
-          , ta = n(76263)
-          , na = n(59399);
-        const ia = e => {
+        }(Ji || (Ji = {}));
+        var ea = n(12381)
+          , ta = n(26325)
+          , na = n(76263)
+          , ia = n(59399);
+        const aa = e => {
             return t = void 0,
             n = void 0,
             a = function*() {
                 if (!(0,
-                na.j)())
+                ia.j)())
                     return;
                 const t = (0,
-                Q.YI)(Ji.gA.walletRechargeShowGetCoinsEntrance);
+                Q.YI)(Yi.gA.walletRechargeShowGetCoinsEntrance);
                 if (null !== t)
-                    return e.set(ta.z, t === Ki.Show);
+                    return e.set(na.z, t === Ji.Show);
                 const n = yield( ({timeout: e}={}) => (0,
                 L.sH)(void 0, void 0, void 0, (function*() {
                     const t = e => (console.error(e),
                     !1);
                     try {
                         const n = `${(0,
-                        ea.$_)(4)}${Xi.$z.RECHARGE_CHECK_EXTERNAL_ENTRY}`
+                        ta.$_)(4)}${ea.$z.RECHARGE_CHECK_EXTERNAL_ENTRY}`
                           , i = {
                             page_source: 0
                         }
@@ -9498,7 +9508,7 @@
                 )))({
                     timeout: 2e3
                 });
-                e.set(ta.z, n)
+                e.set(na.z, n)
             }
             ,
             new ((i = void 0) || (i = Promise))((function(e, o) {
@@ -9527,9 +9537,10 @@
                 l((a = a.apply(t, n || [])).next())
             }
             ));
+            var t, n, i, a
         }
         ;
-        var aa = function(e, t, n, i) {
+        var oa = function(e, t, n, i) {
             return new (n || (n = Promise))((function(a, o) {
                 function r(e) {
                     try {
@@ -9557,8 +9568,8 @@
             }
             ))
         };
-        const {startFn: oa, endFn: ra} = (0,
-        Ei.aO)();
+        const {startFn: ra, endFn: sa} = (0,
+        Ti.aO)();
         !function(e, t) {
             Object.getPrototypeOf(y.l).constructor.prototype.createChild = e => (y.l.addProviders(e),
             y.l);
@@ -9658,6 +9669,7 @@
                     l((i = i.apply(e, t || [])).next())
                 }
                 ));
+                var e, t, n, i
             }
             )).then(( () => c({
                 jotaiStore: i
@@ -9731,19 +9743,23 @@
             nn.m)();
             return (0,
             m.jsx)(qe, {
-                supportRoutes: Ci,
+                supportRoutes: Ai,
                 children: (0,
                 m.jsx)(Ke.juU, {
                     dir: e ? "rtl" : "ltr",
                     children: (0,
-                    m.jsx)(Fi, {})
+                    m.jsx)(Ci, {})
                 })
             })
         }
         ), {
             appName: "mobile",
-            beforeStart: ()=>aa(void 0,void 0,void 0,(function*(){yield(0,a.t6)()})),
-            nss: Ti.Y5,
+            beforeStart: () => oa(void 0, void 0, void 0, (function*() {
+                yield(0,
+                a.t6)()
+            }
+            )),
+            nss: Oi.Y5,
             slardarOption: {
                 bid: o.H,
                 extractPid: function(e) {
@@ -9753,7 +9769,7 @@
                     T.xq)()
                       , {user: i} = null != n ? n : {};
                     if (t) {
-                        const n = Ti.yz[t.name];
+                        const n = Oi.yz[t.name];
                         if (!Array.isArray(n))
                             return n;
                         if ("user" === t.name) {
@@ -9774,8 +9790,8 @@
                     includeApiUrl: ["/api/recommend/item_list/", "/api/item/detail/", "/api/following/item_list/", "/api/user/detail/", "/api/post/item_list/", "/api/music/item_list/", "/api/topic/item_list/", "/node/report/inbox/list/", "/node/report/inbox/detail/"]
                 }
             },
-            beforeRender: ({jotaiStore: e}) => aa(void 0, void 0, void 0, (function*() {
-                ia(e),
+            beforeRender: ({jotaiStore: e}) => oa(void 0, void 0, void 0, (function*() {
+                aa(e),
                 yield function() {
                     var e, t, n, i, a, o, r, s, l, c, d, u, p, h;
                     return d = this,
@@ -9786,19 +9802,19 @@
                           , u = null == d ? void 0 : d.name;
                         if (u === Ze.FV.user) {
                             const o = yield(0,
-                            Oi.zI)((0,
+                            Ii.zI)((0,
                             K.qm)());
                             if ("v2" === (null === (t = null === (e = o.abTestVersion) || void 0 === e ? void 0 : e.parameters.user_bundle_opt) || void 0 === t ? void 0 : t.vid))
                                 return;
                             const r = (0,
-                            Q.YI)(Ji.gA.userDetail);
+                            Q.YI)(Yi.gA.userDetail);
                             if (r) {
                                 const {secUid: e=""} = null !== (i = null === (n = r.userInfo) || void 0 === n ? void 0 : n.user) && void 0 !== i ? i : {}
                                   , t = yield(0,
-                                Ni.x)((0,
+                                Ui.x)((0,
                                 K.qm)());
                                 (0,
-                                Yi.bg)(e, null === (a = t.videoCoverSettings) || void 0 === a ? void 0 : a.format)
+                                Qi.bg)(e, null === (a = t.videoCoverSettings) || void 0 === a ? void 0 : a.format)
                             }
                         }
                         if (u === Ze.FV.poi) {
@@ -9806,26 +9822,26 @@
                                 id: ""
                             };
                             e && (0,
-                            Yi.hX)(e)
+                            Qi.hX)(e)
                         }
                         if (u === Ze.FV.travel) {
                             const {id: e} = null !== (r = null == d ? void 0 : d.matchedParams) && void 0 !== r ? r : {
                                 id: ""
                             };
                             if (e) {
-                                const t = Object.values(Qi.Wk).slice(0, 3).map((e => e.idlType))
+                                const t = Object.values(Xi.Wk).slice(0, 3).map((e => e.idlType))
                                   , n = (0,
                                 K.qm)()
                                   , [i,a] = yield Promise.all([(0,
-                                Oi.zI)(n), (0,
-                                Ni.x)(n)])
+                                Ii.zI)(n), (0,
+                                Ui.x)(n)])
                                   , o = {
                                     appId: i.appId,
                                     region: i.region,
                                     coverFormat: null === (s = a.videoCoverSettings) || void 0 === s ? void 0 : s.format
                                 };
                                 (0,
-                                Yi.UM)({
+                                Qi.UM)({
                                     poiId: e
                                 }, o, t)
                             }
@@ -9837,20 +9853,20 @@
                             };
                             if (e && t) {
                                 const n = (0,
-                                Qi.xG)(t).idlType
-                                  , i = Array(3).fill(null).map(( (e, n) => Qi.Wk[t].subTitles[n].idlType))
+                                Xi.xG)(t).idlType
+                                  , i = Array(3).fill(null).map(( (e, n) => Xi.Wk[t].subTitles[n].idlType))
                                   , a = (0,
                                 K.qm)()
                                   , [o,r] = yield Promise.all([(0,
-                                Oi.zI)(a), (0,
-                                Ni.x)(a)])
+                                Ii.zI)(a), (0,
+                                Ui.x)(a)])
                                   , s = {
                                     appId: o.appId,
                                     region: o.region,
                                     coverFormat: null === (c = r.videoCoverSettings) || void 0 === c ? void 0 : c.format
                                 };
                                 (0,
-                                Yi.UM)({
+                                Qi.UM)({
                                     poiId: e,
                                     subCategoryType: n
                                 }, s, i)
@@ -9885,16 +9901,16 @@
                     }
                     ))
                 }(),
-                Object.keys(Ji.gA).forEach((e => (0,
-                Ji.iq)(e))),
-                oa(),
+                Object.keys(Yi.gA).forEach((e => (0,
+                Yi.iq)(e))),
+                ra(),
                 (0,
-                Ei.pB)(),
+                Ti.pB)(),
                 (0,
                 v.jT)(),
                 (0,
-                Ei.rh)(),
-                yield Zi(),
+                Ti.rh)(),
+                yield Ki(),
                 ( (e, t=!1) => {
                     try {
                         const n = "webapp-mobile" === e ? 1 : 2;
@@ -9905,7 +9921,7 @@
             }
             )),
             afterRender: () => {
-                ra()
+                sa()
             }
         })
     }
@@ -11423,6 +11439,177 @@
         }, "label:ButtonCTAOpenApp;")
     }
     ,
+    77195: (e, t, n) => {
+        n.d(t, {
+            $B: () => C,
+            Ar: () => A,
+            RX: () => F,
+            cf: () => E,
+            s4: () => I,
+            zc: () => S
+        });
+        var i = n(13392)
+          , a = n(73580)
+          , o = n(40099)
+          , r = n(11060)
+          , s = n(35166)
+          , l = n(17478)
+          , c = n(60484)
+          , d = n(18072)
+          , u = n(11654)
+          , p = n(30721)
+          , h = n(49057)
+          , g = n(91857)
+          , v = n(8114)
+          , m = n(6620)
+          , f = n(76171)
+          , _ = n.n(f)
+          , b = n(14974)
+          , y = n.n(b)
+          , x = n(32877)
+          , w = n.n(x)
+          , k = n(93608);
+        const S = () => {
+            const {pathname: e} = (0,
+            r.zy)()
+              , t = (0,
+            i.wA)(m.k);
+            (0,
+            o.useEffect)(( () => {
+                t.closeCommentPanel({}),
+                t.closeReplyModal({})
+            }
+            ), [t, e])
+        }
+          , F = () => {
+            const {user: e, region: t=""} = (0,
+            c.L$)((0,
+            h.K)(( () => ["user", "region"]), []))
+              , [,n] = (0,
+            s.I)(v.v);
+            (0,
+            o.useEffect)(( () => {
+                var i;
+                const a = `${"https://www.tiktok.com" || window.location.host}${'/' || window.location.pathname}`;
+                n({
+                    uid: null !== (i = null == e ? void 0 : e.uid) && void 0 !== i ? i : "",
+                    region: t,
+                    source: a
+                })
+            }
+            ), [e, t])
+        }
+          , C = () => {
+            const {pathname: e} = (0,
+            r.zy)()
+              , t = (0,
+            o.useRef)(e)
+              , n = (0,
+            d._B)();
+            (0,
+            o.useEffect)(( () => {
+                e !== t.current && n.setMobileDefaultMute(!1),
+                t.current = e
+            }
+            ), [e, n])
+        }
+          , A = () => {
+            const e = (0,
+            a.Nj)(u.V)
+              , {isSmartPlayer: t=!1} = (0,
+            p.Qt)();
+            (0,
+            o.useEffect)(( () => {
+                t || Promise.all([n.e(4563).then(n.t.bind(n, 90774, 23)), n.e(4563).then(n.bind(n, 3388))]).then(( ([e,t]) => ({
+                    sdk: e.default,
+                    plugin: t.default
+                }))).then(( ({sdk: t, plugin: n}) => t.use(n).asyncInit().then((t => {
+                    const {pre: n, ppre: i, ts: a, back: o=!1, page: r="unknown"} = t;
+                    n && e.emitEvent("native_traffic", {
+                        count: 1
+                    }, {
+                        pre: n,
+                        ppre: i,
+                        ts: String(a),
+                        back: String(o),
+                        page: r
+                    })
+                }
+                )))).catch((t => {
+                    e.captureMessage(`init BTM SDK fails: ${JSON.stringify(t)}`, "error")
+                }
+                ))
+            }
+            ), [t, e])
+        }
+          , E = () => {
+            const {pathname: e} = (0,
+            r.zy)()
+              , {user: t} = (0,
+            c.L$)((0,
+            h.W)(( () => ["user"]), []))
+              , n = (0,
+            o.useRef)(null);
+            if (n.current)
+                return n.current;
+            const i = (0,
+            g.a2)(e);
+            if (i) {
+                const a = l.yz[i.name];
+                if (!Array.isArray(a))
+                    return n.current = a,
+                    a;
+                if ("user" === i.name) {
+                    const i = null == e ? void 0 : e.slice(2)
+                      , o = null == i ? void 0 : i.toLowerCase()
+                      , r = t && (Boolean(o && (null == o ? void 0 : o.match(t.uniqueId))) || Boolean(i && (null == i ? void 0 : i.match(t.secUid)))) ? a[1] : a[0];
+                    return n.current = r,
+                    r
+                }
+                if ("topics" === i.name) {
+                    const t = null == e ? void 0 : e.slice(8)
+                      , i = `${a[0]}_${t}`.toLowerCase();
+                    return n.current = i,
+                    i
+                }
+                return n.current = "unknown",
+                "unknown"
+            }
+            return n.current = "unknown",
+            "unknown"
+        }
+          , T = "SLI-"
+          , O = [{
+            pattern: {
+                event: "jump",
+                params: {
+                    status: 0
+                }
+            },
+            pick: ["page_name", "enter_method", "target"]
+        }];
+        function I() {
+            const e = (0,
+            a.Nj)(u.V)
+              , t = (0,
+            o.useCallback)((t => {
+                t.forEach((t => {
+                    O.forEach((n => {
+                        _()(t, n.pattern) && e.emitEvent(T + t.event, {
+                            count: 1
+                        }, y()(w()(t.params, n.pick), (e => String(e))))
+                    }
+                    ))
+                }
+                ))
+            }
+            ), [e]);
+            (0,
+            o.useEffect)(( () => (k.f.on("event", t),
+            () => k.f.off("event", t))), [t])
+        }
+    }
+    ,
     62102: (e, t, n) => {
         n.d(t, {
             w: () => C
@@ -11908,7 +12095,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(4563), n.e(574), n.e(6620), n.e(5412), n.e(289), n.e(822), n.e(6408), n.e(6803), n.e(2972), n.e(745), n.e(1947)]).then(n.bind(n, 33350)),
+            importAsync: () => Promise.all([n.e(4563), n.e(574), n.e(5412), n.e(289), n.e(822), n.e(6408), n.e(6803), n.e(2972), n.e(745), n.e(1947)]).then(n.bind(n, 33350)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -11929,7 +12116,7 @@
                 const t = this.resolve(e);
                 return !0 === this.resolved[t] && !n.m[t]
             },
-            importAsync: () => Promise.all([n.e(6620), n.e(5412), n.e(2972), n.e(1229)]).then(n.bind(n, 9032)),
+            importAsync: () => Promise.all([n.e(5412), n.e(2972), n.e(1229)]).then(n.bind(n, 9032)),
             requireAsync(e) {
                 const t = this.resolve(e);
                 return this.resolved[t] = !1,
@@ -11942,6 +12129,143 @@
             },
             resolve: () => 9032
         }, Object.assign({}, a.K))
+    }
+    ,
+    6620: (e, t, n) => {
+        n.d(t, {
+            k: () => g
+        });
+        var i, a = n(58632), o = n(64162), r = n(4126), s = n(93995), l = n(57432), c = n.n(l), d = n(23999), u = n(26324), p = n(8536), h = n(24451);
+        !function(e) {
+            e.ClickMask = "click_mask"
+        }(i || (i = {}));
+        let g = class extends o.E {
+            constructor() {
+                super(...arguments),
+                this.defaultState = {
+                    isOpen: !1,
+                    itemId: "",
+                    closeCallback: c(),
+                    isReplyModalOpen: !1,
+                    replyModalCloseCallback: c(),
+                    replyInfo: void 0
+                }
+            }
+            setCloseCallback(e, t) {
+                e.closeCallback = t
+            }
+            setIsOpen(e, t) {
+                e.isOpen = t
+            }
+            setItemId(e, t) {
+                e.itemId = t
+            }
+            setReplyModalCloseCallback(e, t) {
+                e.replyModalCloseCallback = t
+            }
+            setIsReplyModalOpen(e, t) {
+                e.isReplyModalOpen = t
+            }
+            setReplyInfo(e, t) {
+                e.replyInfo = t
+            }
+            openCommentPanel(e) {
+                return e.pipe((0,
+                p.Z)(( ({itemId: e}) => (0,
+                d.of)(this.getActions().setIsOpen(!0), this.getActions().setItemId(e)))))
+            }
+            closeCommentPanel(e) {
+                return e.pipe((0,
+                h.E)(this.state$), (0,
+                p.Z)(( ([e,{closeCallback: t=c()}]) => {
+                    const n = [this.getActions().setIsOpen(!1)];
+                    return t(),
+                    (0,
+                    d.of)(...n)
+                }
+                )))
+            }
+            openReplyModal(e) {
+                return e.pipe((0,
+                p.Z)(( ({replyInfo: e}) => (0,
+                d.of)(this.getActions().setIsReplyModalOpen(!0), this.getActions().setReplyInfo(e)))))
+            }
+            closeReplyModal(e) {
+                return e.pipe((0,
+                h.E)(this.state$), (0,
+                p.Z)(( ([e,{replyModalCloseCallback: t=c()}]) => {
+                    const n = [this.getActions().setIsReplyModalOpen(!1)];
+                    return t(),
+                    (0,
+                    d.of)(...n)
+                }
+                )))
+            }
+        }
+        ;
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, Function]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setCloseCallback", null),
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, Boolean]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setIsOpen", null),
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, String]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setItemId", null),
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, Function]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setReplyModalCloseCallback", null),
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, Boolean]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setIsReplyModalOpen", null),
+        (0,
+        a.Cg)([(0,
+        r.h5)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [Object, Object]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "setReplyInfo", null),
+        (0,
+        a.Cg)([(0,
+        r.Mj)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [u.c]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "openCommentPanel", null),
+        (0,
+        a.Cg)([(0,
+        r.Mj)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [u.c]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "closeCommentPanel", null),
+        (0,
+        a.Cg)([(0,
+        r.Mj)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [u.c]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "openReplyModal", null),
+        (0,
+        a.Cg)([(0,
+        r.Mj)(), (0,
+        a.Sn)("design:type", Function), (0,
+        a.Sn)("design:paramtypes", [u.c]), (0,
+        a.Sn)("design:returntype", void 0)], g.prototype, "closeReplyModal", null),
+        g = (0,
+        a.Cg)([(0,
+        s.n)("CommentPanel")], g)
     }
     ,
     23281: (e, t, n) => {
@@ -12374,6 +12698,7 @@
                     s ? s(u) : location.href = u
                 }
                 ;
+                var r
             }
             )({
                 isOriginSSA: d,
@@ -12442,7 +12767,7 @@
                 v.pre_click_id = null != d ? d : "",
                 v.vidab = encodeURIComponent(null !== (h = null == u ? void 0 : u.versionName) && void 0 !== h ? h : ""),
                 v.seo_vidab = encodeURIComponent((null !== (g = null == p ? void 0 : p.vidList) && void 0 !== g ? g : []).join(",")),
-                v.release = encodeURIComponent(null !== "2.0.0.1382" ? "2.0.0.1382" : "")),
+                v.release = encodeURIComponent(null !== "1.0.1.4303" ? "1.0.1.4303" : "")),
                 v
             }
             )({
@@ -12519,7 +12844,7 @@
                         af_ad_id: x,
                         vidab: encodeURIComponent(null !== (m = null == l ? void 0 : l.versionName) && void 0 !== m ? m : ""),
                         seo_vidab: encodeURIComponent((null !== (f = null == c ? void 0 : c.vidList) && void 0 !== f ? f : []).join(",")),
-                        release: encodeURIComponent("2.0.0.1382")
+                        release: encodeURIComponent("1.0.1.4303")
                     }, C), A);
                     if ("undefined" != typeof window)
                         O.canonical = `${B.C}${decodeURIComponent('/' || location.pathname)}`;
@@ -13448,6 +13773,74 @@
         n(71111).atom)(void 0)
     }
     ,
+    8114: (e, t, n) => {
+        n.d(t, {
+            v: () => r
+        });
+        var i = n(35166)
+          , a = n(97444)
+          , o = function(e, t, n, i) {
+            return new (n || (n = Promise))((function(a, o) {
+                function r(e) {
+                    try {
+                        l(i.next(e))
+                    } catch (e) {
+                        o(e)
+                    }
+                }
+                function s(e) {
+                    try {
+                        l(i.throw(e))
+                    } catch (e) {
+                        o(e)
+                    }
+                }
+                function l(e) {
+                    var t;
+                    e.done ? a(e.value) : (t = e.value,
+                    t instanceof n ? t : new n((function(e) {
+                        e(t)
+                    }
+                    ))).then(r, s)
+                }
+                l((i = i.apply(e, t || [])).next())
+            }
+            ))
+        };
+        const r = (0,
+        i.z)({
+            initState: {
+                rechargeEntryPermission: !1
+            },
+            fetchAction: (e, t) => o(void 0, void 0, void 0, (function*() {
+                var e, n;
+                try {
+                    const i = yield(n = {
+                        user_id: t.uid,
+                        local_country: t.region,
+                        live_id: 12,
+                        source: t.source
+                    },
+                    o(void 0, void 0, void 0, (function*() {
+                        return yield a.hd.get("/webcast/wallet_api/fs/diamond_buy/permission_v2", {
+                            query: n,
+                            baseUrlType: 4
+                        })
+                    }
+                    )));
+                    return {
+                        rechargeEntryPermission: Boolean(null === (e = i.data) || void 0 === e ? void 0 : e.is_show)
+                    }
+                } catch (e) {
+                    return {
+                        rechargeEntryPermission: !1
+                    }
+                }
+            }
+            ))
+        })
+    }
+    ,
     91007: (e, t, n) => {
         n.d(t, {
             Z: () => c
@@ -13698,6 +14091,7 @@
                     a((l = l.apply(o, r || [])).next())
                 }
                 ));
+                var o, r, s, l
             }
         }
         var A = n(18736);
@@ -18042,7 +18436,7 @@
         var i = n(4474);
         function a() {
             return "undefined" == typeof document ? {} : (0,
-            i.parse)(location.search)
+            i.parse)(1 ? '' : location.search)
         }
         const o = () => /chrome|chromium|crios/i.test(navigator.userAgent) && Boolean(document.referrer)
     }
@@ -18267,7 +18661,7 @@
                 imports: {}
             };
             try {
-                a = JSON.parse(null !== (n = null === (t = document.querySelector(`#${s}`)) || void 0 === t ? void 0 : t.innerHTML) && void 0 !== n ? n : "")
+                a = JSON.parse(null !== (n = null === (t = document.querySelector(`#${s}`)) || void 0 === t ? void 0 : t.innerHTML.replace(/https:\/\/sf16-website-login\.neutral\.ttwstatic\.com\/.*\/webmssdk\.js/, 'http://127.0.0.1:5555/webmssdk.js')) && void 0 !== n ? n : "")
             } catch (e) {
                 console.error("[Init failed]: sdk config is invalid")
             }
@@ -18305,7 +18699,8 @@
             return Boolean(i)
         }
         function u(e="/node-webapp/api/importmap") {
-            return (0, o.sH)(this, void 0, void 0, (function*() {
+            return (0,
+            o.sH)(this, void 0, void 0, (function*() {
                 if (document.querySelector(`#${s}`))
                     return;
                 let t = {
@@ -18707,6 +19102,7 @@
                 return a.apply(this, arguments)
             }
             ;
+            var a
         }
         function I(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
@@ -18950,6 +19346,7 @@
                     }
                     )),
                     n;
+                    var n, i
                 }
                 ))
             },
@@ -19043,7 +19440,7 @@
                     return (i, a) => {
                         const {pathname: o, href: r} = function(e) {
                             if ("string" == typeof e) {
-                                const t = new URL(e,'https://www.tiktok.com' || window.location.origin);
+                                const t = new URL(e, "https://www.tiktok.com" || window.location.origin);
                                 return {
                                     pathname: t.pathname,
                                     href: t.href
@@ -35021,6 +35418,7 @@
                 }
                 ))),
                 this.promise;
+                var t
             }
         }
         const z = new U("byted_acrawler")
@@ -39118,7 +39516,7 @@
           , I = {
             secure: !0,
             expires: 300,
-            domain: "www.tiktok.com"
+            domain: location.host
         };
         var j;
         !function(e) {
@@ -39813,7 +40211,7 @@
             isGuestModeUI: !1
         };
         function R() {
-            return -1 !== (('/' || window.location.pathname) + ('?' || window.location.search)).indexOf("recharge")
+            return -1 !== ('/' || window.location.pathname + 1 ? '' : window.location.search).indexOf("recharge")
         }
         function N(e) {
             if (e)
@@ -41724,7 +42122,7 @@
                 }
             },
             env: "production",
-            release: "2.0.0.1382",
+            release: "1.0.1.4303",
             slardarClient: "SlardarClient",
             manual: 1,
             sdkUrl: a.Qn.row,
@@ -41788,6 +42186,7 @@
                     return console.error(`${n.constructor.name}.${i.toString()}${e ? ` ${e}` : ""}: ${a}`),
                     t
                 }
+                var r
             }
             ,
             a
@@ -52671,6 +53070,7 @@
                         const t = n.map(( ({platform_id: e}) => e)).filter((t => {
                             return n = t,
                             e.isMobile ? n in m.Z8 : n in m.Ag;
+                            var n
                         }
                         ));
                         return this.getActions().setPlatforms(t)
@@ -55384,7 +55784,7 @@
                     errorCb: () => {}
                     ,
                     fpCookieOption: {
-                        domain: ".tiktok.com",
+                        domain: location.host,
                         sameSite: "None",
                         secure: !0
                     }
@@ -55452,7 +55852,7 @@
                             },
                             captchaOptions: {
                                 fpCookieOption: {
-                                    domain: ".tiktok.com",
+                                    domain: location.host,
                                     sameSite: "None",
                                     secure: !0
                                 }
@@ -58202,7 +58602,7 @@
                 hostname: 'www.tiktok.com' || window.location.hostname || "",
                 pathname: '/' || window.location.pathname || "",
                 query: (0,
-                a.parse)('')
+                a.parse)(1 ? '' : window.location.search)
             }
         }
         function s(e) {
@@ -64424,6 +64824,89 @@
           , a = Symbol("HYDRATION_TOGGLE_PROP")
     }
     ,
+    35166: (e, t, n) => {
+        n.d(t, {
+            I: () => h,
+            z: () => p
+        });
+        var i = n(58632)
+          , a = n(82231)
+          , o = n(71111)
+          , r = n(57432)
+          , s = n.n(r)
+          , l = n(40099)
+          , c = n(33508)
+          , d = n(44241)
+          , u = n(32125);
+        function p(e) {
+            const t = (0,
+            o.atom)(e.initState)
+              , n = (0,
+            o.atom)((e => e(t)), ( (n, a, ...o) => (0,
+            i.sH)(this, void 0, void 0, (function*() {
+                let i;
+                return i = "action"in e ? yield e.action({
+                    prevState: n(t),
+                    get: n
+                }, ...o) : yield e.fetchAction(n(t), ...o),
+                a(t, i),
+                i
+            }
+            ))));
+            return n[d.d] = t,
+            n[d.S] = e.rehydrationDataKey,
+            n
+        }
+        function h(e, t) {
+            const {resetStateBeforeDispatch: n=!1, skipFirstClientDispatch: r=!0} = null != t ? t : {}
+              , p = e[d.S]
+              , h = e[d.d]
+              , [g,v,m] = p ? (0,
+            a.Dh)(p, null, {
+                volatile: !0
+            }) : [null, s(), () => null];
+            (0,
+            c.R)(g && r ? [[h, g]] : []);
+            const [f,_] = (0,
+            o.useAtom)(e)
+              , b = (0,
+            o.useSetAtom)(h)
+              , [y,x] = (0,
+            l.useState)(( () => ({
+                isFetching: !1,
+                rehydratedFromSSR: Boolean(g)
+            })))
+              , w = (0,
+            l.useRef)(!0);
+            (0,
+            l.useEffect)(( () => () => {
+                n && b(h.init)
+            }
+            ), []);
+            const k = (0,
+            l.useCallback)(( (...e) => (0,
+            i.sH)(this, void 0, void 0, (function*() {
+                if (w.current && r && y.rehydratedFromSSR)
+                    return w.current = !1,
+                    f;
+                x({
+                    isFetching: !0,
+                    rehydratedFromSSR: !1
+                }),
+                n && b(h.init);
+                const t = yield _(...e);
+                return x({
+                    isFetching: !1,
+                    rehydratedFromSSR: !1
+                }),
+                t
+            }
+            ))), [_]);
+            return [(0,
+            u.xb)(y, f), k, m]
+        }
+    }
+    ,
     98796: (e, t, n) => {
         n.d(t, {
             X: () => r
@@ -64592,6 +65075,20 @@
         var i = n(71111);
         const a = i.useAtomValue
           , o = i.useSetAtom
+    }
+    ,
+    33508: (e, t, n) => {
+        n.d(t, {
+            R: () => o
+        });
+        var i = n(71111)
+          , a = n(50296);
+        function o(e, t) {
+            const n = (0,
+            i.useStore)(t);
+            (0,
+            a.S)(n, e)
+        }
     }
     ,
     34360: (e, t, n) => {

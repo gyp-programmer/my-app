@@ -46,11 +46,13 @@ export default [
       ],
       /** 可以使用双感叹号 */
       "no-extra-boolean-cast": "off",
+      "no-unreachable": "off",
     },
   },
   {
     ignores: [
       "config/",
+      "tiktok/",
       "build/",
       "public/",
       "scripts/",

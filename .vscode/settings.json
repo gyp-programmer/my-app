@@ -2,6 +2,12 @@
   "cSpell.words": ["antd", "groq", "Parens", "qiankun", "Usergroup"],
   // Set the default
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": "never",
+    "source.fixAll.eslint": "never",
+    "source.fixAll.stylelint": "never",
+    "source.fixAll": "never"
+  },
   // Enable per-language
   "[javascript]": {
     "editor.formatOnSave": true
