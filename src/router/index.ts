@@ -20,6 +20,7 @@ import {
   ownComponent,
   Three,
   Three2,
+  TikTok,
 } from "../components";
 import LoadImage from "../practice/load-image";
 import AuthRouter from "./auth-router";
@@ -76,6 +77,10 @@ const routers = [
   {
     path: "/three-demo2",
     element: Three2,
+  },
+  {
+    path: "/tiktok",
+    element: TikTok,
   },
   {
     path: "*",

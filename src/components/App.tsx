@@ -79,6 +79,10 @@ function App() {
           <Link to="/load-image">
             <span className="App-link">预加载大图片</span>
           </Link>
+          <br />
+          <Link to="/tiktok">
+            <span className="App-link">tiktok</span>
+          </Link>
         </div>
       </div>
     </div>

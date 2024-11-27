@@ -103,3 +103,67 @@ git commit --amend --no-edit
 ## 采用scss module开发
 
 - 避免样式出现和微应用的样式混乱
+
+# 记录
+
+1. verdor-islands.js
+   修改部分：
+
+   - 大概1001行 更改为
+     `location.origin + "/api/global-footer"`
+
+2. webapp-mobile-islands.js
+   修改部分：
+
+   - 替换domain domain: "www.tiktok.com" -> domain: location.origin
+   - 22630行 更改内容为
+     ```js
+       rootApi: location.origin,
+       starling: location.origin + '/straling',
+       tea: location.origin + '/tea',
+       libraWebSDK: location.origin | '/abtea',
+     ```
+   - 22650行 更改内容为
+     不用去#api-domain的script中获取domain,删除部分代码
+   - 20491行 20559 更改内容为
+
+   ```js
+     domain: location.host,
+   ```
+
+   - 10693 ${location.origin}
+
+3. webapp-mobile.js
+
+   - 替换domain domain: "www.tiktok.com" -> domain: location.origin
+   - 替换domain domain: ".tiktok.com" -> domain: location.origin
+   - 13720 ${location.origin}
+
+4. verdor.js
+
+   - 12348行 `location.origin + "/api/global-footer"`
+   - 14128行 `location.origin + "/api/v1/web-cookie-privacy/config"`
+
+5. verdor-islands.js
+   - 39929行 `${location.origin}/api/v1/web-cookie-privacy/config`
+   - 1001 `location.origin + "/api/global-footer"`
+6. weapp-login-page.js
+   - 57808行 `this.fetch.post(`${location.origin}/passport/web/region/?domain=${e}``
+   - 57868行 `this.fetch.post(`新的服务/passport/web/store_region/?domain=${e}`,
+   - "/api/compliance/settings/" 替换为 `${location.origin}/api/compliance/settings/`
+   - 57676行 `${location.origin}/passport/web/auth_broadcast/?domain=${t}`
+   - initAccountSdkInstance方法中，getDynamicConfig方法里面的baseURL 改为 location.origin 并且param增加domain: t
+   - domain: location.origin 涉及到fpCookieOption这个配置的domain 全局搜索 fpCookieOption
+7. 3152.js
+   - 286行 ${location.origin}
+8. headSideEffect.island.js
+   - 2817行 apiDomain: location.origin,
+9. runtime.js
+   - 421行 替换js的加载地址
+10. zti.js
+
+    - 3623行 location.hostname 改为 ‘www.tiktok.com’
+    - 3300 行 location.hostname 改为 ‘www.tiktok.com’
+
+待办事项：
+npm-d801507b.d4925c9ee893afeaaf0c.js 文件需要更换

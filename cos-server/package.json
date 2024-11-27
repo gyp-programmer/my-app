@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch src -e ts --exec ts-node app.ts",
-    "build": "tsc",
-    "pm2": "pm2-runtime start ecosystem.config.js"
+    "start": "nodemon --watch src -e ts --exec ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "global": "^4.4.0",
     "https": "^1.0.0",
     "koa": "^2.15.3",
     "koa-body": "^6.0.1",

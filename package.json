@@ -68,7 +68,8 @@
     "format:check": "prettier --check \"./**/*.{js,ts,tsx,json}\"",
     "format:fix": "prettier --write \"./**/*.{js,ts,tsx,json}\"",
     "check:lockfile": "node scripts/check-lockfile.js",
-    "pre:run": "sh ./scripts/run.sh"
+    "pre:run": "sh ./scripts/run.sh",
+    "static:run": "cd tiktok && live-server --https=./cert.js --https-module=spdy --cors"
   },
   "browserslist": {
     "production": [

@@ -192,8 +192,14 @@
                 else if (121 != t) {
                     var a = new Promise(( (r, a) => o = e[t] = [r, a]));
                     r.push(o[2] = a);
-                    var n = d.p + d.u(t)
-                      , i = new Error;
+                    // 代理 1636 资源
+                    var n;
+                    if (t === 978) {
+                        n  = 'https://gyp3.mytiktok.com:8080/zti.js';
+                    } else {
+                        n = d.p + d.u(t);
+                    }
+                    var i = new Error;
                     d.l(n, (r => {
                         if (d.o(e, t) && (0 !== (o = e[t]) && (e[t] = void 0),
                         o)) {
@@ -233,3 +239,4 @@
     )()
 }
 )();
+

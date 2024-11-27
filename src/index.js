@@ -21,14 +21,10 @@ import "../mock";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("./sw.js")
-    .then(registration => {
-      console.log("SW registered: ", registration);
-    })
-    .catch(registrationError => {
-      console.log("SW registration failed: ", registrationError);
-    });
+  navigator.serviceWorker.register("./sw.js");
+  navigator.serviceWorker.ready.then(reg => {
+    console.log("Service Worker 注册成功", reg);
+  });
 }
 
 root.render(

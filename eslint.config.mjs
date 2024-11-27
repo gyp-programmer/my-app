@@ -47,6 +47,7 @@ export default [
       /** 可以使用双感叹号 */
       "no-extra-boolean-cast": "off",
       "no-unreachable": "off",
+      "no-undef": "off",
     },
   },
   {
@@ -61,6 +62,7 @@ export default [
       ".vscode/",
       "src/utils/XMLToJson.js",
       "**/*.test.js",
+      "**/dist",
     ],
   },
   /** 加入settings配置，用于eslint-plugin-react 中的读取 */

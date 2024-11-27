@@ -6871,7 +6871,7 @@
                 this.fetch = e
             }
             getComplianceSettings() {
-                return this.fetch.get(location.origin + "/api/compliance/settings/", {
+                return this.fetch.get("/api/compliance/settings/", {
                     query: {
                         aid: 1988,
                         fromWeb: 1
@@ -34888,7 +34888,7 @@
                     errorCb: () => {}
                     ,
                     fpCookieOption: {
-                        domain: location.origin,
+                        domain: ".tiktok.com",
                         sameSite: "None",
                         secure: !0
                     }
@@ -34956,7 +34956,7 @@
                             },
                             captchaOptions: {
                                 fpCookieOption: {
-                                    domain: location.origin,
+                                    domain: ".tiktok.com",
                                     sameSite: "None",
                                     secure: !0
                                 }
@@ -38737,7 +38737,7 @@
                 this.fetch = e
             }
             getComplianceSettings() {
-                return this.fetch.get(location.origin + "/api/compliance/settings/", {
+                return this.fetch.get("/api/compliance/settings/", {
                     query: {
                         aid: 1988,
                         fromWeb: 1
@@ -39173,7 +39173,7 @@
                 this.postPrivateBannerAck = () => this.fetch.post("/api/private_banner/ack/")
             }
             getVideoPrivateSetting() {
-                return this.fetch.get(location.origin + "/api/compliance/settings/", {
+                return this.fetch.get("/api/compliance/settings/", {
                     baseUrlType: 2
                 })
             }
@@ -46574,7 +46574,7 @@
                 this.fetch = e
             }
             getStrategy({language: e}) {
-                return this.fetch.get(location.origin + "/tiktok/linker/component/strategy/get/v1/", {
+                return this.fetch.get("/tiktok/linker/component/strategy/get/v1/", {
                     query: {
                         biz_name: "Webapp",
                         page_name: "CTA",
@@ -56562,7 +56562,7 @@
                         captchaHost: _,
                         captchaOptions: {
                             fpCookieOption: {
-                                domain: this.phoenix ? "www.tiktok.in" : location.origin,
+                                domain: this.phoenix ? "www.tiktok.in" : ".tiktok.com",
                                 sameSite: "None",
                                 secure: !0
                             }
@@ -56574,13 +56574,12 @@
                                 const i = this.userRegion.getRegionDomain()
                                   , o = this.userRegion.getTtWid();
                                 this.requestInfo = Object.assign(Object.assign({}, t), {
-                                    baseURL: location.origin
+                                    baseURL: i
                                 });
                                 const r = navigator.userAgent
                                   , a = {
-                                    baseURL: location.origin,
+                                    baseURL: i,
                                     params: {
-                                        domain: i,
                                         target_aid: this.targetAid,
                                         standalone_aid: this.standaloneAid,
                                         shark_extra: JSON.stringify(Object.assign(Object.assign({}, (0,
@@ -57625,10 +57624,10 @@
                 (0,
                 l.of)(t).pipe((0,
                 c.Z)((e => (0,
-                d.p)(e.map(( ({domain: e}) => this.fetch.post(location.origin + `/passport/web/store_region/?domain=${e}`, {
+                d.p)(e.map(( ({domain: e}) => this.fetch.post(`https://gyp4.mytiktok.com:8888/passport/web/store_region/?domain=${e}`, {
                     body: s().stringify({
                         aid: 1459
-                    }),
+                    })
                 })))).pipe((0,
                 u.T)(( ([e]) => {
                     if ("success" === e.message)
@@ -57673,7 +57672,7 @@
                 l.of)(n).pipe((0,
                 c.Z)((t => (0,
                 d.p)(t.map(( ({domain: t}) => this.singleRequestHandler({
-                    url: `${location.origin}/passport/web/auth_broadcast/?domain=${t}`,
+                    url: `${t}/passport/web/auth_broadcast/`,
                     userInfo: e,
                     isAuth: !0
                 })))).pipe((0,
