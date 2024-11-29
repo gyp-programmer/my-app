@@ -22528,7 +22528,7 @@
                 to: ve.tH.loginHome
             }) : (0,
             i.jsx)(vl.rd, {
-                to: "https://www.tiktok.com/foryou"
+                to: location.origin + "/foryou"
             })
         }
         ))
@@ -22636,7 +22636,7 @@
                 (0,
                 m.useEffect)(( () => {
                     a && (c ? setTimeout(( () => {
-                        location.href = `https://www.tiktok.com/foryou?lang=${s}`
+                        location.href = `${location.origin}/foryou?lang=${s}`
                     }
                     ), 1e3) : setTimeout(( () => {
                         window.location.reload()
@@ -25834,7 +25834,7 @@
           , cC = "https://www.tiktok.com"
           , dC = "required name=search_term_string"
           , uC = "Watch trending videos for you"
-          , pC = "https://www.tiktok.com/foryou"
+          , pC = location.origin + "/foryou"
           , gC = "https://www.tiktok.com/find"
           , mC = "https://www.tiktok.com/product"
           , hC = "Discover popular videos"
@@ -38745,7 +38745,7 @@
                 }).pipe(this.errorHandler)
             }
             validateAge(e, t) {
-                return this.fetch.post("https://www.tiktok.com/api/v3/register/verification/age/", Object.assign({
+                return this.fetch.post(location.origin + "/api/v3/register/verification/age/", Object.assign({
                     body: y().stringify({
                         fromWeb: 1,
                         source: "web",
@@ -39209,7 +39209,7 @@
                 u.of)(this.noop())))))
             }
             getIsRegisterPrivateAccount() {
-                return this.fetch.get("/api/user/detail/self/", {
+                return this.fetch.get(location.origin + "/api/user/detail/self/", {
                     query: {
                         tt_csrf_token: this.fetch.csrfToken
                     }
@@ -47229,7 +47229,7 @@
                     e && (n += `?redirect_url=${encodeURIComponent(e)}`),
                     window.location.href = n
                 }
-                )(`https://www.tiktok.com/foryou?lang=${h}`)
+                )(`${location.origin}/foryou?lang=${h}`)
             }
             ), []);
             return (0,
@@ -48824,7 +48824,7 @@
         }, "label:SpanHelpText;");
         var x;
         !function(e) {
-            e.ForYou = "https://www.tiktok.com/foryou",
+            e.ForYou = location.origin + "/foryou",
             e.Support = "https://support.tiktok.com",
             e.Feedback = "https://www.tiktok.com/feedback"
         }(x || (x = {}));
@@ -53800,7 +53800,7 @@
                     }),
                     Promise.reject(new Error(t))
                 }
-                return Qe.sendRequest(`${r}/consent/api/record/create/sync/${o}`, "POST", ( (e, t) => {
+                return Qe.sendRequest(`${location.origin}/consent/api/record/create/sync/${o}`, "POST", ( (e, t) => {
                     var n;
                     return {
                         consent_records: null != (n = null == t ? void 0 : t.filter((e => null == e ? void 0 : e.key)).map((e => rn({
@@ -55391,7 +55391,7 @@
                 this.redirectNewModalPage = e
             }
             validateUsername(e) {
-                return this.fetch.get("/api/uniqueid/check/", {
+                return this.fetch.get(location.origin + "/api/uniqueid/check/", {
                     query: {
                         unique_id: e,
                         fromWeb: 1,
@@ -55668,7 +55668,7 @@
                     body: g().stringify({
                         platform_app_id: w.iU.apple,
                         action: "login_only",
-                        next: "https://www.tiktok.com/foryou?lang=en"
+                        next: location.origin + "/foryou?lang=en"
                     })
                 })
             }
@@ -56542,7 +56542,7 @@
                     T.V)()
                       , p = "VGeo-US" === l
                       , v = "VGeo-EU" === l
-                      , _ = this.phoenix ? "https://www.tiktok.in" : "https://www.tiktok.com"
+                      , _ = this.phoenix ? "https://www.tiktok.in" : location.origin
                       , f = (0,
                     x.Bl)("acrawler");
                     return (0,
@@ -57916,7 +57916,7 @@
         const r = e => e.startsWith(i.tH.signupHome)
           , a = (e, t, n="") => {
             var r;
-            const a = `https://www.tiktok.com/foryou?lang=${e}`
+            const a = `${location.origin}/foryou?lang=${e}`
               , {pathname: s, href: l} = location
               , c = s.startsWith(i.tH.loginHome) || s.startsWith(i.tH.signupHome) || s.startsWith(i.tH.oauth) || s.startsWith(i.tH.logout) || s.startsWith(i.tH.accountDeactivate) || s.startsWith(i.tH.linkPhoneOrEmail) ? a : l
               , d = (e => {

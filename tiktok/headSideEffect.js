@@ -1,9 +1,10 @@
+// headSideEffect.island.4267f58107d8e64cb66f.js
 "use strict";
 (self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([[1636], {
-    96778: (e, t, n) => {
+    34020: (e, t, n) => {
         n.r(t),
         n.d(t, {
-            default: () => $i
+            default: () => Vi
         });
         var i = n(24643)
           , o = n(77195)
@@ -12,17 +13,17 @@
           , s = n(54888)
           , l = n(67518)
           , c = n(46682)
-          , p = n(40099)
-          , u = n(28591)
-          , d = n(58632)
-          , g = n(64162)
-          , m = n(4126)
-          , _ = n(93995)
-          , h = n(8536)
+          , u = n(40099)
+          , d = n(28591)
+          , p = n(58632)
+          , h = n(64162)
+          , _ = n(4126)
+          , g = n(93995)
+          , m = n(8536)
           , f = n(62564)
           , b = n(26324)
-          , y = n(38203)
-          , v = n(97444);
+          , v = n(38203)
+          , y = n(21313);
         let P = class {
             constructor(e) {
                 this.fetch = e
@@ -38,10 +39,10 @@
         }
         ;
         P = (0,
-        d.Cg)([(0,
-        y._)(), (0,
-        d.Sn)("design:paramtypes", [v.pM])], P);
-        let x = class extends g.E {
+        p.Cg)([(0,
+        v._)(), (0,
+        p.Sn)("design:paramtypes", [y.pM])], P);
+        let k = class extends h.E {
             constructor(e) {
                 super(),
                 this.service = e,
@@ -49,32 +50,32 @@
             }
             getComplianceSettings(e) {
                 return e.pipe((0,
-                h.Z)(( () => this.service.getComplianceSettings().pipe((0,
+                m.Z)(( () => this.service.getComplianceSettings().pipe((0,
                 f.T)((e => (null == e || e.status_code,
                 this.noop())))))))
             }
         }
         ;
         (0,
-        d.Cg)([(0,
-        m.uk)(), (0,
-        d.Sn)("design:type", b.c)], x.prototype, "dispose$", void 0),
+        p.Cg)([(0,
+        _.uk)(), (0,
+        p.Sn)("design:type", b.c)], k.prototype, "dispose$", void 0),
         (0,
-        d.Cg)([(0,
-        m.Mj)(), (0,
-        d.Sn)("design:type", Function), (0,
-        d.Sn)("design:paramtypes", [b.c]), (0,
-        d.Sn)("design:returntype", void 0)], x.prototype, "getComplianceSettings", null),
-        x = (0,
-        d.Cg)([(0,
-        _.n)("ComplianceSettingsModule"), (0,
-        d.Sn)("design:paramtypes", [P])], x);
+        p.Cg)([(0,
+        _.Mj)(), (0,
+        p.Sn)("design:type", Function), (0,
+        p.Sn)("design:paramtypes", [b.c]), (0,
+        p.Sn)("design:returntype", void 0)], k.prototype, "getComplianceSettings", null),
+        k = (0,
+        p.Cg)([(0,
+        g.n)("ComplianceSettingsModule"), (0,
+        p.Sn)("design:paramtypes", [P])], k);
         var E = n(60484)
-          , k = n(55462)
+          , x = n(55462)
           , T = n(49057);
         const O = function({iconSrc: e="https://www.tiktok.com/favicon.ico"}) {
             return (0,
-            i.jsxs)(u.mg, {
+            i.jsxs)(d.mg, {
                 children: [(0,
                 i.jsx)("meta", {
                     name: "google",
@@ -94,7 +95,7 @@
           , S = ["//v16.tiktokcdn.com", "//p16-va.tiktokcdn.com", "//s20.tiktokcdn.com"]
           , C = function() {
             return (0,
-            i.jsx)(u.mg, {
+            i.jsx)(d.mg, {
                 children: S.map(( (e, t) => (0,
                 i.jsx)("link", {
                     rel: "dns-prefetch",
@@ -105,27 +106,27 @@
         var w = n(73580)
           , j = n(91498)
           , M = n(97086)
-          , L = n(72277)
-          , A = n(11654)
+          , A = n(72277)
+          , L = n(11654)
           , N = n(23721)
-          , D = n(82517);
+          , D = n(45297);
         const I = function({appContext: e, bizContext: t, slardarBid: n, initialPid: o, async: r=!1, reportImage: a}) {
             var s, l;
-            const {abTestVersion: c, env: d, botType: g, user: m, wid: _, region: h} = null != e ? e : {}
-              , {isMobile: f, domains: b, isTTP: y, idc: v} = null != t ? t : {}
+            const {abTestVersion: c, env: p, botType: h, user: _, wid: g, region: m} = null != e ? e : {}
+              , {isMobile: f, domains: b, isTTP: v, idc: y} = null != t ? t : {}
               , P = (0,
-            w.Nj)(A.V)
-              , x = (0,
-            p.useMemo)(( () => {
+            w.Nj)(L.V)
+              , k = (0,
+            u.useMemo)(( () => {
                 var e;
                 return Object.assign(Object.assign({
-                    region: null != h ? h : "",
-                    botType: null != g ? g : "",
+                    region: null != m ? m : "",
+                    botType: null != h ? h : "",
                     isMobile: Boolean(f).toString(),
                     isDowngrade: (0,
                     M.qk)().toString(),
-                    isLogin: Boolean(m).toString(),
-                    isPPE: "ppe" === (null == d ? void 0 : d.type),
+                    isLogin: Boolean(_).toString(),
+                    isPPE: "ppe" === (null == p ? void 0 : p.type),
                     isLandingPage: 1,
                     launchMode: (0,
                     M.fU)() ? "" : (0,
@@ -138,7 +139,7 @@
                     try {
                         const n = e.parameters || {};
                         Object.entries(n).forEach(( ([e,n]) => {
-                            L.s.includes(e) && (t[e] = n.vid)
+                            A.s.includes(e) && (t[e] = n.vid)
                         }
                         ))
                     } catch (e) {
@@ -147,30 +148,30 @@
                     return t
                 }
                 )(c)), {
-                    uid: null !== (e = null == m ? void 0 : m.uid) && void 0 !== e ? e : "",
-                    idc: null != v ? v : "unknown"
+                    uid: null !== (e = null == _ ? void 0 : _.uid) && void 0 !== e ? e : "",
+                    idc: null != y ? y : "unknown"
                 })
             }
-            ), [h, g, f, m, null == d ? void 0 : d.type, c])
+            ), [m, h, f, _, null == p ? void 0 : p.type, c])
               , {enableInlineScript: E} = (0,
-            k.yf)()
+            x.yf)()
               , T = !!a || "v2" === (null === (l = null === (s = null == c ? void 0 : c.parameters) || void 0 === s ? void 0 : s.enable_slardar_image) || void 0 === l ? void 0 : l.vid)
               , O = (0,
-            p.useMemo)(( () => Object.assign(Object.assign(Object.assign({}, N.dg), {
+            u.useMemo)(( () => Object.assign(Object.assign(Object.assign({}, N.dg), {
                 bid: n,
-                env: "boe" === (null == d ? void 0 : d.type) || "ppe" === (null == d ? void 0 : d.type) ? "test" : "production",
+                env: "boe" === (null == p ? void 0 : p.type) || "ppe" === (null == p ? void 0 : p.type) ? "test" : "production",
                 domain: null == b ? void 0 : b.slardar,
                 disableInit: !0,
-                useLocalConfig: "ppe" === (null == d ? void 0 : d.type) || "boe" === (null == d ? void 0 : d.type),
+                useLocalConfig: "ppe" === (null == p ? void 0 : p.type) || "boe" === (null == p ? void 0 : p.type),
                 integrations: [...P.registerImageXPlugin(T, a && "boolean" != typeof a ? a.sample : void 0)]
-            }), y ? {
+            }), v ? {
                 sdkUrl: "https://lf16-cdn-tos.tiktokcdn-us.com/obj/static-tx/slardar/fe/sdk-web/browser.oci.js",
                 pluginPathPrefix: "https://lf16-cdn-tos.tiktokcdn-us.com/obj/static-tx/slardar/fe/sdk-web/plugins"
-            } : {})), [null == b ? void 0 : b.slardar, null == d ? void 0 : d.type, y, n])
+            } : {})), [null == b ? void 0 : b.slardar, null == p ? void 0 : p.type, v, n])
               , S = (0,
-            p.useMemo)(( () => JSON.stringify(O)), [O]);
+            u.useMemo)(( () => JSON.stringify(O)), [O]);
             return (0,
-            p.useEffect)(( () => {
+            u.useEffect)(( () => {
                 let e;
                 const t = () => {
                     window.SlardarClient ? P.hasStarted() || (P.mountBeforeSendEvent(),
@@ -178,21 +179,21 @@
                         pid: o
                     })),
                     P.config({
-                        userId: _
+                        userId: g
                     }),
                     P.start()) : e = window.requestIdleCallback ? window.requestIdleCallback(t) : window.setTimeout(t, 1)
                 }
                 ;
-                return P.context(x),
+                return P.context(k),
                 "delay_start_until_manually_called" === o ? (P.preserveConfig(O),
                 P.preserveExtraInfo({
-                    userId: _
+                    userId: g
                 })) : (P.mountBeforeSendEvent(),
                 P.init(Object.assign(Object.assign({}, O), {
                     pid: o
                 })),
                 P.config({
-                    userId: _
+                    userId: g
                 }),
                 P.start(),
                 e = window.requestIdleCallback ? window.requestIdleCallback(t) : window.setTimeout(t, 1)),
@@ -203,7 +204,7 @@
             ), []),
             !E || (0,
             M._8)(r) ? null : (0,
-            i.jsxs)(u.mg, {
+            i.jsxs)(d.mg, {
                 children: [(0,
                 i.jsx)("script", {
                     id: "slardar-config",
@@ -211,17 +212,17 @@
                     children: S
                 }), r ? (0,
                 i.jsx)("script", {
-                    src: D.se[y ? "TTP" : "ROW"].slardarWeb,
+                    src: D.se[v ? "TTP" : "ROW"].slardarWeb,
                     async: "DO_NOT_DELETE_FOR_REHYDRATE_ERROR"
                 }) : (0,
                 i.jsx)("script", {
-                    src: D.se[y ? "TTP" : "ROW"].slardarWeb
+                    src: D.se[v ? "TTP" : "ROW"].slardarWeb
                 })]
             })
         }
           , R = function({isLogin: e, isFtc: t}) {
             return (0,
-            i.jsx)(u.mg, {
+            i.jsx)(d.mg, {
                 children: (0,
                 i.jsx)("meta", {
                     name: "pumbaa-ctx",
@@ -229,32 +230,32 @@
                 })
             })
         }
-          , U = function({appContext: e, bizContext: t, slardarBid: n, iconSrc: o, initialPid: r, asyncSlardar: a=!1, usePumbaaMeta: s=!1, slardarReportImage: d}) {
-            var g;
-            const {language: m} = (0,
+          , U = function({appContext: e, bizContext: t, slardarBid: n, iconSrc: o, initialPid: r, asyncSlardar: a=!1, usePumbaaMeta: s=!1, slardarReportImage: p}) {
+            var h;
+            const {language: _} = (0,
             E.L$)(e)
-              , {isDark: _} = (0,
+              , {isDark: g} = (0,
             l.u)()
-              , {user: h} = null !== (g = (0,
-            T.W)(( () => ["user"]), [])) && void 0 !== g ? g : {}
+              , {user: m} = null !== (h = (0,
+            T.W)(( () => ["user"]), [])) && void 0 !== h ? h : {}
               , {enableHeadComponent: f} = (0,
-            k.yf)()
-              , b = Boolean(h)
-              , y = Boolean(null == h ? void 0 : h.ftcUser)
-              , v = (0,
-            c.w)(x);
+            x.yf)()
+              , b = Boolean(m)
+              , v = Boolean(null == m ? void 0 : m.ftcUser)
+              , y = (0,
+            c.w)(k);
             return (0,
-            p.useEffect)(( () => {
-                b && v.getComplianceSettings()
+            u.useEffect)(( () => {
+                b && y.getComplianceSettings()
             }
-            ), [b, v]),
+            ), [b, y]),
             (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(u.mg, {
+                i.jsx)(d.mg, {
                     htmlAttributes: {
-                        lang: m,
-                        "data-theme": _ ? "dark" : "light"
+                        lang: _,
+                        "data-theme": g ? "dark" : "light"
                     }
                 }), (0,
                 i.jsx)(O, {
@@ -262,7 +263,7 @@
                 }), s && (0,
                 i.jsx)(R, {
                     isLogin: b,
-                    isFtc: y
+                    isFtc: v
                 }), f && (0,
                 i.jsx)(I, {
                     appContext: e,
@@ -270,7 +271,7 @@
                     slardarBid: n,
                     initialPid: r,
                     async: a,
-                    reportImage: d
+                    reportImage: p
                 }), (0,
                 i.jsx)(C, {})]
             })
@@ -280,28 +281,28 @@
           , z = n.n(Y)
           , H = n(56268)
           , F = n(13549)
-          , K = n(98796)
+          , V = n(98796)
           , W = n(32125)
-          , $ = n(10828)
-          , V = n(4929)
+          , K = n(10828)
+          , $ = n(4929)
           , G = n(9472)
-          , X = n(78662)
-          , q = n(67768);
-        function Z(e) {
-            return null == e || "number" == typeof e || "boolean" == typeof e ? e : "string" == typeof e ? e.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;") : Array.isArray(e) ? e.map((e => Z(e))) : "[object Object]" === Object.prototype.toString.call(e) ? Object.keys(e).reduce(( (t, n) => (t[n] = Z(e[n]),
-            t)), {}) : Z(String(e))
+          , q = n(78662)
+          , X = n(67768);
+        function J(e) {
+            return null == e || "number" == typeof e || "boolean" == typeof e ? e : "string" == typeof e ? e.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;") : Array.isArray(e) ? e.map((e => J(e))) : "[object Object]" === Object.prototype.toString.call(e) ? Object.keys(e).reduce(( (t, n) => (t[n] = J(e[n]),
+            t)), {}) : J(String(e))
         }
-        class J extends p.PureComponent {
+        class Z extends u.PureComponent {
             dynamicAddCompKey(e=[]) {
-                return e && e.length ? e.map(Z).reduce(( (e, t, n) => {
+                return e && e.length ? e.map(J).reduce(( (e, t, n) => {
                     var o;
                     const [r="",a={},s] = t;
                     return "" !== r && 0 !== Object.keys(a).length && e.push((0,
-                    i.jsx)(q.hp, {
+                    i.jsx)(X.hp, {
                         dangerouslyExposeHtml: !0,
                         id: null !== (o = null == s ? void 0 : s.name) && void 0 !== o ? o : r,
                         children: (0,
-                        i.jsx)(q.ck, {
+                        i.jsx)(X.ck, {
                             genericType: r,
                             genericKey: r,
                             schema: a
@@ -313,7 +314,7 @@
             }
             render() {
                 const {wrappedHead: e, metaParams: t={}, jsonldList: n=[], children: o} = this.props
-                  , {title: r="", keywords: a="", description: s="", robotsContent: l="", canonicalHref: c="", alternateHref: p="", amphtmlHref: u="", applicableDevice: d="", hreflangList: g=[]} = t;
+                  , {title: r="", keywords: a="", description: s="", robotsContent: l="", canonicalHref: c="", alternateHref: u="", amphtmlHref: d="", applicableDevice: p="", hreflangList: h=[]} = t;
                 return (0,
                 i.jsxs)(i.Fragment, {
                     children: [(0,
@@ -333,24 +334,24 @@
                         i.jsx)("meta", {
                             name: "robots",
                             content: l
-                        }, "robots"), d && (0,
+                        }, "robots"), p && (0,
                         i.jsx)("meta", {
                             name: "applicable-device",
-                            content: d
+                            content: p
                         }, "applicable-device"), c && (0,
                         i.jsx)("link", {
                             rel: "canonical",
                             href: c
-                        }, "canonical"), u && (0,
+                        }, "canonical"), d && (0,
                         i.jsx)("link", {
                             rel: "amphtml",
-                            href: u
-                        }, "amphtml"), p && (0,
+                            href: d
+                        }, "amphtml"), u && (0,
                         i.jsx)("link", {
                             rel: "alternate",
                             media: "only screen and (max-width: 640px)",
-                            href: p
-                        }, "alternate-media"), g.length ? g.map(( ({hreflang: e, href: t}) => (0,
+                            href: u
+                        }, "alternate-media"), h.length ? h.map(( ({hreflang: e, href: t}) => (0,
                         i.jsx)("link", {
                             rel: "alternate",
                             hrefLang: e,
@@ -360,12 +361,12 @@
                 })
             }
         }
-        const Q = J
+        const Q = Z
           , ee = function({appContext: e}) {
             const {pathname: t} = (0,
             H.useLocation)()
               , {metaParams: n, jsonldList: o, disableAlternateLink: r, generateAlternateWithCanonical: a, enableAlternateHreflang: s, alternateHreflangList: l} = (0,
-            K.X)(G.b, {
+            V.X)(G.b, {
                 selector: ({metaParams: e, jsonldList: t, disableAlternateLink: n, generateAlternateWithCanonical: i, enableAlternateHreflang: o, alternateHreflangList: r}) => ({
                     metaParams: e,
                     jsonldList: t,
@@ -380,26 +381,26 @@
             try {
                 c = encodeURI(decodeURI(t))
             } catch (e) {}
-            const d = (0,
-            p.useMemo)(( () => {
+            const p = (0,
+            u.useMemo)(( () => {
                 let e = [];
                 const {robotsContent: t, canonicalHref: i} = null != n ? n : {}
                   , o = t && !t.includes("noindex")
-                  , p = a && null != i ? i : `${$.C}${c}`;
+                  , u = a && null != i ? i : `${K.C}${c}`;
                 if (o && s)
                     return Object.assign(Object.assign({}, n), {
                         hreflangList: z()(l, "hreflang")
                     });
                 if (o && !r) {
                     const t = (0,
-                    X.Iz)(c);
+                    q.Iz)(c);
                     e = [{
                         hreflang: "x-default",
-                        href: t ? $.C : p
+                        href: t ? K.C : u
                     }],
-                    V.wX.forEach(( ({value: n}) => {
+                    $.wX.forEach(( ({value: n}) => {
                         const i = n.replace(/(^zh([_-]\w+)*)/g, "zh-Hant")
-                          , o = t ? `${$.C}/${i}/` : `${p}?lang=${i}`;
+                          , o = t ? `${K.C}/${i}/` : `${u}?lang=${i}`;
                         e.push({
                             hreflang: i,
                             href: o
@@ -416,8 +417,8 @@
             F.o)(( () => Promise.resolve()), []),
             (0,
             i.jsx)(Q, {
-                wrappedHead: u.mg,
-                metaParams: d,
+                wrappedHead: d.mg,
+                metaParams: p,
                 jsonldList: o
             })
         };
@@ -435,7 +436,7 @@
             return (0,
             F.o)(( () => Promise.resolve()), []),
             (0,
-            i.jsx)(u.mg, {
+            i.jsx)(d.mg, {
                 children: Object.keys(a).map((e => (0,
                 i.jsx)("meta", {
                     property: e,
@@ -448,22 +449,22 @@
           , oe = n(40812)
           , re = n(68310)
           , ae = n(37434)
-          , se = n(27106)
+          , se = n(71281)
           , le = n(67581)
           , ce = n(86515);
-        var pe = n(88920)
-          , ue = n(58305)
-          , de = n(62186);
-        const ge = (0,
-        de.A)("p", {
+        var ue = n(88920)
+          , de = n(58305)
+          , pe = n(62186);
+        const he = (0,
+        pe.A)("p", {
             target: "e1ckpjj30"
         })([{
             textAlign: "center",
             fontSize: 15,
             margin: "16px 0 12px 0"
         }], "label:Description;")
-          , me = (0,
-        de.A)("div", {
+          , _e = (0,
+        pe.A)("div", {
             target: "e1ckpjj31"
         })([{
             display: "flex",
@@ -471,8 +472,8 @@
             alignItems: "center",
             color: "#FE2C55"
         }], "label:DIVEditFuture;")
-          , _e = (0,
-        de.A)("div", {
+          , ge = (0,
+        pe.A)("div", {
             target: "e1ckpjj32"
         })([{
             textAlign: "center",
@@ -483,14 +484,14 @@
             justifyContent: "center",
             color: "var(--TextTertiary)"
         }], "label:GhostButton;")
-          , he = (0,
-        de.A)("img", {
+          , me = (0,
+        pe.A)("img", {
             target: "e1ckpjj33"
         })([ () => ({
             height: 149
         })], "label:Banner;")
           , fe = (0,
-        de.A)("h3", {
+        pe.A)("h3", {
             target: "e1ckpjj34"
         })([{
             marginTop: 36,
@@ -498,69 +499,52 @@
             fontSize: 20
         }], "label:Title;")
           , be = n.p + "699cc32d70bd43f9f12c.png";
-        var ye = n(60986)
-          , ve = n(5107)
-          , Pe = n(85077)
-          , xe = n(18047)
-          , Ee = n(52837)
-          , ke = (0,
-        Ee.r)((function(e) {
-            return p.createElement("svg", (0,
-            xe._)({
-                fill: "currentColor"
-            }, e, {
-                viewBox: "0 0 24 48",
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "1em",
-                height: "1em",
-                className: "flip-rtl " + (e.className ? e.className : "")
-            }), p.createElement("path", {
-                d: "M16.37 24 2.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L5.96 40.92a1 1 0 0 1-1.41 0L2.7 39.08a1 1 0 0 1 0-1.42L16.37 24Z"
-            }))
-        }
-        ));
-        const Te = "dailyscreentime_notifreminder_desc_minutes"
-          , Oe = "familyPairing_dailyScreenTime_intervention_desc_minutes"
-          , Se = "dailyscreentime_notifreminder_desc_hours"
-          , Ce = "familyPairing_dailyScreenTime_intervention_desc_hours"
-          , we = "dailyscreentime_notifreminder_desc_hoursminutes"
-          , je = "familyPairing_dailyScreenTime_intervention_desc_hoursMinutes"
-          , Me = "dailyscreentime_notifreminder_toast_incorrectpasscode"
-          , Le = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_heading"
-          , Ae = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_firstreminder_desc"
-          , Ne = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_editreminder_link"
-          , De = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_ok_btn"
-          , Ie = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_delay_btn_variantone"
-          , Re = "screentime_breakreminder_modal_timetotakeabreak_title"
-          , Ue = "screentime_breakreminder_modal_timetotakeabreak_desc_1"
-          , Be = "screentime_breakreminder_modal_editreminder_link"
-          , Ye = "screentime_breakreminder_modal_ok_btn"
-          , ze = "screentime_breakreminder_modal_snooze_link"
-          , He = "dailyscreentime_notifreminder_header_ready"
-          , Fe = "familyPairing_dailyScreenTime_intervention_headline"
-          , Ke = "familyPairing_dailyScreenTime_intervention_returnToTikTok_toast"
-          , We = "dailyscreentime_notifreminder_button_returntotiktok"
-          , $e = "dailyscreentime_introsheet_minors_heading"
-          , Ve = "dailyscreentime_introsheet_minors_firstbullet_logoff"
-          , Ge = "dailyscreentime_introsheet_minors_secondbullet_settingsprivacy"
-          , Xe = "dailyscreentime_introsheet_minors_firstbutton_gotit"
-          , qe = "dailyscreentime_introsheet_minors_secondbutton_manage";
-        var Ze = n(40173)
-          , Je = n(82182)
-          , Qe = n(66345);
-        const et = () => {
+        var ve = n(60986)
+          , ye = n(58130)
+          , Pe = n(9261)
+          , ke = n(99822);
+        const Ee = "dailyscreentime_notifreminder_desc_minutes"
+          , xe = "familyPairing_dailyScreenTime_intervention_desc_minutes"
+          , Te = "dailyscreentime_notifreminder_desc_hours"
+          , Oe = "familyPairing_dailyScreenTime_intervention_desc_hours"
+          , Se = "dailyscreentime_notifreminder_desc_hoursminutes"
+          , Ce = "familyPairing_dailyScreenTime_intervention_desc_hoursMinutes"
+          , we = "dailyscreentime_notifreminder_toast_incorrectpasscode"
+          , je = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_heading"
+          , Me = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_firstreminder_desc"
+          , Ae = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_editreminder_link"
+          , Le = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_ok_btn"
+          , Ne = "nightscreentimemgmt_sleepreminders_modal_readyforsleep_delay_btn_variantone"
+          , De = "screentime_breakreminder_modal_timetotakeabreak_title"
+          , Ie = "screentime_breakreminder_modal_timetotakeabreak_desc_1"
+          , Re = "screentime_breakreminder_modal_editreminder_link"
+          , Ue = "screentime_breakreminder_modal_ok_btn"
+          , Be = "screentime_breakreminder_modal_snooze_link"
+          , Ye = "dailyscreentime_notifreminder_header_ready"
+          , ze = "familyPairing_dailyScreenTime_intervention_headline"
+          , He = "familyPairing_dailyScreenTime_intervention_returnToTikTok_toast"
+          , Fe = "dailyscreentime_notifreminder_button_returntotiktok"
+          , Ve = "dailyscreentime_introsheet_minors_heading"
+          , We = "dailyscreentime_introsheet_minors_firstbullet_logoff"
+          , Ke = "dailyscreentime_introsheet_minors_secondbullet_settingsprivacy"
+          , $e = "dailyscreentime_introsheet_minors_firstbutton_gotit"
+          , Ge = "dailyscreentime_introsheet_minors_secondbutton_manage";
+        var qe = n(40173)
+          , Xe = n(82182)
+          , Je = n(66345);
+        const Ze = () => {
             const [e,t] = (0,
             c.S)(le.z)
               , n = (0,
-            w.Nj)(Je.i)
+            w.Nj)(Xe.i)
               , {isDark: o} = (0,
             l.u)()
               , r = (0,
-            Ze.s)()
+            qe.s)()
               , [a,s] = (0,
-            p.useState)(0);
+            u.useState)(0);
             (0,
-            p.useEffect)(( () => {
+            u.useEffect)(( () => {
                 e.breakReminderPopup && (n.uploadMetric("web_time_break_pop"),
                 (0,
                 ce.nN)("updateActiveTimeUsage", {
@@ -571,21 +555,21 @@
                 }, re.LH))
             }
             ), [e.breakReminderPopup]);
-            const u = (0,
+            const d = (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(he, {
-                    src: o ? be : ye
+                i.jsx)(me, {
+                    src: o ? be : ve
                 }), (0,
                 i.jsx)(fe, {
-                    children: r(Re, {}, "Time to take a break?")
+                    children: r(De, {}, "Time to take a break?")
                 }), (0,
-                i.jsx)(ge, {
-                    children: r(Ue, {
+                i.jsx)(he, {
+                    children: r(Ie, {
                         num: e.durationReminder
                     }, `You’ve had ${e.durationReminder} minutes of uninterrupted screen time. Consider taking a break for a while.`)
                 }), (0,
-                i.jsxs)(me, {
+                i.jsxs)(_e, {
                     onClick: () => {
                         t.setBreakReminderPopup(!1),
                         s(1),
@@ -594,15 +578,15 @@
                     ,
                     children: [(0,
                     i.jsx)(Pe.QK, {
-                        label: r(Be, {}, "Edit future reminders"),
+                        label: r(Re, {}, "Edit future reminders"),
                         color: "Primary"
                     }), (0,
-                    i.jsx)(ke, {
+                    i.jsx)(ke.Z, {
                         color: "Primary",
                         size: 14
                     })]
                 }), (0,
-                i.jsx)(Qe.p, {
+                i.jsx)(Je.p, {
                     visiblePopupType: a,
                     changeVisiblePopupType: e => {
                         s(e)
@@ -610,9 +594,9 @@
                 })]
             });
             return (0,
-            i.jsx)(ve.yl7, {
+            i.jsx)(ye.yl7, {
                 isVisible: e.breakReminderPopup,
-                message: e.breakReminderPopup ? u : null,
+                message: e.breakReminderPopup ? d : null,
                 actionVariant: "text",
                 widthVariant: "wide",
                 actions: [{
@@ -621,7 +605,7 @@
                         n.uploadMetric("web_time_break_ok")
                     }
                     ,
-                    text: r(Ye, {}, "OK"),
+                    text: r(Ue, {}, "OK"),
                     variant: "primary"
                 }, {
                     onClick: () => {
@@ -630,68 +614,68 @@
                         n.uploadMetric("web_time_break_snooze")
                     }
                     ,
-                    text: r(ze, {}, "Snooze(10m)"),
+                    text: r(Be, {}, "Snooze(10m)"),
                     variant: "secondary"
                 }]
             })
         }
-          , tt = n.p + "2c1d4382cd9969108f39.png";
-        var nt = n(17785)
-          , it = n(26456);
-        const ot = () => {
+          , Qe = n.p + "2c1d4382cd9969108f39.png";
+        var et = n(17785)
+          , tt = n(26456);
+        const nt = () => {
             var e;
             const [t,n] = (0,
             c.S)(le.z)
               , o = (0,
-            w.Nj)(Je.i)
+            w.Nj)(Xe.i)
               , r = (0,
-            Ze.s)()
+            qe.s)()
               , {isDark: a} = (0,
             l.u)()
               , s = r("screenTime_web_sleepReminders_setTime_am_desc", {}, "AM")
-              , u = r("screenTime_web_sleepReminders_setTime_pm_desc", {}, "PM")
-              , {language: d} = null !== (e = (0,
+              , d = r("screenTime_web_sleepReminders_setTime_pm_desc", {}, "PM")
+              , {language: p} = null !== (e = (0,
             T.W)(( () => ["language", "user"]), [])) && void 0 !== e ? e : {}
-              , g = (0,
+              , h = (0,
             H.useHistory)()
-              , m = (0,
-            p.useMemo)(( () => {
+              , _ = (0,
+            u.useMemo)(( () => {
                 var e, n;
                 const i = (null === (e = t.sleepTimeSettings) || void 0 === e ? void 0 : e.sleep_time_start_hour) || 0
                   , o = (null === (n = t.sleepTimeSettings) || void 0 === n ? void 0 : n.sleep_time_start_minute) || 0
                   , r = (new Date).setHours(i, o)
-                  , a = i < 12 ? s : u;
-                return it.Ay.format(r, "LT") + ` ${a}`
+                  , a = i < 12 ? s : d;
+                return tt.Ay.format(r, "LT") + ` ${a}`
             }
             ), [t.sleepTimeSettings])
-              , _ = (0,
-            p.useMemo)(( () => !t.defaultDailySTMPopup && t.sleepReminderPopup && t.isOpenSleepReminder), [t.sleepReminderPopup, t.defaultDailySTMPopup, t.isOpenSleepReminder]);
+              , g = (0,
+            u.useMemo)(( () => !t.defaultDailySTMPopup && t.sleepReminderPopup && t.isOpenSleepReminder), [t.sleepReminderPopup, t.defaultDailySTMPopup, t.isOpenSleepReminder]);
             (0,
-            p.useEffect)(( () => {
-                _ && o.uploadMetric("web_sleep_reminder_pop_up")
+            u.useEffect)(( () => {
+                g && o.uploadMetric("web_sleep_reminder_pop_up")
             }
-            ), [_]);
-            const h = (0,
+            ), [g]);
+            const m = (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(he, {
-                    src: a ? tt : nt
+                i.jsx)(me, {
+                    src: a ? Qe : et
                 }), (0,
                 i.jsx)(fe, {
                     style: {
                         marginTop: 36
                     },
-                    children: r(Le, {}, "Ready for bed?")
+                    children: r(je, {}, "Ready for bed?")
                 }), (0,
-                i.jsx)(ge, {
+                i.jsx)(he, {
                     style: {
                         marginBottom: 12
                     },
-                    children: r(Ae, {
-                        string: m
-                    }, `You’ve set your sleep time for ${m}.`)
+                    children: r(Me, {
+                        string: _
+                    }, `You’ve set your sleep time for ${_}.`)
                 }), (0,
-                i.jsxs)(me, {
+                i.jsxs)(_e, {
                     onClick: () => {
                         t.sleepTimeSettings && n.uploadSleepReminderAction({
                             sleep_time_settings: t.sleepTimeSettings,
@@ -700,27 +684,27 @@
                         }),
                         n.setSleepReminderPopup(!1),
                         o.uploadMetric("web_sleep_reminder_edit"),
-                        g.push({
+                        h.push({
                             pathname: "/setting",
-                            search: `?lang=${d}&activeTab=sleep-reminder`
+                            search: `?lang=${p}&activeTab=sleep-reminder`
                         })
                     }
                     ,
                     children: [(0,
                     i.jsx)(Pe.QK, {
-                        label: r(Ne, {}, "Edit reminder"),
+                        label: r(Ae, {}, "Edit reminder"),
                         color: "Primary"
                     }), (0,
-                    i.jsx)(ke, {
+                    i.jsx)(ke.Z, {
                         color: "Primary",
                         size: 14
                     })]
                 })]
             });
             return (0,
-            i.jsx)(ve.yl7, {
-                isVisible: _,
-                message: _ ? h : null,
+            i.jsx)(ye.yl7, {
+                isVisible: g,
+                message: g ? m : null,
                 actionVariant: "text",
                 widthVariant: "wide",
                 actions: [{
@@ -734,7 +718,7 @@
                         o.uploadMetric("web_sleep_reminder_ok")
                     }
                     ,
-                    text: r(De, {}, "OK"),
+                    text: r(Le, {}, "OK"),
                     variant: "primary"
                 }, {
                     onClick: () => {
@@ -748,87 +732,53 @@
                         o.uploadMetric("web_sleep_reminder_delay")
                     }
                     ,
-                    text: r(Ie, {}, "Delay (10m)"),
+                    text: r(Ne, {}, "Delay (10m)"),
                     variant: "secondary"
                 }]
             })
         }
-          , rt = n.p + "d5dd413dd013f33ce41d.png";
-        var at = n(72438);
-        function st(e) {
-            return p.createElement("svg", (0,
-            xe._)({
-                fill: "currentColor"
-            }, e, {
-                viewBox: "0 0 48 48",
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "1em",
-                height: "1em",
-                className: e.className
-            }), p.createElement("path", {
-                d: "M14.83 14.33a9.22 9.22 0 0 1 18.34 0l1.03 10.59c.28 2.85 1.86 4.92 3.56 7.08H10.24c1.7-2.16 3.28-4.23 3.56-7.08l1.03-10.6ZM24 2c-6.8 0-12.5 5.17-13.16 11.94L9.82 24.53c-.3 3.19-3.4 5.86-5.27 8.23A2 2 0 0 0 6.12 36h35.76a2 2 0 0 0 1.57-3.24c-1.87-2.37-4.96-5.04-5.27-8.23l-1.02-10.59A13.22 13.22 0 0 0 24 2Zm6.9 39c.11-.55-.35-1-.9-1H18c-.55 0-1.01.45-.9 1 1.28 6.61 12.52 6.61 13.8 0Z"
-            }))
-        }
-        function lt(e) {
-            return p.createElement("svg", (0,
-            xe._)({
-                fill: "currentColor"
-            }, e, {
-                viewBox: "0 0 48 48",
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "1em",
-                height: "1em",
-                className: e.className
-            }), p.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M37.37 4.85a4.01 4.01 0 0 0-.99-.79 3 3 0 0 0-2.72 0c-.45.23-.81.6-1 .79a9 9 0 0 1-.04.05l-19.3 19.3c-1.64 1.63-2.53 2.52-3.35 3.47a36 36 0 0 0-4.32 6.16c-.6 1.1-1.14 2.24-2.11 4.33l-.3.6c-.4.75-.84 1.61-.8 2.43a2.5 2.5 0 0 0 2.37 2.36c.82.05 1.68-.4 2.44-.79l.59-.3c2.09-.97 3.23-1.5 4.33-2.11a36 36 0 0 0 6.16-4.32c.95-.82 1.84-1.71 3.47-3.34l19.3-19.3.05-.06a3 3 0 0 0 .78-3.71c-.22-.45-.6-.81-.78-1l-.02-.02-.03-.03-3.67-3.67a8.7 8.7 0 0 1-.06-.05ZM16.2 26.97 35.02 8.15l2.83 2.83L19.03 29.8c-1.7 1.7-2.5 2.5-3.33 3.21a32 32 0 0 1-7.65 4.93 32 32 0 0 1 4.93-7.65c.73-.82 1.51-1.61 3.22-3.32Z"
-            }), p.createElement("path", {
-                d: "M43 44H13.83a40 40 0 0 0 6-4H43a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1Z"
-            }))
-        }
-        (0,
-        Ee.r)(st),
-        (0,
-        Ee.r)(lt);
-        const ct = () => {
+          , it = n.p + "d5dd413dd013f33ce41d.png";
+        var ot = n(72438)
+          , rt = n(93897)
+          , at = n(70813);
+        const st = () => {
             var e;
             const t = (0,
-            Ze.s)()
+            qe.s)()
               , {isDark: n} = (0,
             l.u)()
               , o = (0,
-            w.Nj)(Je.i)
+            w.Nj)(Xe.i)
               , [r,a] = (0,
             c.S)(le.z)
               , s = (0,
             H.useHistory)()
-              , {language: u} = null !== (e = (0,
+              , {language: d} = null !== (e = (0,
             T.W)(( () => ["language"]), [])) && void 0 !== e ? e : {}
-              , d = (0,
-            p.useMemo)(( () => {
+              , p = (0,
+            u.useMemo)(( () => {
                 const e = 2 === r.STMInterventionType && r.defaultDailySTMPopup;
                 return e && o.uploadMetric("web_stm_pop_up"),
                 e
             }
             ), [r.STMInterventionType, r.defaultDailySTMPopup])
-              , g = {
+              , h = {
                 type: "icon",
                 items: [{
-                    text: t(Ve, {}, "We’ll let you know if your time is up so it’s easier to log off"),
-                    iconComponent: st
+                    text: t(We, {}, "We’ll let you know if your time is up so it’s easier to log off"),
+                    iconComponent: rt.A
                 }, {
-                    text: t(Ge, {}, "You can manage your daily screen time in Settings and privacy"),
-                    iconComponent: lt
+                    text: t(Ke, {}, "You can manage your daily screen time in Settings and privacy"),
+                    iconComponent: at.A
                 }]
             }
-              , m = (0,
+              , _ = (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(ve.I05, {
+                i.jsx)(ye.I05, {
                     className: "mt-32",
                     variant: "primary",
-                    text: t(Xe, {}, "Got it"),
+                    text: t($e, {}, "Got it"),
                     useNewRadiusDesign: !0,
                     onClick: () => {
                         o.uploadDailySTMPopupSuccess({
@@ -840,7 +790,7 @@
                         o.uploadMetric("web_stm_got_it")
                     }
                 }), (0,
-                i.jsx)(_e, {
+                i.jsx)(ge, {
                     style: {
                         marginTop: 6
                     },
@@ -848,39 +798,39 @@
                         a.setDefaultDailySTMPopup(!1),
                         s.push({
                             pathname: "/setting",
-                            search: `lang=${u}&activeTab=custom-select-screen-time`
+                            search: `lang=${d}&activeTab=custom-select-screen-time`
                         })
                     }
                     ,
-                    children: t(qe, {}, "Manage Daily Screen Time")
+                    children: t(Ge, {}, "Manage Daily Screen Time")
                 })]
             });
             return (0,
-            i.jsx)(ve.NCo, {
-                isVisible: d,
-                image: d ? {
+            i.jsx)(ye.NCo, {
+                isVisible: p,
+                image: p ? {
                     type: "large-image",
-                    src: n ? rt : at
+                    src: n ? it : ot
                 } : void 0,
-                title: t($e, {}, "To support your well-being, your daily screen time is set to 1 hour"),
-                message: g,
-                accessory: m,
+                title: t(Ve, {}, "To support your well-being, your daily screen time is set to 1 hour"),
+                message: h,
+                accessory: _,
                 actions: []
             })
         }
-          , pt = n.p + "57ca16f6b5b90c7753d0.png"
-          , ut = n.p + "81479b0f5488c5f3b85d.png"
-          , dt = (0,
-        p.memo)((function({onPasswordChange: e}) {
+          , lt = n.p + "57ca16f6b5b90c7753d0.png"
+          , ct = n.p + "81479b0f5488c5f3b85d.png"
+          , ut = (0,
+        u.memo)((function({onPasswordChange: e}) {
             const t = [(0,
-            p.useRef)(null), (0,
-            p.useRef)(null), (0,
-            p.useRef)(null), (0,
-            p.useRef)(null)]
+            u.useRef)(null), (0,
+            u.useRef)(null), (0,
+            u.useRef)(null), (0,
+            u.useRef)(null)]
               , [n,o] = (0,
-            p.useState)("");
+            u.useState)("");
             return (0,
-            p.useEffect)(( () => {
+            u.useEffect)(( () => {
                 e(n)
             }
             ), [n, e]),
@@ -893,7 +843,7 @@
                     marginBottom: 32
                 },
                 children: t.map(( (e, r) => (0,
-                i.jsx)(ve.jl$, {
+                i.jsx)(ye.jl$, {
                     ref: e,
                     type: "password",
                     textAlign: "center",
@@ -936,36 +886,36 @@
             })
         }
         ))
-          , gt = ({passcode: e="1234"}) => {
+          , dt = ({passcode: e="1234"}) => {
             var t;
             const n = (0,
-            Ze.s)()
+            qe.s)()
               , {isDark: o} = (0,
             l.u)()
               , [r,a] = (0,
-            p.useState)("")
+            u.useState)("")
               , s = 4 !== r.length
-              , u = (0,
-            w.Nj)(Je.i)
-              , [d,g] = (0,
+              , d = (0,
+            w.Nj)(Xe.i)
+              , [p,h] = (0,
             c.S)(le.z)
-              , {user: m} = null !== (t = (0,
+              , {user: _} = null !== (t = (0,
             T.W)(( () => ["user"]), [])) && void 0 !== t ? t : {}
-              , _ = (0,
-            p.useMemo)(( () => d.isFpTeenOpenDailySTM), [d.isFpTeenOpenDailySTM])
-              , h = (0,
-            p.useMemo)(( () => d.parentUsername), [d.parentUsername])
+              , g = (0,
+            u.useMemo)(( () => p.isFpTeenOpenDailySTM), [p.isFpTeenOpenDailySTM])
+              , m = (0,
+            u.useMemo)(( () => p.parentUsername), [p.parentUsername])
               , f = (0,
-            p.useMemo)(( () => Math.floor((d.timeUsageToday + d.activeTimeUsage) / 3600)), [d.timeUsageToday, d.activeTimeUsage])
+            u.useMemo)(( () => Math.floor((p.timeUsageToday + p.activeTimeUsage) / 3600)), [p.timeUsageToday, p.activeTimeUsage])
               , b = (0,
-            p.useMemo)(( () => Math.floor((d.timeUsageToday + d.activeTimeUsage / 60) % 60)), [d.timeUsageToday, d.activeTimeUsage])
-              , y = (0,
-            p.useMemo)(( () => (1 === d.STMInterventionType || 3 === d.STMInterventionType) && d.defaultDailySTMPopup && d.isOpenDailySTM), [d.STMInterventionType, d.defaultDailySTMPopup, d.isOpenDailySTM])
+            u.useMemo)(( () => Math.floor((p.timeUsageToday + p.activeTimeUsage / 60) % 60)), [p.timeUsageToday, p.activeTimeUsage])
               , v = (0,
-            p.useMemo)(( () => {
+            u.useMemo)(( () => (1 === p.STMInterventionType || 3 === p.STMInterventionType) && p.defaultDailySTMPopup && p.isOpenDailySTM), [p.STMInterventionType, p.defaultDailySTMPopup, p.isOpenDailySTM])
+              , y = (0,
+            u.useMemo)(( () => {
                 if (b && f) {
                     const e = (0,
-                    ce.gO)(n(we, {
+                    ce.gO)(n(Se, {
                         minutes: b,
                         hours: f
                     }, `You’ve spent ${f}h ${b}m on TikTok today. Close it to stay within your daily time, or enter the passcode <b>1234</b> to return to TikTok.`), {
@@ -979,7 +929,7 @@
                 }
                 if (f) {
                     const e = (0,
-                    ce.gO)(n(Se, {
+                    ce.gO)(n(Te, {
                         hours: f
                     }, `You’ve spent ${f}h on TikTok today. Close it to stay within your daily time, or enter the passcode <b>1234</b> to return to TikTok.`), {
                         hours: f.toString()
@@ -990,7 +940,7 @@
                     }, "passcode"), e[1]]
                 }
                 const e = (0,
-                ce.gO)(n(Te, {
+                ce.gO)(n(Ee, {
                     minutes: b
                 }, `You’ve spent ${b}m on TikTok today. Close it to stay within your daily time, or enter the passcode <b>1234</b> to return to TikTok.`), {
                     minutes: b.toString()
@@ -1002,70 +952,70 @@
             }
             ), [n, b, f])
               , P = (0,
-            p.useMemo)(( () => b && f ? (0,
-            ce.gO)(n(je, {
-                minutes: b,
-                hours: f,
-                username: h
-            }, `You’ve spent ${f}h ${b}m on TikTok today. Close it to stay within your daily time, or enter a passcode from ${h} to return to TikTok.`), {
-                minutes: b.toString(),
-                hours: f.toString(),
-                username: h
-            }) : f ? (0,
+            u.useMemo)(( () => b && f ? (0,
             ce.gO)(n(Ce, {
-                hours: f,
-                username: h
-            }, `You’ve spent ${f}h on TikTok today. Close it to stay within your daily time, or enter a passcode from ${h} to return to TikTok.`), {
-                hours: f.toString(),
-                username: h
-            }) : (0,
-            ce.gO)(n(Oe, {
                 minutes: b,
-                username: h
-            }, `You’ve spent ${b}m on TikTok today. Close it to stay within your daily time, or enter a passcode from ${h} to return to TikTok.`), {
+                hours: f,
+                username: m
+            }, `You’ve spent ${f}h ${b}m on TikTok today. Close it to stay within your daily time, or enter a passcode from ${m} to return to TikTok.`), {
                 minutes: b.toString(),
-                username: h
-            })), [n, h, f, b])
-              , x = (0,
-            p.useMemo)(( () => _ ? P : v), [_, v, P])
+                hours: f.toString(),
+                username: m
+            }) : f ? (0,
+            ce.gO)(n(Oe, {
+                hours: f,
+                username: m
+            }, `You’ve spent ${f}h on TikTok today. Close it to stay within your daily time, or enter a passcode from ${m} to return to TikTok.`), {
+                hours: f.toString(),
+                username: m
+            }) : (0,
+            ce.gO)(n(xe, {
+                minutes: b,
+                username: m
+            }, `You’ve spent ${b}m on TikTok today. Close it to stay within your daily time, or enter a passcode from ${m} to return to TikTok.`), {
+                minutes: b.toString(),
+                username: m
+            })), [n, m, f, b])
+              , k = (0,
+            u.useMemo)(( () => g ? P : y), [g, y, P])
               , E = (0,
-            p.useMemo)(( () => n(_ ? Fe : He, {}, "Ready to close TikTok?")), [_])
-              , k = () => {
-                ve.DbI.success(n(Ke, {}, "You've returned to Tiktok")),
-                u.uploadDailySTMPopupSuccess({
+            u.useMemo)(( () => n(g ? ze : Ye, {}, "Ready to close TikTok?")), [g])
+              , x = () => {
+                ye.DbI.success(n(He, {}, "You've returned to Tiktok")),
+                d.uploadDailySTMPopupSuccess({
                     date: (0,
                     ce.zk)(new Date),
-                    screen_time_limit_type: _ ? 3 : 1
+                    screen_time_limit_type: g ? 3 : 1
                 }).subscribe(),
-                u.uploadMetric("web_users_return_tt"),
-                g.setDefaultDailySTMPopup(!1)
+                d.uploadMetric("web_users_return_tt"),
+                h.setDefaultDailySTMPopup(!1)
             }
               , O = () => {
-                u.uploadMetric("web_dstime_passcode_error"),
-                ve.DbI.error(n(Me, {}, "The passcode you entered is incorrect. Please try again."))
+                d.uploadMetric("web_dstime_passcode_error"),
+                ye.DbI.error(n(we, {}, "The passcode you entered is incorrect. Please try again."))
             }
               , S = (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(ge, {
-                    children: x
+                i.jsx)(he, {
+                    children: k
                 }), (0,
-                i.jsx)(dt, {
+                i.jsx)(ut, {
                     onPasswordChange: e => {
                         a(e)
                     }
                 }), (0,
-                i.jsx)(ve.I05, {
+                i.jsx)(ye.I05, {
                     onClick: () => {
                         try {
-                            if (u.uploadMetric("web_dstime_enter_passcode"),
-                            _) {
-                                if (_) {
+                            if (d.uploadMetric("web_dstime_enter_passcode"),
+                            g) {
+                                if (g) {
                                     const e = (0,
-                                    ce.Zf)(r, (null == m ? void 0 : m.uid) || "");
-                                    u.uploadDailySTMTeenPinSuccess(e).subscribe({
+                                    ce.Zf)(r, (null == _ ? void 0 : _.uid) || "");
+                                    d.uploadDailySTMTeenPinSuccess(e).subscribe({
                                         next: e => {
-                                            0 === e.status_code ? k() : O()
+                                            0 === e.status_code ? x() : O()
                                         }
                                         ,
                                         error: () => {
@@ -1074,32 +1024,32 @@
                                     })
                                 }
                             } else
-                                r !== e ? O() : k()
+                                r !== e ? O() : x()
                         } catch (e) {
-                            ve.DbI.info(n(Me, {}, "The passcode you entered is incorrect. Please try again.")),
-                            u.uploadMetric("web_dstime_passcode_error")
+                            ye.DbI.info(n(we, {}, "The passcode you entered is incorrect. Please try again.")),
+                            d.uploadMetric("web_dstime_passcode_error")
                         }
                     }
                     ,
                     disabled: s,
                     variant: "primary",
-                    text: n(We, {}, "Return to Tiktok"),
+                    text: n(Fe, {}, "Return to Tiktok"),
                     useNewRadiusDesign: !0
                 })]
             });
             return (0,
-            p.useEffect)(( () => {
-                u.uploadMetric("web_stm_pop_up")
+            u.useEffect)(( () => {
+                d.uploadMetric("web_stm_pop_up")
             }
             ), []),
             (0,
             i.jsx)(i.Fragment, {
                 children: (0,
-                i.jsx)(ve.NCo, {
-                    isVisible: y,
-                    image: y ? {
+                i.jsx)(ye.NCo, {
+                    isVisible: v,
+                    image: v ? {
                         type: "large-image",
-                        src: o ? pt : ut
+                        src: o ? lt : ct
                     } : void 0,
                     title: E,
                     subtitle: "",
@@ -1114,43 +1064,43 @@
             })
         }
         ;
-        var mt, _t, ht, ft, bt, yt, vt, Pt, xt, Et, kt = n(237), Tt = n(48615), Ot = n(70364), St = n.n(Ot);
-        (_t = mt || (mt = {})).POP = "pop",
-        _t.PC_BANNER = "pc_banner",
-        _t.MOBILE_BANNER = "mobile_banner",
-        _t.WEBVIEW = "webview",
-        (ft = ht || (ht = {})).V1 = "v1",
-        ft.V2 = "v2",
-        ft.CUSTOMIZED = "customized",
-        (yt = bt || (bt = {})).TEXT = "text",
-        yt.LINK = "link",
-        yt.BUTTON = "button",
-        (Pt = vt || (vt = {})).EXTERNAL = "external",
-        Pt.INTERNAL = "internal",
-        Pt.SUB_POPUP = "sub_popup",
-        (Et = xt || (xt = {})).INFO = "info",
-        Et.WARN = "warn",
-        Et.ERROR = "error";
-        const Ct = "/tiktok/popup/dispatch/v1"
-          , wt = "/api/policy/notice/"
-          , jt = Ct
-          , Mt = "/tiktok/popup/callback/v1"
-          , Lt = Mt;
-        var At, Nt;
-        (Nt = At || (At = {})).initError = "initError",
-        Nt.beforeFetchData = "beforeFetchData",
-        Nt.afterFetchData = "afterFetchData",
-        Nt.fetchDataError = "fetchDataError",
-        Nt.popupDataReady = "popupDataReady",
-        Nt.processDataError = "processDataError",
-        Nt.beforeSendCallback = "beforeSendCallback",
-        Nt.afterSendCallback = "afterSendCallback",
-        Nt.sendCallbackError = "sendCallbackError",
-        Nt.beforeNavigateToNextPopup = "beforeNavigateToNextPopup",
-        Nt.afterNavigateToNextPopup = "afterNavigateToNextPopup",
-        Nt.allPopupsCompleted = "allPopupsCompleted",
-        Nt.beforeDestruct = "beforeDestruct";
-        var Dt, It = class {
+        var pt, ht, _t, gt, mt, ft, bt, vt, yt, Pt, kt = n(237), Et = n(48615), xt = n(70364), Tt = n.n(xt);
+        (ht = pt || (pt = {})).POP = "pop",
+        ht.PC_BANNER = "pc_banner",
+        ht.MOBILE_BANNER = "mobile_banner",
+        ht.WEBVIEW = "webview",
+        (gt = _t || (_t = {})).V1 = "v1",
+        gt.V2 = "v2",
+        gt.CUSTOMIZED = "customized",
+        (ft = mt || (mt = {})).TEXT = "text",
+        ft.LINK = "link",
+        ft.BUTTON = "button",
+        (vt = bt || (bt = {})).EXTERNAL = "external",
+        vt.INTERNAL = "internal",
+        vt.SUB_POPUP = "sub_popup",
+        (Pt = yt || (yt = {})).INFO = "info",
+        Pt.WARN = "warn",
+        Pt.ERROR = "error";
+        const Ot = "/tiktok/popup/dispatch/v1"
+          , St = "/api/policy/notice/"
+          , Ct = Ot
+          , wt = "/tiktok/popup/callback/v1"
+          , jt = wt;
+        var Mt, At;
+        (At = Mt || (Mt = {})).initError = "initError",
+        At.beforeFetchData = "beforeFetchData",
+        At.afterFetchData = "afterFetchData",
+        At.fetchDataError = "fetchDataError",
+        At.popupDataReady = "popupDataReady",
+        At.processDataError = "processDataError",
+        At.beforeSendCallback = "beforeSendCallback",
+        At.afterSendCallback = "afterSendCallback",
+        At.sendCallbackError = "sendCallbackError",
+        At.beforeNavigateToNextPopup = "beforeNavigateToNextPopup",
+        At.afterNavigateToNextPopup = "afterNavigateToNextPopup",
+        At.allPopupsCompleted = "allPopupsCompleted",
+        At.beforeDestruct = "beforeDestruct";
+        var Lt, Nt = class {
             init(e) {
                 this.debug = e.debug,
                 this.meta = e.meta
@@ -1173,12 +1123,12 @@
             e.INFO = "info",
             e.WARN = "warn",
             e.ERROR = "error"
-        }(Dt || (Dt = {}));
-        class Rt extends It {
+        }(Lt || (Lt = {}));
+        class Dt extends Nt {
             init(e) {
                 this.meta = e.meta,
                 this.debug = e.debug,
-                e.customLoggingModule && e.customLoggingModule instanceof It ? this._customLogger = e.customLoggingModule : this.warn("[LoggingModule]: init - incorrect implementation of LoggingModule")
+                e.customLoggingModule && e.customLoggingModule instanceof Nt ? this._customLogger = e.customLoggingModule : this.warn("[LoggingModule]: init - incorrect implementation of LoggingModule")
             }
             sendDebugMessage(e) {
                 if (this.debug) {
@@ -1200,7 +1150,7 @@
                 "function" == typeof (null === (n = this._customLogger) || void 0 === n ? void 0 : n.info) && this._customLogger.info(e, t),
                 this.send({
                     message: e,
-                    level: Dt.INFO,
+                    level: Lt.INFO,
                     meta: this.meta,
                     data: t
                 })
@@ -1210,7 +1160,7 @@
                 "function" == typeof (null === (n = this._customLogger) || void 0 === n ? void 0 : n.warn) && this._customLogger.warn(e, t),
                 this.send({
                     message: e,
-                    level: Dt.WARN,
+                    level: Lt.WARN,
                     meta: this.meta,
                     data: t
                 })
@@ -1220,7 +1170,7 @@
                 "function" == typeof (null === (n = this._customLogger) || void 0 === n ? void 0 : n.error) && this._customLogger.error(e, t),
                 this.send({
                     message: e,
-                    level: Dt.ERROR,
+                    level: Lt.ERROR,
                     meta: this.meta,
                     data: t
                 })
@@ -1232,16 +1182,16 @@
             constructor() {
                 return super(),
                 this.debug = !1,
-                Rt._instance || (Rt._instance = this),
-                Rt._instance
+                Dt._instance || (Dt._instance = this),
+                Dt._instance
             }
         }
-        var Ut = new Rt
-          , Bt = n(71510)
-          , Yt = n.n(Bt)
-          , zt = n(35655)
-          , Ht = n.n(zt);
-        function Ft(e, t, n) {
+        var It = new Dt
+          , Rt = n(71510)
+          , Ut = n.n(Rt)
+          , Bt = n(35655)
+          , Yt = n.n(Bt);
+        function zt(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -1250,7 +1200,7 @@
             }) : e[t] = n,
             e
         }
-        function Kt(e) {
+        function Ht(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -1259,23 +1209,23 @@
                 }
                 )))),
                 i.forEach((function(t) {
-                    Ft(e, t, n[t])
+                    zt(e, t, n[t])
                 }
                 ))
             }
             return e
         }
-        const Wt = /^(https?:\/\/)/;
-        class $t {
+        const Ft = /^(https?:\/\/)/;
+        class Vt {
             constructor() {
                 return this.init = e => {
-                    Ut.info("[ServiceModule]: init"),
+                    It.info("[ServiceModule]: init"),
                     this._domain = e.domain || "https://www.tiktok.com",
                     this._commonParams = e.commonParams || {}
                 }
                 ,
                 this.sendRequest = (e, t, n, i) => {
-                    const o = Wt.test(e) ? e : `${this._domain}${e}`
+                    const o = Ft.test(e) ? e : `${this._domain}${e}`
                       , r = new URL(o)
                       , a = Array.from(r.searchParams.entries()).reduce(( (e, t) => {
                         const [n,i] = t;
@@ -1285,7 +1235,7 @@
                     ), {})
                       , s = null != i ? i : {}
                       , {params: l, timeout: c} = s
-                      , p = function(e, t) {
+                      , u = function(e, t) {
                         if (null == e)
                             return {};
                         var n, i, o = function(e, t) {
@@ -1305,9 +1255,9 @@
                         }
                         return o
                     }(s, ["params", "timeout"]);
-                    let u = Kt({}, this._commonParams, a, null != l ? l : {});
-                    "GET" === t && n && "object" == typeof n && (u = Kt({}, u, n));
-                    const d = new URLSearchParams((e => {
+                    let d = Ht({}, this._commonParams, a, null != l ? l : {});
+                    "GET" === t && n && "object" == typeof n && (d = Ht({}, d, n));
+                    const p = new URLSearchParams((e => {
                         if (!e)
                             return "";
                         const t = new URLSearchParams;
@@ -1320,32 +1270,32 @@
                         )),
                         t.toString()
                     }
-                    )(u))
-                      , g = new URL(`${r.origin}${r.pathname}?${d.toString()}`)
-                      , m = Yt()({}, p, {
+                    )(d))
+                      , h = new URL(`${r.origin}${r.pathname}?${p.toString()}`)
+                      , _ = Ut()({}, u, {
                         method: t,
                         timeout: null != c ? c : 0,
                         data: n
                     });
-                    return Ut.info("[ServiceModule]: sendRequest start", m),
-                    Ht()(g.href, m).then((e => (Ut.info("[ServiceModule]: sendRequest finish", e),
+                    return It.info("[ServiceModule]: sendRequest start", _),
+                    Yt()(h.href, _).then((e => (It.info("[ServiceModule]: sendRequest finish", e),
                     e))).catch((e => {
-                        throw Ut.error("[ServiceModule]: sendRequest error", e),
+                        throw It.error("[ServiceModule]: sendRequest error", e),
                         e
                     }
                     ))
                 }
                 ,
                 this.destruct = () => {
-                    Ut.info("[ServiceModule]: destruct")
+                    It.info("[ServiceModule]: destruct")
                 }
                 ,
-                $t._instance || ($t._instance = this),
-                $t._instance
+                Vt._instance || (Vt._instance = this),
+                Vt._instance
             }
         }
-        var Vt, Gt, Xt, qt, Zt, Jt, Qt, en, tn, nn, on, rn, an = new $t;
-        function sn(e, t, n) {
+        var Wt, Kt, $t, Gt, qt, Xt, Jt, Zt, Qt, en, tn, nn, on = new Vt;
+        function rn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -1354,7 +1304,7 @@
             }) : e[t] = n,
             e
         }
-        function ln(e) {
+        function an(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -1363,13 +1313,13 @@
                 }
                 )))),
                 i.forEach((function(t) {
-                    sn(e, t, n[t])
+                    rn(e, t, n[t])
                 }
                 ))
             }
             return e
         }
-        function cn(e, t) {
+        function sn(e, t) {
             return t = null != t ? t : {},
             Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e) {
                 var t = Object.keys(e);
@@ -1384,12 +1334,12 @@
             )),
             e
         }
-        function pn({lang: e, body: t, bodyLinks: n, popupMeta: i, style: o, callback: r}) {
+        function ln({lang: e, body: t, bodyLinks: n, popupMeta: i, style: o, callback: r}) {
             if (!t)
                 return;
             if (!n || 0 === n.length || !/%s/.test(t))
                 return [{
-                    type: bt.TEXT,
+                    type: mt.TEXT,
                     text: t
                 }];
             const a = /%s/g
@@ -1397,37 +1347,37 @@
               , l = t;
             let c = 0;
             return n.forEach(( ({text: t, action: n}) => {
-                var p;
-                const u = a.exec(l);
-                if (!u)
+                var u;
+                const d = a.exec(l);
+                if (!d)
                     return;
-                const d = ln({
-                    type: (null == n ? void 0 : n.link) ? bt.LINK : bt.BUTTON,
+                const p = an({
+                    type: (null == n ? void 0 : n.link) ? mt.LINK : mt.BUTTON,
                     text: t
                 }, (null == n ? void 0 : n.link) && {
-                    link: mn({
+                    link: pn({
                         link: n.link,
                         lang: e
                     }),
-                    linkType: n.link_type === Zt.LINK_TYPE_ENUM_EXTERNAL ? vt.EXTERNAL : vt.INTERNAL
-                }, (null == n || null === (p = n.actions) || void 0 === p ? void 0 : p.includes(tn.ACTION_TYPE_ENUM_CALLBACK)) && {
+                    linkType: n.link_type === qt.LINK_TYPE_ENUM_EXTERNAL ? bt.EXTERNAL : bt.INTERNAL
+                }, (null == n || null === (u = n.actions) || void 0 === u ? void 0 : u.includes(Qt.ACTION_TYPE_ENUM_CALLBACK)) && {
                     callback: r(i, o, n, !1)
                 });
                 s.push({
-                    type: bt.TEXT,
-                    text: l.slice(c, u.index)
+                    type: mt.TEXT,
+                    text: l.slice(c, d.index)
                 }),
-                s.push(d),
-                c = Number(u.index) + u[0].length
+                s.push(p),
+                c = Number(d.index) + d[0].length
             }
             )),
             s.push({
-                type: bt.TEXT,
+                type: mt.TEXT,
                 text: l.slice(c)
             }),
             s
         }
-        function un({rawButtons: e, popupMeta: t, style: n, callback: i}) {
+        function cn({rawButtons: e, popupMeta: t, style: n, callback: i}) {
             if (!e)
                 return;
             const o = [];
@@ -1443,136 +1393,136 @@
             )),
             o
         }
-        function dn(e) {
+        function un(e) {
             switch (e) {
-            case Xt.POPUP_STYLE_ENUM_PC_BANNER:
-                return mt.PC_BANNER;
-            case Xt.POPUP_STYLE_ENUM_MOBILE_BANNER:
-                return mt.MOBILE_BANNER;
-            case Xt.POPUP_STYLE_ENUM_WEBVIEW:
-                return mt.WEBVIEW;
-            case Xt.POPUP_STYLE_ENUM_POP:
+            case $t.POPUP_STYLE_ENUM_PC_BANNER:
+                return pt.PC_BANNER;
+            case $t.POPUP_STYLE_ENUM_MOBILE_BANNER:
+                return pt.MOBILE_BANNER;
+            case $t.POPUP_STYLE_ENUM_WEBVIEW:
+                return pt.WEBVIEW;
+            case $t.POPUP_STYLE_ENUM_POP:
             default:
-                return mt.POP
+                return pt.POP
             }
         }
-        (Gt = Vt || (Vt = {})).CALLBACK = "callback",
-        Gt.H5 = "h5",
-        (qt = Xt || (Xt = {}))[qt.POPUP_STYLE_ENUM_BOTTOM = 0] = "POPUP_STYLE_ENUM_BOTTOM",
-        qt[qt.POPUP_STYLE_ENUM_POP = 1] = "POPUP_STYLE_ENUM_POP",
-        qt[qt.POPUP_STYLE_ENUM_FULLSCREEN = 2] = "POPUP_STYLE_ENUM_FULLSCREEN",
-        qt[qt.POPUP_STYLE_ENUM_WEBVIEW = 3] = "POPUP_STYLE_ENUM_WEBVIEW",
-        qt[qt.POPUP_STYLE_ENUM_PC_BANNER = 4] = "POPUP_STYLE_ENUM_PC_BANNER",
-        qt[qt.POPUP_STYLE_ENUM_MOBILE_BANNER = 5] = "POPUP_STYLE_ENUM_MOBILE_BANNER",
-        (Jt = Zt || (Zt = {}))[Jt.LINK_TYPE_ENUM_INTERNAL = 0] = "LINK_TYPE_ENUM_INTERNAL",
-        Jt[Jt.LINK_TYPE_ENUM_EXTERNAL = 1] = "LINK_TYPE_ENUM_EXTERNAL",
-        Jt[Jt.LINK_TYPE_ENUM_SUB_POPUP = 2] = "LINK_TYPE_ENUM_SUB_POPUP",
-        Jt[Jt.LINK_TYPE_UPGRADE = 3] = "LINK_TYPE_UPGRADE",
-        (en = Qt || (Qt = {}))[en.POPUP_OPERATION_ENUM_LEGACY_0 = 0] = "POPUP_OPERATION_ENUM_LEGACY_0",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_1 = 1] = "POPUP_OPERATION_ENUM_LEGACY_1",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_2 = 2] = "POPUP_OPERATION_ENUM_LEGACY_2",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_3 = 3] = "POPUP_OPERATION_ENUM_LEGACY_3",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_4_AGREE = 4] = "POPUP_OPERATION_ENUM_LEGACY_4_AGREE",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_5_REMIND_ME_LATER = 5] = "POPUP_OPERATION_ENUM_LEGACY_5_REMIND_ME_LATER",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_7_LEARN_MORE = 6] = "POPUP_OPERATION_ENUM_LEGACY_7_LEARN_MORE",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_8_CONFIRM = 7] = "POPUP_OPERATION_ENUM_LEGACY_8_CONFIRM",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_9_NOT_NOW = 8] = "POPUP_OPERATION_ENUM_LEGACY_9_NOT_NOW",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_10_DOWNLOAD_YOUR_DATA = 9] = "POPUP_OPERATION_ENUM_LEGACY_10_DOWNLOAD_YOUR_DATA",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_11_SUBMIT_APPEAL = 10] = "POPUP_OPERATION_ENUM_LEGACY_11_SUBMIT_APPEAL",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_20_DOWNLOAD_YOUR_DATA = 11] = "POPUP_OPERATION_ENUM_LEGACY_20_DOWNLOAD_YOUR_DATA",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_100_GOT_IT = 12] = "POPUP_OPERATION_ENUM_LEGACY_100_GOT_IT",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_101_LEARN_MORE = 13] = "POPUP_OPERATION_ENUM_LEGACY_101_LEARN_MORE",
-        en[en.POPUP_OPERATION_ENUM_LEGACY_200_LEARN_MORE = 14] = "POPUP_OPERATION_ENUM_LEGACY_200_LEARN_MORE",
-        (nn = tn || (tn = {}))[nn.ACTION_TYPE_ENUM_CALLBACK = 0] = "ACTION_TYPE_ENUM_CALLBACK",
-        nn[nn.ACTION_TYPE_ENUM_UPDATE_CONSENT = 1] = "ACTION_TYPE_ENUM_UPDATE_CONSENT",
-        nn[nn.ACTION_TYPE_ENUM_FETCH_COMPLIANCE_SETTING = 2] = "ACTION_TYPE_ENUM_FETCH_COMPLIANCE_SETTING",
-        (rn = on || (on = {}))[rn.POPUP_CALLBACK_TYPE_ENUM_UNKNOWN = 0] = "POPUP_CALLBACK_TYPE_ENUM_UNKNOWN",
-        rn[rn.POPUP_CALLBACK_TYPE_ENUM_USER_ID = 1] = "POPUP_CALLBACK_TYPE_ENUM_USER_ID",
-        rn[rn.POPUP_CALLBACK_TYPE_ENUM_DEVICE_ID = 2] = "POPUP_CALLBACK_TYPE_ENUM_DEVICE_ID";
-        const gn = "${locale}";
-        function mn({link: e, lang: t}) {
-            return e.replace(gn, t)
+        (Kt = Wt || (Wt = {})).CALLBACK = "callback",
+        Kt.H5 = "h5",
+        (Gt = $t || ($t = {}))[Gt.POPUP_STYLE_ENUM_BOTTOM = 0] = "POPUP_STYLE_ENUM_BOTTOM",
+        Gt[Gt.POPUP_STYLE_ENUM_POP = 1] = "POPUP_STYLE_ENUM_POP",
+        Gt[Gt.POPUP_STYLE_ENUM_FULLSCREEN = 2] = "POPUP_STYLE_ENUM_FULLSCREEN",
+        Gt[Gt.POPUP_STYLE_ENUM_WEBVIEW = 3] = "POPUP_STYLE_ENUM_WEBVIEW",
+        Gt[Gt.POPUP_STYLE_ENUM_PC_BANNER = 4] = "POPUP_STYLE_ENUM_PC_BANNER",
+        Gt[Gt.POPUP_STYLE_ENUM_MOBILE_BANNER = 5] = "POPUP_STYLE_ENUM_MOBILE_BANNER",
+        (Xt = qt || (qt = {}))[Xt.LINK_TYPE_ENUM_INTERNAL = 0] = "LINK_TYPE_ENUM_INTERNAL",
+        Xt[Xt.LINK_TYPE_ENUM_EXTERNAL = 1] = "LINK_TYPE_ENUM_EXTERNAL",
+        Xt[Xt.LINK_TYPE_ENUM_SUB_POPUP = 2] = "LINK_TYPE_ENUM_SUB_POPUP",
+        Xt[Xt.LINK_TYPE_UPGRADE = 3] = "LINK_TYPE_UPGRADE",
+        (Zt = Jt || (Jt = {}))[Zt.POPUP_OPERATION_ENUM_LEGACY_0 = 0] = "POPUP_OPERATION_ENUM_LEGACY_0",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_1 = 1] = "POPUP_OPERATION_ENUM_LEGACY_1",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_2 = 2] = "POPUP_OPERATION_ENUM_LEGACY_2",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_3 = 3] = "POPUP_OPERATION_ENUM_LEGACY_3",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_4_AGREE = 4] = "POPUP_OPERATION_ENUM_LEGACY_4_AGREE",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_5_REMIND_ME_LATER = 5] = "POPUP_OPERATION_ENUM_LEGACY_5_REMIND_ME_LATER",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_7_LEARN_MORE = 6] = "POPUP_OPERATION_ENUM_LEGACY_7_LEARN_MORE",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_8_CONFIRM = 7] = "POPUP_OPERATION_ENUM_LEGACY_8_CONFIRM",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_9_NOT_NOW = 8] = "POPUP_OPERATION_ENUM_LEGACY_9_NOT_NOW",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_10_DOWNLOAD_YOUR_DATA = 9] = "POPUP_OPERATION_ENUM_LEGACY_10_DOWNLOAD_YOUR_DATA",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_11_SUBMIT_APPEAL = 10] = "POPUP_OPERATION_ENUM_LEGACY_11_SUBMIT_APPEAL",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_20_DOWNLOAD_YOUR_DATA = 11] = "POPUP_OPERATION_ENUM_LEGACY_20_DOWNLOAD_YOUR_DATA",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_100_GOT_IT = 12] = "POPUP_OPERATION_ENUM_LEGACY_100_GOT_IT",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_101_LEARN_MORE = 13] = "POPUP_OPERATION_ENUM_LEGACY_101_LEARN_MORE",
+        Zt[Zt.POPUP_OPERATION_ENUM_LEGACY_200_LEARN_MORE = 14] = "POPUP_OPERATION_ENUM_LEGACY_200_LEARN_MORE",
+        (en = Qt || (Qt = {}))[en.ACTION_TYPE_ENUM_CALLBACK = 0] = "ACTION_TYPE_ENUM_CALLBACK",
+        en[en.ACTION_TYPE_ENUM_UPDATE_CONSENT = 1] = "ACTION_TYPE_ENUM_UPDATE_CONSENT",
+        en[en.ACTION_TYPE_ENUM_FETCH_COMPLIANCE_SETTING = 2] = "ACTION_TYPE_ENUM_FETCH_COMPLIANCE_SETTING",
+        (nn = tn || (tn = {}))[nn.POPUP_CALLBACK_TYPE_ENUM_UNKNOWN = 0] = "POPUP_CALLBACK_TYPE_ENUM_UNKNOWN",
+        nn[nn.POPUP_CALLBACK_TYPE_ENUM_USER_ID = 1] = "POPUP_CALLBACK_TYPE_ENUM_USER_ID",
+        nn[nn.POPUP_CALLBACK_TYPE_ENUM_DEVICE_ID = 2] = "POPUP_CALLBACK_TYPE_ENUM_DEVICE_ID";
+        const dn = "${locale}";
+        function pn({link: e, lang: t}) {
+            return e.replace(dn, t)
         }
-        function _n({lang: e, body: t, bodyLinks: n, popupMeta: i, callback: o}) {
+        function hn({lang: e, body: t, bodyLinks: n, popupMeta: i, callback: o}) {
             if (!t)
                 return;
             if (!n || 0 === n.length)
                 return [{
-                    type: bt.TEXT,
+                    type: mt.TEXT,
                     text: t
                 }];
             const r = []
               , a = t;
             let s = 0;
             const l = /%s/g;
-            return n.forEach(( ({name: t, link: n="", operation: c, dismiss: p, approve: u, new_web_tab: d, extra: g, link_type: m}) => {
-                const _ = l.exec(a);
-                if (!_)
+            return n.forEach(( ({name: t, link: n="", operation: c, dismiss: u, approve: d, new_web_tab: p, extra: h, link_type: _}) => {
+                const g = l.exec(a);
+                if (!g)
                     return;
-                const h = mn({
+                const m = pn({
                     link: n,
                     lang: e
                 })
-                  , f = Boolean(u || p)
-                  , b = m === Vt.CALLBACK || u
-                  , y = {
-                    type: n ? bt.LINK : bt.BUTTON,
+                  , f = Boolean(d || u)
+                  , b = _ === Wt.CALLBACK || d
+                  , v = {
+                    type: n ? mt.LINK : mt.BUTTON,
                     text: t,
-                    link: h,
-                    linkType: d ? vt.EXTERNAL : vt.INTERNAL,
-                    onClick: o(f, !!b, cn(ln({}, i), {
-                        extra: g,
+                    link: m,
+                    linkType: p ? bt.EXTERNAL : bt.INTERNAL,
+                    onClick: o(f, !!b, sn(an({}, i), {
+                        extra: h,
                         operation: null == c ? void 0 : c.toString()
                     }))
                 };
                 r.push({
-                    type: bt.TEXT,
-                    text: a.slice(s, _.index)
+                    type: mt.TEXT,
+                    text: a.slice(s, g.index)
                 }),
-                r.push(y),
-                s = Number(_.index) + _[0].length
+                r.push(v),
+                s = Number(g.index) + g[0].length
             }
             )),
             r.push({
-                type: bt.TEXT,
+                type: mt.TEXT,
                 text: a.slice(s)
             }),
             r
         }
-        function hn({lang: e, first_button_highlight: t, rawButtons: n, popupMeta: i, callback: o}) {
+        function _n({lang: e, first_button_highlight: t, rawButtons: n, popupMeta: i, callback: o}) {
             if (0 === n.length)
                 return;
             const r = [];
-            return n.forEach(( ({text: n, is_bold: a, link_type: s, link: l, extra: c, approve: p, operation: u, dismiss: d, dismiss_all: g, new_web_tab: m, is_close_style: _}, h) => {
-                const f = Boolean(p || d || g)
-                  , b = s === Vt.CALLBACK || p
-                  , y = {
+            return n.forEach(( ({text: n, is_bold: a, link_type: s, link: l, extra: c, approve: u, operation: d, dismiss: p, dismiss_all: h, new_web_tab: _, is_close_style: g}, m) => {
+                const f = Boolean(u || p || h)
+                  , b = s === Wt.CALLBACK || u
+                  , v = {
                     text: n,
-                    isCloseStyle: _,
+                    isCloseStyle: g,
                     isBold: Boolean(a),
-                    isHighlight: 0 === h && t,
-                    link: l ? mn({
+                    isHighlight: 0 === m && t,
+                    link: l ? pn({
                         link: l,
                         lang: e
                     }) : void 0,
-                    linkType: m ? vt.EXTERNAL : vt.INTERNAL,
-                    onClick: o(f, !!b, cn(ln({}, i), {
+                    linkType: _ ? bt.EXTERNAL : bt.INTERNAL,
+                    onClick: o(f, !!b, sn(an({}, i), {
                         extra: c,
-                        operation: null == u ? void 0 : u.toString()
+                        operation: null == d ? void 0 : d.toString()
                     }), l ? {
-                        link: mn({
+                        link: pn({
                             link: l,
                             lang: e
                         }),
-                        linkType: m ? vt.EXTERNAL : vt.INTERNAL
+                        linkType: _ ? bt.EXTERNAL : bt.INTERNAL
                     } : void 0)
                 };
-                r.push(y)
+                r.push(v)
             }
             )),
             r
         }
-        function fn(e) {
+        function gn(e) {
             if (e)
                 return {
                     url: e,
@@ -1580,7 +1530,7 @@
                     height: "48px"
                 }
         }
-        function bn(e, t, n, i, o, r, a) {
+        function mn(e, t, n, i, o, r, a) {
             try {
                 var s = e[r](a)
                   , l = s.value
@@ -1589,7 +1539,7 @@
             }
             s.done ? t(l) : Promise.resolve(l).then(i, o)
         }
-        function yn(e, t, n) {
+        function fn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -1598,14 +1548,14 @@
             }) : e[t] = n,
             e
         }
-        class vn {
+        class bn {
             init(e, t) {
-                Ut.info("[PopupModule]: init", e),
+                It.info("[PopupModule]: init", e),
                 this._lang = e.lang,
-                this._popupApi = e.apiPath || jt,
-                this._callbackApi = e.callbackApiPath || Lt,
+                this._popupApi = e.apiPath || Ct,
+                this._callbackApi = e.callbackApiPath || jt,
                 this._scene = e.scene || 0,
-                this._dataProcessor = e.dataProcessor || ht.V2,
+                this._dataProcessor = e.dataProcessor || _t.V2,
                 this._customizedProcessor = e.customizeDataProcessor,
                 this._navigateToNextPopup = t.navigateToNextPopup,
                 this._completeAllPopups = t.completeAllPopups,
@@ -1614,13 +1564,13 @@
                 this._adjustAPIConfig()
             }
             _adjustAPIConfig() {
-                this._popupApi === Ct ? (this._callbackApi = Mt,
-                this._dataProcessor = ht.V2) : this._popupApi === wt && (this._callbackApi = "/api/policy/notice/approve/",
-                this._dataProcessor = ht.V1)
+                this._popupApi === Ot ? (this._callbackApi = wt,
+                this._dataProcessor = _t.V2) : this._popupApi === St && (this._callbackApi = "/api/policy/notice/approve/",
+                this._dataProcessor = _t.V1)
             }
             fetch(e) {
-                return Ut.info("[PopupModule]: fetch ", this._popupApi),
-                an.sendRequest(this._popupApi, "GET", function(e) {
+                return It.info("[PopupModule]: fetch ", this._popupApi),
+                on.sendRequest(this._popupApi, "GET", function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {}
                           , i = Object.keys(n);
@@ -1629,7 +1579,7 @@
                         }
                         )))),
                         i.forEach((function(t) {
-                            yn(e, t, n[t])
+                            fn(e, t, n[t])
                         }
                         ))
                     }
@@ -1639,13 +1589,13 @@
                 }, e))
             }
             processData(e) {
-                switch (Ut.info("[PopupModule]: process data", e),
+                switch (It.info("[PopupModule]: process data", e),
                 this._dataProcessor) {
-                case ht.V1:
+                case _t.V1:
                     return this._processV1Data(e.data);
-                case ht.V2:
+                case _t.V2:
                     return this._processV2Data(e.data);
-                case ht.CUSTOMIZED:
+                case _t.CUSTOMIZED:
                     return this._processCustomizedData(e);
                 default:
                     return this._processV2Data(e.data)
@@ -1653,7 +1603,7 @@
             }
             _processV1Data(e) {
                 const t = "string" == typeof e ? JSON.parse(e) : e;
-                Ut.info("[PopupModule]: process V1 response", t);
+                It.info("[PopupModule]: process V1 response", t);
                 const n = null == t ? void 0 : t.policy_notices;
                 if (!n || 0 === n.length)
                     return [];
@@ -1674,16 +1624,16 @@
                         },
                         popupType: e.style,
                         title: e.title,
-                        icon: fn(e.icon_url),
-                        iconDark: fn(e.icon_url_dark),
-                        body: _n({
+                        icon: gn(e.icon_url),
+                        iconDark: gn(e.icon_url_dark),
+                        body: hn({
                             lang: this._lang,
                             body: e.body,
                             bodyLinks: e.body_link_list,
                             popupMeta: t,
                             callback: this.callbackFunctionV1
                         }),
-                        buttons: hn({
+                        buttons: _n({
                             lang: this._lang,
                             first_button_highlight: Boolean(e.first_button_highlight),
                             rawButtons: e.actions || [],
@@ -1698,7 +1648,7 @@
             }
             _processV2Data(e) {
                 const t = "string" == typeof e ? JSON.parse(e) : e;
-                return Ut.info("[PopupModule]: process V2 response", t),
+                return It.info("[PopupModule]: process V2 response", t),
                 t.popup_responses.map((e => {
                     const t = e.popup_ui
                       , n = e.popup_meta;
@@ -1707,17 +1657,17 @@
                             style: t.style,
                             business: n.business
                         },
-                        popupType: dn(t.style),
-                        icon: fn(t.icon_url),
-                        iconDark: fn(t.icon_url_dark),
+                        popupType: un(t.style),
+                        icon: gn(t.icon_url),
+                        iconDark: gn(t.icon_url_dark),
                         title: t.title,
-                        buttons: un({
+                        buttons: cn({
                             rawButtons: t.buttons,
                             popupMeta: n,
                             style: t.style,
                             callback: this.callbackFunctionV2
                         }),
-                        body: pn({
+                        body: ln({
                             lang: this._lang,
                             body: t.body,
                             bodyLinks: t.body_links,
@@ -1730,52 +1680,52 @@
                 ))
             }
             _processCustomizedData(e) {
-                if (Ut.info("[PopupModule]: process customized response"),
+                if (It.info("[PopupModule]: process customized response"),
                 !e || !this._customizedProcessor)
                     return [];
                 try {
                     return this._customizedProcessor(e)
                 } catch (e) {
-                    Ut.error("[PopupModule]: process customized response fail", e)
+                    It.error("[PopupModule]: process customized response fail", e)
                 }
                 return []
             }
             destruct() {
-                Ut.info("[PopupModule]: destruct")
+                It.info("[PopupModule]: destruct")
             }
             constructor() {
                 this.callbackFunctionV1 = (e, t, n, i) => () => {
                     t && this._sendCallback(n).then(( () => {
-                        Ut.info("[PopupModule]: send callback finished")
+                        It.info("[PopupModule]: send callback finished")
                     }
                     )).catch((e => {
-                        Ut.error("[PopupModule]: send callback fail", e)
+                        It.error("[PopupModule]: send callback fail", e)
                     }
                     )),
-                    i && (i.linkType === vt.EXTERNAL ? window.open(i.link) : window.location.href = i.link),
+                    i && (i.linkType === bt.EXTERNAL ? window.open(i.link) : window.location.href = i.link),
                     e && this._navigateToNextPopup()
                 }
                 ,
                 this.callbackFunctionV2 = (e, t, n, i) => () => {
-                    if ((null == n ? void 0 : n.actions) && n.actions.includes(tn.ACTION_TYPE_ENUM_CALLBACK) && this._sendCallback({
+                    if ((null == n ? void 0 : n.actions) && n.actions.includes(Qt.ACTION_TYPE_ENUM_CALLBACK) && this._sendCallback({
                         business: e.business,
                         version: e.version,
                         style: t,
                         extra: n.extra,
                         operation: n.operation
                     }).then(( () => {
-                        Ut.info("[PopupModule]: send callback finished")
+                        It.info("[PopupModule]: send callback finished")
                     }
                     )).catch((e => {
-                        Ut.error("[PopupModule]: send callback fail", e)
+                        It.error("[PopupModule]: send callback fail", e)
                     }
                     )),
                     i && (null == n ? void 0 : n.link)) {
-                        const e = mn({
+                        const e = pn({
                             link: n.link,
                             lang: this._lang
                         });
-                        n.link_type === Zt.LINK_TYPE_ENUM_EXTERNAL ? window.open(e) : window.location.href = e
+                        n.link_type === qt.LINK_TYPE_ENUM_EXTERNAL ? window.open(e) : window.location.href = e
                     }
                     (null == n ? void 0 : n.dismiss_all) ? this._completeAllPopups() : (null == n ? void 0 : n.dismiss) && this._navigateToNextPopup()
                 }
@@ -1785,7 +1735,7 @@
                     n._beforeSendCallback();
                     try {
                         const t = "object" == typeof e ? new URLSearchParams(e) : e;
-                        yield an.sendRequest(n._callbackApi, "POST", t, {
+                        yield on.sendRequest(n._callbackApi, "POST", t, {
                             headers: {
                                 "Content-Type": "application/x-www-form-urlencoded"
                             }
@@ -1802,10 +1752,10 @@
                     return new Promise((function(i, o) {
                         var r = e.apply(t, n);
                         function a(e) {
-                            bn(r, i, o, a, s, "next", e)
+                            mn(r, i, o, a, s, "next", e)
                         }
                         function s(e) {
-                            bn(r, i, o, a, s, "throw", e)
+                            mn(r, i, o, a, s, "throw", e)
                         }
                         a(void 0)
                     }
@@ -1816,16 +1766,16 @@
                     return t.apply(this, arguments)
                 }
                 ),
-                vn._instance || (vn._instance = this),
-                vn._instance
+                bn._instance || (bn._instance = this),
+                bn._instance
             }
         }
-        var Pn = new vn;
-        class xn {
+        var vn = new bn;
+        class yn {
             init(e) {
-                Ut.info("[LifeCycleModule]: init"),
-                Ut.info("[LifeCycleModule]: init Popup module"),
-                Pn.init(e, {
+                It.info("[LifeCycleModule]: init"),
+                It.info("[LifeCycleModule]: init Popup module"),
+                vn.init(e, {
                     navigateToNextPopup: this.navigateToNextPopup,
                     completeAllPopups: this.completeAllPopups,
                     beforeSendCallback: this.beforeSendCallback,
@@ -1834,12 +1784,12 @@
                 this._currentEvent = new Set
             }
             addEventListener(e, t) {
-                Ut.info("[LifeCycleModule]: add event listener to ", e);
+                It.info("[LifeCycleModule]: add event listener to ", e);
                 const n = this._eventListeners.get(e) || [];
                 this._eventListeners.set(e, [...n, t])
             }
             removeEventListener(e, t) {
-                Ut.info("[LifeCycleModule]: remove event listener from ", e);
+                It.info("[LifeCycleModule]: remove event listener from ", e);
                 const n = this._eventListeners.get(e);
                 if (!n)
                     return;
@@ -1847,55 +1797,55 @@
                 this._eventListeners.set(e, i)
             }
             removeAllEventListeners(e) {
-                Ut.info("[LifeCycleModule]: remove all event listeners from ", e),
+                It.info("[LifeCycleModule]: remove all event listeners from ", e),
                 this._eventListeners.set(e, [])
             }
             fetchPopupData(e) {
-                return Ut.info("[LifeCycleModule]: fetch popup data"),
-                this.dispatchEvent(At.beforeFetchData),
-                Pn.fetch(e).then((e => {
-                    this.dispatchEvent(At.afterFetchData),
-                    Ut.info("[LifeCycleModule]: fetch popup data done, start processing response"),
+                return It.info("[LifeCycleModule]: fetch popup data"),
+                this.dispatchEvent(Mt.beforeFetchData),
+                vn.fetch(e).then((e => {
+                    this.dispatchEvent(Mt.afterFetchData),
+                    It.info("[LifeCycleModule]: fetch popup data done, start processing response"),
                     this.processData(e)
                 }
                 )).catch((e => {
-                    Ut.error("[LifeCycleModule]: fetch failure - ", e),
-                    this.dispatchEvent(At.fetchDataError)
+                    It.error("[LifeCycleModule]: fetch failure - ", e),
+                    this.dispatchEvent(Mt.fetchDataError)
                 }
                 ))
             }
             processData(e) {
                 try {
-                    const t = Pn.processData(e);
-                    (null == t ? void 0 : t.length) ? (Ut.info("[LifeCycleModule]: process response done, popup data ready"),
+                    const t = vn.processData(e);
+                    (null == t ? void 0 : t.length) ? (It.info("[LifeCycleModule]: process response done, popup data ready"),
                     this._currentPopupIndex = 0,
                     this._popupData = t,
-                    this.dispatchEvent(At.popupDataReady)) : Ut.info("[LifeCycleModule]: process popup response done, no popup data")
+                    this.dispatchEvent(Mt.popupDataReady)) : It.info("[LifeCycleModule]: process popup response done, no popup data")
                 } catch (e) {
-                    Ut.error("[LifeCycleModule]: process popup response error - ", e)
+                    It.error("[LifeCycleModule]: process popup response error - ", e)
                 }
             }
             hasPopupData() {
-                return Ut.info("[LifeCycleModule]: has popup data"),
+                return It.info("[LifeCycleModule]: has popup data"),
                 this._popupData.length > 0
             }
             getAllPopupData() {
-                return Ut.info("[LifeCycleModule]: get all popup data"),
+                return It.info("[LifeCycleModule]: get all popup data"),
                 this._popupData
             }
             getCurrentPopupData() {
-                return Ut.info("[LifeCycleModule]: get current popup data"),
+                return It.info("[LifeCycleModule]: get current popup data"),
                 this._popupData[this._currentPopupIndex]
             }
             hasNextPopup() {
-                Ut.info("[LifeCycleModule]: has next popup");
+                It.info("[LifeCycleModule]: has next popup");
                 const e = this._popupData.length
                   , t = this._currentPopupIndex + 1;
                 return 0 !== this._popupData.length && t < e
             }
             destruct() {
-                Ut.info("[LifeCycleModule]: destruct"),
-                Pn.destruct(),
+                It.info("[LifeCycleModule]: destruct"),
+                vn.destruct(),
                 this._currentPopupIndex = -1,
                 this._popupData = [],
                 this._currentEvent.clear()
@@ -1905,9 +1855,9 @@
                 this._currentPopupIndex = -1,
                 this._popupData = [],
                 this.dispatchEvent = e => {
-                    if (Ut.info("[LifeCycleModule]: dispatch start - ", e),
+                    if (It.info("[LifeCycleModule]: dispatch start - ", e),
                     this._currentEvent.has(e))
-                        return void Ut.error("[LifeCycleModule]: Dispatch is already in process", {
+                        return void It.error("[LifeCycleModule]: Dispatch is already in process", {
                             currentEvent: [...this._currentEvent],
                             upcomingEvent: e
                         });
@@ -1917,41 +1867,41 @@
                         try {
                             t()
                         } catch (t) {
-                            Ut.warn(`[LifeCycleModule]: error executing listener for event: ${e}`, t)
+                            It.warn(`[LifeCycleModule]: error executing listener for event: ${e}`, t)
                         }
                     }
                     )),
                     this._currentEvent.delete(e),
-                    Ut.info("[LifeCycleModule]: dispatch finish - ", e)
+                    It.info("[LifeCycleModule]: dispatch finish - ", e)
                 }
                 ,
                 this.beforeSendCallback = () => {
-                    Ut.info("[LifeCycleModule]: before sendCallback"),
-                    this.dispatchEvent(At.beforeSendCallback)
+                    It.info("[LifeCycleModule]: before sendCallback"),
+                    this.dispatchEvent(Mt.beforeSendCallback)
                 }
                 ,
                 this.afterSendCallback = (e, t) => {
-                    e ? (Ut.info("[LifeCycleModule]: after sendCallback"),
-                    this.dispatchEvent(At.afterSendCallback)) : (Ut.error("[LifeCycleModule]: send callback failure", t),
-                    this.dispatchEvent(At.sendCallbackError))
+                    e ? (It.info("[LifeCycleModule]: after sendCallback"),
+                    this.dispatchEvent(Mt.afterSendCallback)) : (It.error("[LifeCycleModule]: send callback failure", t),
+                    this.dispatchEvent(Mt.sendCallbackError))
                 }
                 ,
                 this.navigateToNextPopup = () => {
-                    Ut.info("[LifeCycleModule]: navigate to next popup"),
-                    this._currentPopupIndex + 1 < this._popupData.length ? this._currentPopupIndex = this._currentPopupIndex + 1 : (Ut.warn("[LifeCycleModule]: navigate to next popup failure - no next popup"),
-                    this.dispatchEvent(At.allPopupsCompleted))
+                    It.info("[LifeCycleModule]: navigate to next popup"),
+                    this._currentPopupIndex + 1 < this._popupData.length ? this._currentPopupIndex = this._currentPopupIndex + 1 : (It.warn("[LifeCycleModule]: navigate to next popup failure - no next popup"),
+                    this.dispatchEvent(Mt.allPopupsCompleted))
                 }
                 ,
                 this.completeAllPopups = () => {
-                    Ut.info("[LifeCycleModule]: complete all popup"),
+                    It.info("[LifeCycleModule]: complete all popup"),
                     this._currentPopupIndex = this._popupData.length
                 }
                 ,
-                xn._instance || (xn._instance = this),
-                xn._instance
+                yn._instance || (yn._instance = this),
+                yn._instance
             }
         }
-        var En = new xn;
+        var Pn = new yn;
         function kn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
@@ -1961,7 +1911,7 @@
             }) : e[t] = n,
             e
         }
-        function Tn(e) {
+        function En(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -1976,7 +1926,7 @@
             }
             return e
         }
-        const On = {
+        const xn = {
             appId: -1,
             region: "",
             wid: -1,
@@ -1984,18 +1934,18 @@
             isDebug: !1,
             isMobile: !1,
             apiDomain: "",
-            apiPath: jt,
-            callbackApiPath: Lt,
-            dataProcessor: ht.V2,
+            apiPath: Ct,
+            callbackApiPath: jt,
+            dataProcessor: _t.V2,
             scene: 0,
             timeout: 1e3
         };
-        class Sn {
+        class Tn {
             init(e) {
                 if (this._isInitialized)
                     return;
-                const t = Tn({}, On, e);
-                Ut.init(Tn({
+                const t = En({}, xn, e);
+                It.init(En({
                     debug: Boolean(t.isDebug),
                     meta: {
                         appID: t.appId,
@@ -2005,8 +1955,8 @@
                 }, t.logging && {
                     customLoggingModule: t.logging
                 })),
-                Ut.info("[SDK]: init global module"),
-                an.init({
+                It.info("[SDK]: init global module"),
+                on.init({
                     domain: t.apiDomain,
                     commonParams: {
                         region: t.region,
@@ -2017,69 +1967,69 @@
                         device_platform: t.isMobile ? "web_mobile" : "web_pc"
                     }
                 }),
-                En.init(t),
-                Pn.init(t, {
-                    navigateToNextPopup: En.navigateToNextPopup,
-                    completeAllPopups: En.completeAllPopups,
-                    beforeSendCallback: En.beforeSendCallback,
-                    afterSendCallback: En.afterSendCallback
+                Pn.init(t),
+                vn.init(t, {
+                    navigateToNextPopup: Pn.navigateToNextPopup,
+                    completeAllPopups: Pn.completeAllPopups,
+                    beforeSendCallback: Pn.beforeSendCallback,
+                    afterSendCallback: Pn.afterSendCallback
                 }),
                 this._isInitialized = !0
             }
             fetchPopupData(e) {
-                return Ut.info("[SDK]: fetch popup data"),
-                En.fetchPopupData(e)
+                return It.info("[SDK]: fetch popup data"),
+                Pn.fetchPopupData(e)
             }
             hasPopupData() {
-                return Ut.info("[SDK]: has popup data"),
-                En.hasPopupData()
+                return It.info("[SDK]: has popup data"),
+                Pn.hasPopupData()
             }
             getPopupData() {
-                return Ut.info("[SDK]: get popup data"),
-                this.hasPopupData() ? En.getCurrentPopupData() : null
+                return It.info("[SDK]: get popup data"),
+                this.hasPopupData() ? Pn.getCurrentPopupData() : null
             }
             hasNextPopup() {
-                return Ut.info("[SDK]: has next popup"),
-                En.hasNextPopup()
+                return It.info("[SDK]: has next popup"),
+                Pn.hasNextPopup()
             }
             addEventListener(e, t) {
-                if (Ut.info("[SDK]: addEventListener"),
-                e && At[e] && "function" == typeof t)
-                    En.addEventListener(e, t);
+                if (It.info("[SDK]: addEventListener"),
+                e && Mt[e] && "function" == typeof t)
+                    Pn.addEventListener(e, t);
                 else {
                     const e = "[SDK]: addEventListener - invalid param for adding new event listener";
-                    Ut.error(e, new Error(e))
+                    It.error(e, new Error(e))
                 }
             }
             removeEventListener(e, t) {
-                Ut.info("[SDK]: removeEventListener"),
-                e && At[e] && "function" == typeof t ? En.removeEventListener(e, t) : Ut.warn("[SDK]: removeEventListener - invalid param for removing event listener")
+                It.info("[SDK]: removeEventListener"),
+                e && Mt[e] && "function" == typeof t ? Pn.removeEventListener(e, t) : It.warn("[SDK]: removeEventListener - invalid param for removing event listener")
             }
             removeAllEventListeners(e) {
-                Ut.info("[SDK]: removeAllEventListener"),
-                e && At[e] ? En.removeAllEventListeners(e) : Ut.warn("[SDK]: removeEventListener - invalid param for removing all event listener")
+                It.info("[SDK]: removeAllEventListener"),
+                e && Mt[e] ? Pn.removeAllEventListeners(e) : It.warn("[SDK]: removeEventListener - invalid param for removing all event listener")
             }
             destruct() {
-                Ut.info("[SDK]: destruct");
-                for (const e of Object.keys(At)) {
-                    const t = At[e];
+                It.info("[SDK]: destruct");
+                for (const e of Object.keys(Mt)) {
+                    const t = Mt[e];
                     this.removeAllEventListeners(t)
                 }
-                En.destruct(),
-                an.destruct(),
-                Ut.destruct(),
+                Pn.destruct(),
+                on.destruct(),
+                It.destruct(),
                 this._isInitialized = !1
             }
             constructor() {
                 return this._isInitialized = !1,
-                Sn._instance || (Sn._instance = this),
-                Sn._instance
+                Tn._instance || (Tn._instance = this),
+                Tn._instance
             }
         }
-        var Cn = new Sn
-          , wn = n(47942);
-        const jn = (0,
-        de.A)("div", {
+        var On = new Tn
+          , Sn = n(47942);
+        const Cn = (0,
+        pe.A)("div", {
             target: "e1mpj5ji0"
         })({
             width: "100vw",
@@ -2099,8 +2049,8 @@
                 transform: "scaleY(0.5)"
             }
         }, "label:DivBannerContainer;")
-          , Mn = (0,
-        de.A)("div", {
+          , wn = (0,
+        pe.A)("div", {
             target: "e1mpj5ji1"
         })({
             padding: "12px 12px 12px 16px",
@@ -2108,36 +2058,36 @@
             justifyContent: "space-between",
             gap: "8px"
         }, "label:DivBannerWrapper;")
-          , Ln = (0,
-        de.A)("div", {
+          , jn = (0,
+        pe.A)("div", {
             target: "e1mpj5ji2"
         })({
             display: "flex",
             alignItems: "center",
             gap: "16px"
         }, "label:DivLeftContainer;")
-          , An = (0,
-        de.A)("div", {
+          , Mn = (0,
+        pe.A)("div", {
             target: "e1mpj5ji3"
         })({
             display: "flex",
             alignItems: "flex-start",
             gap: "24px"
         }, "label:DivRightContainer;")
-          , Nn = (0,
-        de.A)("div", {
+          , An = (0,
+        pe.A)("div", {
             target: "e1mpj5ji4"
         })({
             alignSelf: "center",
             lineHeight: "18px"
         }, "label:DivContentWrapper;")
-          , Dn = (0,
-        de.A)("div", {
+          , Ln = (0,
+        pe.A)("div", {
             target: "e1mpj5ji5"
         })({
             margin: "9px 0"
         }, "label:DivButton;");
-        function In(e, t, n) {
+        function Nn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -2146,7 +2096,7 @@
             }) : e[t] = n,
             e
         }
-        function Rn(e) {
+        function Dn(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -2155,13 +2105,13 @@
                 }
                 )))),
                 i.forEach((function(t) {
-                    In(e, t, n[t])
+                    Nn(e, t, n[t])
                 }
                 ))
             }
             return e
         }
-        function Un(e, t) {
+        function In(e, t) {
             return t = null != t ? t : {},
             Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e) {
                 var t = Object.keys(e);
@@ -2176,25 +2126,25 @@
             )),
             e
         }
-        const Bn = e => {
+        const Rn = e => {
             const {content: t, open: n, colorScheme: o, config: r, eventReport: a} = e;
             if (!n)
                 return null;
-            const {buttons: s, icon: l, iconDark: c, body: u, title: d, eventInfo: g} = t
-              , m = (0,
-            p.useRef)(null)
+            const {buttons: s, icon: l, iconDark: c, body: d, title: p, eventInfo: h} = t
               , _ = (0,
-            p.useCallback)((e => {
+            u.useRef)(null)
+              , g = (0,
+            u.useCallback)((e => {
                 var t;
                 "Enter" !== e.key && " " !== e.key || (e.preventDefault(),
                 e.stopPropagation(),
-                null === (t = m.current) || void 0 === t || t.click())
+                null === (t = _.current) || void 0 === t || t.click())
             }
             ), [])
-              , h = "dark" === o ? c : l;
+              , m = "dark" === o ? c : l;
             var f, b;
             return (0,
-            i.jsx)(jn, {
+            i.jsx)(Cn, {
                 role: "alert",
                 style: {
                     top: null !== (f = null == r ? void 0 : r.topOffset) && void 0 !== f ? f : "0",
@@ -2202,39 +2152,39 @@
                     backgroundColor: "var(--ui-sheet-backdrop-1)"
                 },
                 children: (0,
-                i.jsxs)(Mn, {
+                i.jsxs)(wn, {
                     children: [(0,
-                    i.jsxs)(Ln, {
-                        children: [h && (0,
+                    i.jsxs)(jn, {
+                        children: [m && (0,
                         i.jsx)("img", {
                             alt: "icon",
-                            src: h.url,
-                            height: h.height,
-                            width: h.width
+                            src: m.url,
+                            height: m.height,
+                            width: m.width
                         }), (0,
-                        i.jsxs)(Nn, {
-                            children: [d && (0,
-                            i.jsx)(wn.Fm, {
+                        i.jsxs)(An, {
+                            children: [p && (0,
+                            i.jsx)(Sn.Fm, {
                                 as: "h4",
                                 size: 15,
                                 color: "UIShapeText1OnNeutral",
                                 weight: "medium",
-                                children: d
+                                children: p
                             }), (0,
-                            i.jsx)(wn.Fm, {
+                            i.jsx)(Sn.Fm, {
                                 as: "p",
                                 size: 15,
                                 color: "UIShapeText1OnNeutral",
-                                children: null == u ? void 0 : u.map((e => {
-                                    return e.type === bt.TEXT ? e.text : (0,
-                                    i.jsx)(wn.QKx, {
+                                children: null == d ? void 0 : d.map((e => {
+                                    return e.type === mt.TEXT ? e.text : (0,
+                                    i.jsx)(Sn.QKx, {
                                         color: "UIShapeText1OnNeutral",
                                         label: e.text,
                                         href: null !== (t = e.link) && void 0 !== t ? t : "",
-                                        target: e.linkType === vt.EXTERNAL ? "_blank" : "_self",
+                                        target: e.linkType === bt.EXTERNAL ? "_blank" : "_self",
                                         onClick: () => {
                                             var t;
-                                            null == a || a(ii, Un(Rn({}, g), {
+                                            null == a || a(ti, In(Dn({}, h), {
                                                 button_info: e.text
                                             })),
                                             null === (t = e.onClick) || void 0 === t || t.call(e)
@@ -2248,23 +2198,23 @@
                             })]
                         })]
                     }), (0,
-                    i.jsx)(An, {
+                    i.jsx)(Mn, {
                         children: null == s ? void 0 : s.map((e => e.isCloseStyle ? (0,
                         i.jsx)("div", {
                             onClick: () => {
                                 var t;
-                                null == a || a(ii, Un(Rn({}, g), {
+                                null == a || a(ti, In(Dn({}, h), {
                                     button_info: e.text
                                 })),
                                 null === (t = e.onClick) || void 0 === t || t.call(e)
                             }
                             ,
-                            onKeyDown: _,
-                            ref: m,
+                            onKeyDown: g,
+                            ref: _,
                             tabIndex: 0,
                             role: "button",
                             children: (0,
-                            i.jsx)(wn.gn, {
+                            i.jsx)(Sn.gn, {
                                 size: "24px",
                                 style: {
                                     cursor: "pointer"
@@ -2272,15 +2222,15 @@
                                 color: "BrandTikTokBackground"
                             })
                         }, e.text) : (0,
-                        i.jsx)(Dn, {
+                        i.jsx)(Ln, {
                             children: (0,
-                            i.jsx)(wn.I05, {
+                            i.jsx)(Sn.I05, {
                                 label: e.text,
                                 shape: "borderless",
                                 variant: "primary",
                                 onClick: () => {
                                     var t;
-                                    null == a || a(ii, Un(Rn({}, g), {
+                                    null == a || a(ti, In(Dn({}, h), {
                                         button_info: e.text
                                     })),
                                     null === (t = e.onClick) || void 0 === t || t.call(e)
@@ -2291,8 +2241,8 @@
                 })
             })
         }
-          , Yn = (0,
-        de.A)("div", {
+          , Un = (0,
+        pe.A)("div", {
             target: "e1krb51j0"
         })(( ({theme: {colors: e}}) => ({
             width: "100vw",
@@ -2314,8 +2264,8 @@
                 transform: "scaleY(0.5)"
             }
         })), "label:DivBannerContainer;")
-          , zn = (0,
-        de.A)("div", {
+          , Bn = (0,
+        pe.A)("div", {
             target: "e1krb51j1"
         })({
             width: 1150,
@@ -2325,35 +2275,35 @@
             justifyContent: "space-between",
             gap: "24px"
         }, "label:DivBannerWrapper;")
-          , Hn = (0,
-        de.A)("div", {
+          , Yn = (0,
+        pe.A)("div", {
             target: "e1krb51j2"
         })({
             display: "flex",
             alignItems: "center",
             gap: "16px"
         }, "label:DivLeftContainer;")
-          , Fn = (0,
-        de.A)("div", {
+          , zn = (0,
+        pe.A)("div", {
             target: "e1krb51j3"
         })([{
             display: "flex",
             alignItems: "center",
             gap: "24px"
         }], "label:DivRightContainer;")
-          , Kn = (0,
-        de.A)("div", {
+          , Hn = (0,
+        pe.A)("div", {
             target: "e1krb51j4"
         })({
             alignSelf: "center"
         }, "label:DivContentWrapper;")
-          , Wn = (0,
-        de.A)("div", {
+          , Fn = (0,
+        pe.A)("div", {
             target: "e1krb51j5"
         })({
             margin: "9px 0"
         }, "label:DivButton;");
-        function $n(e, t, n) {
+        function Vn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -2362,7 +2312,7 @@
             }) : e[t] = n,
             e
         }
-        function Vn(e) {
+        function Wn(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -2371,13 +2321,13 @@
                 }
                 )))),
                 i.forEach((function(t) {
-                    $n(e, t, n[t])
+                    Vn(e, t, n[t])
                 }
                 ))
             }
             return e
         }
-        function Gn(e, t) {
+        function Kn(e, t) {
             return t = null != t ? t : {},
             Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e) {
                 var t = Object.keys(e);
@@ -2392,65 +2342,65 @@
             )),
             e
         }
-        const Xn = e => {
+        const $n = e => {
             const {content: t, open: n, colorScheme: o, config: r, eventReport: a} = e;
             if (!n)
                 return null;
-            const {buttons: s, icon: l, iconDark: c, body: u, title: d, eventInfo: g} = t
-              , m = (0,
-            p.useRef)(null)
+            const {buttons: s, icon: l, iconDark: c, body: d, title: p, eventInfo: h} = t
               , _ = (0,
-            p.useCallback)((e => {
+            u.useRef)(null)
+              , g = (0,
+            u.useCallback)((e => {
                 var t;
                 "Enter" !== e.key && " " !== e.key || (e.preventDefault(),
                 e.stopPropagation(),
-                null === (t = m.current) || void 0 === t || t.click())
+                null === (t = _.current) || void 0 === t || t.click())
             }
             ), [])
-              , h = "dark" === o ? c : l;
+              , m = "dark" === o ? c : l;
             var f, b;
             return (0,
-            i.jsx)(Yn, {
+            i.jsx)(Un, {
                 role: "alert",
                 style: {
                     top: null !== (f = null == r ? void 0 : r.topOffset) && void 0 !== f ? f : "59px",
                     zIndex: null !== (b = null == r ? void 0 : r.zIndex) && void 0 !== b ? b : 999
                 },
                 children: (0,
-                i.jsxs)(zn, {
+                i.jsxs)(Bn, {
                     children: [(0,
-                    i.jsxs)(Hn, {
-                        children: [h && (0,
+                    i.jsxs)(Yn, {
+                        children: [m && (0,
                         i.jsx)("img", {
                             alt: "icon",
-                            src: h.url,
-                            height: h.height,
-                            width: h.width
+                            src: m.url,
+                            height: m.height,
+                            width: m.width
                         }), (0,
-                        i.jsxs)(Kn, {
-                            children: [d && (0,
-                            i.jsx)(wn.Fm, {
+                        i.jsxs)(Hn, {
+                            children: [p && (0,
+                            i.jsx)(Sn.Fm, {
                                 as: "h4",
                                 color: "UIText1",
                                 size: 16,
                                 weight: "medium",
-                                children: d
-                            }), u && (0,
-                            i.jsx)(wn.Fm, {
+                                children: p
+                            }), d && (0,
+                            i.jsx)(Sn.Fm, {
                                 as: "p",
                                 size: 16,
                                 weight: "medium",
                                 color: "UIText2",
-                                children: u.map((e => {
-                                    return e.type === bt.TEXT ? e.text : (0,
-                                    i.jsx)(wn.QKx, {
+                                children: d.map((e => {
+                                    return e.type === mt.TEXT ? e.text : (0,
+                                    i.jsx)(Sn.QKx, {
                                         color: "UIText1Display",
                                         label: e.text,
                                         href: null !== (t = e.link) && void 0 !== t ? t : "",
-                                        target: e.linkType === vt.EXTERNAL ? "_blank" : "_self",
+                                        target: e.linkType === bt.EXTERNAL ? "_blank" : "_self",
                                         onClick: () => {
                                             var t;
-                                            null == a || a(ii, Gn(Vn({}, g), {
+                                            null == a || a(ti, Kn(Wn({}, h), {
                                                 button_info: e.text
                                             })),
                                             null === (t = e.onClick) || void 0 === t || t.call(e)
@@ -2464,38 +2414,38 @@
                             })]
                         })]
                     }), (0,
-                    i.jsx)(Fn, {
+                    i.jsx)(zn, {
                         children: null == s ? void 0 : s.map((e => e.isCloseStyle ? (0,
                         i.jsx)("div", {
                             onClick: () => {
                                 var t;
-                                null == a || a(ii, Gn(Vn({}, g), {
+                                null == a || a(ti, Kn(Wn({}, h), {
                                     button_info: e.text
                                 })),
                                 null === (t = e.onClick) || void 0 === t || t.call(e)
                             }
                             ,
-                            onKeyDown: _,
-                            ref: m,
+                            onKeyDown: g,
+                            ref: _,
                             tabIndex: 0,
                             role: "button",
                             children: (0,
-                            i.jsx)(wn.gn, {
+                            i.jsx)(Sn.gn, {
                                 size: "24px",
                                 style: {
                                     cursor: "pointer"
                                 }
                             })
                         }, e.text) : (0,
-                        i.jsx)(Wn, {
+                        i.jsx)(Fn, {
                             children: (0,
-                            i.jsx)(wn.I05, {
+                            i.jsx)(Sn.I05, {
                                 label: e.text,
                                 shape: "borderless",
                                 variant: "primary",
                                 onClick: () => {
                                     var t;
-                                    null == a || a(ii, Gn(Vn({}, g), {
+                                    null == a || a(ti, Kn(Wn({}, h), {
                                         button_info: e.text
                                     })),
                                     null === (t = e.onClick) || void 0 === t || t.call(e)
@@ -2506,8 +2456,8 @@
                 })
             })
         }
-          , qn = (0,
-        de.A)("div", {
+          , Gn = (0,
+        pe.A)("div", {
             target: "e140os950"
         })({
             display: "flex",
@@ -2518,14 +2468,14 @@
             gap: "8px",
             padding: "0 24px"
         }, "label:ButtonContainer;")
-          , Zn = (0,
-        de.A)("img", {
+          , qn = (0,
+        pe.A)("img", {
             target: "e140os951"
         })({
             display: "block",
             margin: "8px auto"
         }, "label:Img;");
-        function Jn(e, t, n) {
+        function Xn(e, t, n) {
             return t in e ? Object.defineProperty(e, t, {
                 value: n,
                 enumerable: !0,
@@ -2534,7 +2484,7 @@
             }) : e[t] = n,
             e
         }
-        function Qn(e) {
+        function Jn(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {}
                   , i = Object.keys(n);
@@ -2543,13 +2493,13 @@
                 }
                 )))),
                 i.forEach((function(t) {
-                    Jn(e, t, n[t])
+                    Xn(e, t, n[t])
                 }
                 ))
             }
             return e
         }
-        function ei(e, t) {
+        function Zn(e, t) {
             return t = null != t ? t : {},
             Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e) {
                 var t = Object.keys(e);
@@ -2564,27 +2514,27 @@
             )),
             e
         }
-        const ti = e => {
+        const Qn = e => {
             var t;
             const {icon: n, iconDark: o, buttons: r, body: a, title: s, eventInfo: l} = e.content
               , c = "dark" === e.colorScheme ? o : n;
-            var p;
+            var u;
             return (0,
-            i.jsxs)(wn.nOL, {
+            i.jsxs)(Sn.nOL, {
                 open: e.open,
                 onOpenChange: () => {}
                 ,
                 style: {
                     padding: "32px 0",
-                    zIndex: null !== (p = null === (t = e.config) || void 0 === t ? void 0 : t.zIndex) && void 0 !== p ? p : 9999
+                    zIndex: null !== (u = null === (t = e.config) || void 0 === t ? void 0 : t.zIndex) && void 0 !== u ? u : 9999
                 },
                 children: [c && (0,
-                i.jsx)(Zn, {
+                i.jsx)(qn, {
                     src: c.url,
                     height: c.height,
                     width: c.width
                 }), s && (0,
-                i.jsx)(wn.Fm, {
+                i.jsx)(Sn.Fm, {
                     as: "h2",
                     align: "center",
                     size: 20,
@@ -2596,7 +2546,7 @@
                     },
                     children: s
                 }), (null == a ? void 0 : a.length) && (0,
-                i.jsx)(wn.Fm, {
+                i.jsx)(Sn.Fm, {
                     as: "p",
                     size: 15,
                     align: "center",
@@ -2605,16 +2555,16 @@
                         padding: "7px 24px 24px"
                     },
                     children: a.map((t => {
-                        return t.type === bt.TEXT ? t.text : (0,
-                        i.jsx)(wn.QKx, {
+                        return t.type === mt.TEXT ? t.text : (0,
+                        i.jsx)(Sn.QKx, {
                             color: "UIText1Display",
                             weight: "medium",
                             label: t.text,
                             href: null !== (n = t.link) && void 0 !== n ? n : "",
-                            target: t.linkType === vt.EXTERNAL ? "_blank" : "_self",
+                            target: t.linkType === bt.EXTERNAL ? "_blank" : "_self",
                             onClick: () => {
                                 var n, i;
-                                null === (n = e.eventReport) || void 0 === n || n.call(e, ii, ei(Qn({}, l), {
+                                null === (n = e.eventReport) || void 0 === n || n.call(e, ti, Zn(Jn({}, l), {
                                     button_info: t.text
                                 })),
                                 null === (i = t.onClick) || void 0 === i || i.call(t)
@@ -2624,9 +2574,9 @@
                     }
                     ))
                 }), (null == r ? void 0 : r.length) && (0,
-                i.jsx)(qn, {
+                i.jsx)(Gn, {
                     children: r.map((t => (0,
-                    i.jsx)(wn.I05, {
+                    i.jsx)(Sn.I05, {
                         style: t.isBold ? {
                             fontWeight: "bold"
                         } : {},
@@ -2634,7 +2584,7 @@
                         variant: t.isHighlight ? "primary" : "secondary",
                         onClick: () => {
                             var n, i;
-                            null === (n = e.eventReport) || void 0 === n || n.call(e, ii, ei(Qn({}, l), {
+                            null === (n = e.eventReport) || void 0 === n || n.call(e, ti, Zn(Jn({}, l), {
                                 button_info: t.text
                             })),
                             null === (i = t.onClick) || void 0 === i || i.call(t)
@@ -2643,48 +2593,49 @@
                 })]
             })
         }
-          , ni = n.p + "09a28b24483e3a6b156f.css";
-        const ii = "qa_tns_general_dialog_click";
-        function oi() {
+        ;
+        var ei = n(28658);
+        const ti = "qa_tns_general_dialog_click";
+        function ni() {
             return (0,
             i.jsx)("link", {
                 rel: "stylesheet",
-                href: ni
+                href: ei
             })
         }
-        const ri = e => {
+        const ii = e => {
             const [t,n] = (0,
-            p.useState)(null)
-              , {eventReport: o, noFetchDataAtInit: r, SDKConfig: a, visible: s, onReadyToClose: l, onReadyToShow: c, colorScheme: u, textDirection: d, componentConfig: g} = e;
+            u.useState)(null)
+              , {eventReport: o, noFetchDataAtInit: r, SDKConfig: a, visible: s, onReadyToClose: l, onReadyToShow: c, colorScheme: d, textDirection: p, componentConfig: h} = e;
             if ((0,
-            p.useEffect)(( () => (Cn.init(a),
-            r || Cn.fetchPopupData().catch(null),
-            Cn.addEventListener(At.popupDataReady, ( () => {
-                Cn.getPopupData() && (n(Cn.getPopupData()),
+            u.useEffect)(( () => (On.init(a),
+            r || On.fetchPopupData().catch(null),
+            On.addEventListener(Mt.popupDataReady, ( () => {
+                On.getPopupData() && (n(On.getPopupData()),
                 c())
             }
             )),
-            Cn.addEventListener(At.afterNavigateToNextPopup, ( () => {
-                n(Cn.getPopupData())
+            On.addEventListener(Mt.afterNavigateToNextPopup, ( () => {
+                n(On.getPopupData())
             }
             )),
-            Cn.addEventListener(At.allPopupsCompleted, ( () => {
+            On.addEventListener(Mt.allPopupsCompleted, ( () => {
                 l()
             }
             )),
             () => {
-                Cn.destruct()
+                On.destruct()
             }
             )), []),
             (0,
-            p.useEffect)(( () => {
+            u.useEffect)(( () => {
                 s && t && o && o("tns_general_dialog_show", t.eventInfo)
             }
             ), [s]),
             !t)
                 return null;
-            const {popupType: m} = t
-              , _ = function(e, t) {
+            const {popupType: _} = t
+              , g = function(e, t) {
                 if (null == e)
                     return {};
                 var n, i, o = function(e, t) {
@@ -2704,49 +2655,49 @@
                 }
                 return o
             }(t, ["popupType"]);
-            let h;
-            switch (m) {
-            case mt.MOBILE_BANNER:
-                h = (0,
-                i.jsx)(Bn, {
-                    colorScheme: u,
-                    content: _,
+            let m;
+            switch (_) {
+            case pt.MOBILE_BANNER:
+                m = (0,
+                i.jsx)(Rn, {
+                    colorScheme: d,
+                    content: g,
                     open: s,
-                    config: null == g ? void 0 : g.mBanner,
+                    config: null == h ? void 0 : h.mBanner,
                     eventReport: o
                 });
                 break;
-            case mt.PC_BANNER:
-                h = (0,
-                i.jsx)(Xn, {
-                    colorScheme: u,
-                    content: _,
+            case pt.PC_BANNER:
+                m = (0,
+                i.jsx)($n, {
+                    colorScheme: d,
+                    content: g,
                     open: s,
-                    config: null == g ? void 0 : g.pcBanner,
+                    config: null == h ? void 0 : h.pcBanner,
                     eventReport: o
                 });
                 break;
-            case mt.POP:
+            case pt.POP:
             default:
-                h = (0,
-                i.jsx)(ti, {
-                    colorScheme: u,
-                    content: _,
+                m = (0,
+                i.jsx)(Qn, {
+                    colorScheme: d,
+                    content: g,
                     open: s,
-                    config: null == g ? void 0 : g.popup,
+                    config: null == h ? void 0 : h.popup,
                     eventReport: o
                 })
             }
             return (0,
-            i.jsxs)(wn.juU, {
-                colorSchemePreference: u,
-                textDirection: d,
+            i.jsxs)(Sn.juU, {
+                colorSchemePreference: d,
+                textDirection: p,
                 children: [(0,
-                i.jsx)(oi, {}), h]
+                i.jsx)(ni, {}), m]
             })
         }
-          , ai = Cn.fetchPopupData;
-        var si, li, ci = n(93608);
+          , oi = On.fetchPopupData;
+        var ri, ai, si = n(16891);
         !function(e) {
             e.None = "none",
             e.Pop = "pop",
@@ -2754,84 +2705,91 @@
             e.Bottom = "bottom",
             e.PcBanner = "pc_banner",
             e.MobileBanner = "mobile_banner"
-        }(si || (si = {})),
+        }(ri || (ri = {})),
         function(e) {
             e.Callback = "callback",
             e.H5 = "h5"
-        }(li || (li = {}));
-        const pi = e => {
+        }(ai || (ai = {}));
+        const li = e => {
             var t, n;
             const {onHide: o, hideByDefault: r} = e
               , a = (0,
-            p.useRef)(!1)
+            u.useRef)(!1)
               , [s,c] = (0,
-            p.useState)(!1)
-              , u = (0,
-            p.useCallback)(( () => {
+            u.useState)(!1)
+              , d = (0,
+            u.useCallback)(( () => {
                 null == o || o(),
                 c(!1)
             }
             ), [o])
-              , {language: d, wid: g, region: m} = null !== (t = (0,
+              , {language: p, wid: h, region: _} = null !== (t = (0,
             T.W)(( () => ["language", "wid", "region"]), [])) && void 0 !== t ? t : {}
-              , {isMobile: _} = null !== (n = (0,
-            Tt.U)(( () => ["isMobile"]), [])) && void 0 !== n ? n : {}
-              , {isDark: h, direction: f} = (0,
+              , {isMobile: g} = null !== (n = (0,
+            Et.U)(( () => ["isMobile"]), [])) && void 0 !== n ? n : {}
+              , {isDark: m, direction: f} = (0,
             l.u)()
-              , b = (0,
-            p.useCallback)((e => {
+              , {showFullSideNav: b} = (0,
+            ue.vY)()
+              , v = (0,
+            u.useCallback)((e => {
                 a.current || (a.current = !0,
-                ai({
+                oi({
                     scene: 555,
                     extra: JSON.stringify(e)
                 }).catch(null))
             }
             ), [])
               , y = (0,
-            p.useCallback)((e => {
-                ai({
+            u.useCallback)((e => {
+                oi({
                     scene: 555,
                     extra: JSON.stringify(e)
                 }).catch(null)
             }
             ), []);
             if ((0,
-            p.useEffect)(( () => (kt.LZ.on(kt.Rh, St()(b, 2e3)),
-            kt.LZ.on(kt.gk, St()(y, 2e3)),
+            u.useEffect)(( () => (kt.LZ.on(kt.Rh, Tt()(v, 2e3)),
+            kt.LZ.on(kt.gk, Tt()(y, 2e3)),
             () => {
                 kt.LZ.clear(kt.Rh),
                 kt.LZ.clear(kt.gk)
             }
-            )), [b, y]),
-            !g || !m || !d)
+            )), [v, y]),
+            !h || !_ || !p)
                 return null;
-            const v = {
+            const P = {
                 appId: 1988,
-                wid: g,
-                isMobile: _,
-                region: m,
-                lang: d,
+                wid: h,
+                isMobile: g,
+                region: _,
+                lang: p,
                 apiDomain: location.origin,
-                apiPath: wt
+                apiPath: St
             };
             return (0,
             i.jsx)("div", {
                 id: "web-universal-popup",
                 children: (0,
-                i.jsx)(ri, {
-                    eventReport: ci.f.event.bind(ci.f),
+                i.jsx)(ii, {
+                    eventReport: si.f.event.bind(si.f),
                     noFetchDataAtInit: r,
-                    SDKConfig: v,
+                    SDKConfig: P,
                     visible: s,
-                    colorScheme: h ? "dark" : "light",
+                    colorScheme: m ? "dark" : "light",
                     textDirection: f,
-                    onReadyToClose: u,
-                    onReadyToShow: () => c(!0)
+                    onReadyToClose: d,
+                    onReadyToShow: () => c(!0),
+                    componentConfig: b ? {
+                        pcBanner: {
+                            topOffset: "0"
+                        }
+                    } : void 0
                 })
             })
         }
-          , ui = (0,
-        de.A)("div", {
+          , ci = (0,
+        pe.A)("div", {
             target: "e16yqw5k0"
         })(( ({isMobile: e}) => ({
             textAlign: "center",
@@ -2845,8 +2803,8 @@
             justifyContent: e ? "space-between" : void 0,
             paddingBottom: e ? "150px" : void 0
         })), "label:ScheduledBreakContainer;")
-          , di = (0,
-        de.A)("div", {
+          , ui = (0,
+        pe.A)("div", {
             target: "e16yqw5k1"
         })(( ({isMobile: e}) => ({
             color: "rgba(246, 246, 246, 1)",
@@ -2856,8 +2814,8 @@
             fontWeight: 700,
             padding: e ? "5px" : void 0
         })), "label:Title;")
-          , gi = (0,
-        de.A)("div", {
+          , di = (0,
+        pe.A)("div", {
             target: "e16yqw5k2"
         })(( ({isMobile: e}) => ({
             fontWeight: 500,
@@ -2869,8 +2827,8 @@
             maxWidth: "640px",
             padding: e ? "5px" : void 0
         })), "label:Subtitle;")
-          , mi = (0,
-        de.A)("div", {
+          , pi = (0,
+        pe.A)("div", {
             target: "e16yqw5k3"
         })([{
             position: "fixed",
@@ -2884,8 +2842,8 @@
             height: "100vh",
             overflow: "hidden"
         }], "label:ModalContainer;")
-          , _i = (0,
-        de.A)("div", {
+          , hi = (0,
+        pe.A)("div", {
             target: "e16yqw5k4"
         })([{
             position: "absolute",
@@ -2896,31 +2854,31 @@
             display: "flex",
             justifyContent: "center"
         }], "label:BackgroundImageContainer;")
-          , hi = (0,
-        de.A)("img", {
+          , _i = (0,
+        pe.A)("img", {
             target: "e16yqw5k5"
         })([{
             height: "100%",
             objectFit: "cover"
         }], "label:BackgroundImage;")
-          , fi = (0,
-        de.A)("div", {
+          , gi = (0,
+        pe.A)("div", {
             target: "e16yqw5k6"
         })([{
             position: "relative",
             zIndex: 1,
             height: "100%"
         }], "label:ModalContent;")
-          , bi = (0,
-        de.A)("button", {
+          , mi = (0,
+        pe.A)("button", {
             target: "e16yqw5k7"
         })(( ({isMobile: e}) => ({
             backgroundColor: "white",
             padding: e ? "12px 40px 12px 40px" : "8px 14px 8px 14px",
             borderRadius: e ? "20px" : "6px"
         })), "label:SettingButton;")
-          , yi = (0,
-        de.A)("div", {
+          , fi = (0,
+        pe.A)("div", {
             target: "e16yqw5k8"
         })([{
             color: "black",
@@ -2931,22 +2889,22 @@
             fontSize: "16px",
             textAlign: "center"
         }], "label:SettingButtonText;")
-          , vi = n.p + "e0c522d68f9718996605.png";
-        var Pi = n(67169)
-          , xi = n(18072);
-        const Ei = e => {
+          , bi = n.p + "e0c522d68f9718996605.png";
+        var vi = n(67169)
+          , yi = n(18072);
+        const Pi = e => {
             const {isOpen: t, children: n, id: o} = e;
             return t ? (0,
-            i.jsxs)(mi, {
+            i.jsxs)(pi, {
                 id: o,
                 children: [(0,
-                i.jsx)(_i, {
+                i.jsx)(hi, {
                     children: (0,
-                    i.jsx)(hi, {
-                        src: vi
+                    i.jsx)(_i, {
+                        src: bi
                     })
                 }), (0,
-                i.jsx)(fi, {
+                i.jsx)(gi, {
                     children: n
                 })]
             }) : null
@@ -2954,18 +2912,18 @@
           , ki = e => {
             const {onSettingClick: t, rule: n, isMobile: o} = e
               , r = (0,
-            Ze.s)();
+            qe.s)();
             return (0,
-            i.jsxs)(ui, {
+            i.jsxs)(ci, {
                 isMobile: o,
                 children: [(0,
                 i.jsxs)("div", {
                     children: [(0,
-                    i.jsx)(di, {
+                    i.jsx)(ui, {
                         isMobile: o,
                         children: r("FPscheduledBreak_teenBreaklimit_headline", {}, "Time Away")
                     }), (0,
-                    i.jsx)(gi, {
+                    i.jsx)(di, {
                         isMobile: o,
                         children: r("FPscheduledBreak_teenBreaklimit_content", {
                             s_startTime: n.startTime,
@@ -2973,65 +2931,65 @@
                         }, "Your parent or guardian scheduled time away for you between {s_startTime}-{s_endTime}.")
                     })]
                 }), (0,
-                i.jsx)(bi, {
+                i.jsx)(mi, {
                     onClick: t,
                     isMobile: o,
                     children: (0,
-                    i.jsx)(yi, {
+                    i.jsx)(fi, {
                         children: r("FPscheduledBreak_teenBreaklimit_settingsButton", {}, "View Settings")
                     })
                 })]
             })
         }
-          , Ti = e => {
+          , Ei = e => {
             const {onSettingClick: t, isMobile: n, header: o} = e
               , [r] = (0,
             c.S)(le.z)
               , {mute: a, setMute: s} = (0,
-            Pi.ah)({
+            vi.ah)({
                 playMode: 0,
                 itemMute: !1
             })
               , {mobileDefaultMute: l} = (0,
-            xi.bn)()
-              , {setMobileDefaultMute: u} = (0,
-            xi._B)()
-              , d = r.scheduledBreakActive || !1;
-            var g, m;
-            return g = "full-modal-id",
-            m = d,
+            yi.bn)()
+              , {setMobileDefaultMute: d} = (0,
+            yi._B)()
+              , p = r.scheduledBreakActive || !1;
+            var h, _;
+            return h = "full-modal-id",
+            _ = p,
             (0,
-            p.useEffect)(( () => {
+            u.useEffect)(( () => {
                 let e;
-                return m && (e = setInterval(( () => {
-                    document.getElementById(g) || window.location.reload()
+                return _ && (e = setInterval(( () => {
+                    document.getElementById(h) || window.location.reload()
                 }
                 ), 1e3)),
                 () => {
                     e && clearInterval(e)
                 }
             }
-            ), [g, m]),
+            ), [h, _]),
             (0,
-            p.useEffect)(( () => {
-                d && (n && !l ? u(!0) : n || a || s(!0))
+            u.useEffect)(( () => {
+                p && (n && !l ? d(!0) : n || a || s(!0))
             }
-            ), [n, d, l, a, u, s]),
+            ), [n, p, l, a, d, s]),
             (0,
-            p.useEffect)(( () => {
-                d && ci.f.event("show_scheduled_break_block", {
+            u.useEffect)(( () => {
+                p && si.f.event("show_scheduled_break_block", {
                     type: "global"
                 })
             }
-            ), [d]),
+            ), [p]),
             (0,
             i.jsx)(Pe.Mw, {
-                isOpen: d,
+                isOpen: p,
                 size: "Small",
                 children: (0,
-                i.jsx)(Ei, {
+                i.jsx)(Pi, {
                     id: "full-modal-id",
-                    isOpen: d,
+                    isOpen: p,
                     children: (0,
                     i.jsxs)(i.Fragment, {
                         children: [o, (0,
@@ -3047,16 +3005,16 @@
         ;
         n(66994),
         n(69970);
-        var Oi = n(59952)
-          , Si = n(49677);
-        var Ci = n(13392)
-          , wi = n(58139)
-          , ji = n(28303)
-          , Mi = n(4206);
-        const Li = (0,
-        p.memo)(( () => {
-            const [{avatarUrl: e, isOpen: t, pageType: n, enterMethod: o, url: r, videoId: a, userId: s, onLoginClick: l, challengeId: c, musicId: u},d] = (0,
-            Ci.Su)(Mi.f, {
+        var xi = n(59952)
+          , Ti = n(49677);
+        var Oi = n(13392)
+          , Si = n(58139)
+          , Ci = n(64840)
+          , wi = n(59030);
+        const ji = (0,
+        u.memo)(( () => {
+            const [{avatarUrl: e, isOpen: t, pageType: n, enterMethod: o, url: r, videoId: a, userId: s, onLoginClick: l, challengeId: c, musicId: d},p] = (0,
+            Oi.Su)(wi.f, {
                 selector: e => ({
                     avatarUrl: e.avatarUrl,
                     isOpen: e.isOpen,
@@ -3071,50 +3029,50 @@
                 }),
                 dependencies: []
             })
-              , {handleReportCtaDismiss: g, handleReportCtaLogin: m} = (0,
-            ji.$3)({
+              , {handleReportCtaDismiss: h, handleReportCtaLogin: _} = (0,
+            Ci.$3)({
                 page_type: n,
                 enterMethod: o
             })
-              , _ = (0,
-            p.useCallback)(( () => {
-                d.setIsOpen(!1)
+              , g = (0,
+            u.useCallback)(( () => {
+                p.setIsOpen(!1)
             }
-            ), [d])
-              , h = (0,
-            p.useCallback)(( () => {
+            ), [p])
+              , m = (0,
+            u.useCallback)(( () => {
                 l(),
                 location.href = r
             }
             ), [l, r]);
             return (0,
-            i.jsx)(wi.X, {
+            i.jsx)(Si.X, {
                 icon: e,
                 video_id: a,
                 user_id: s,
                 challenge_id: c,
-                music_id: u,
+                music_id: d,
                 pageType: n,
                 type: "login",
-                handleReportCtaLogin: m,
-                handleReportCtaDismiss: g,
+                handleReportCtaLogin: _,
+                handleReportCtaDismiss: h,
                 visible: t,
                 enterMethod: o,
                 isCalledByFunBtn: !0,
-                onLoginBtnClick: h,
-                onCancel: _
+                onLoginBtnClick: m,
+                onCancel: g
             })
         }
         ));
-        var Ai = n(4195)
-          , Ni = n(95481)
-          , Di = n(72153)
-          , Ii = n(97397);
-        const Ri = (0,
-        de.A)("div", {
+        var Mi = n(93240)
+          , Ai = n(95481)
+          , Li = n(72153)
+          , Ni = n(97397);
+        const Di = (0,
+        pe.A)("div", {
             target: "e9zsjvj0"
         })(( ({theme: e}) => [(0,
-        Di.zy)({
+        Li.zy)({
             theme: e,
             fontFamily: "TikTokFont",
             fontWeight: "bold",
@@ -3125,11 +3083,11 @@
             textAlign: "center",
             wordBreak: "break-word"
         }]), "label:DivTitle;")
-          , Ui = (0,
-        de.A)("div", {
+          , Ii = (0,
+        pe.A)("div", {
             target: "e9zsjvj1"
         })(( ({theme: e}) => [(0,
-        Di.zy)({
+        Li.zy)({
             theme: e,
             fontFamily: "TikTokFont",
             fontStyle: "normal"
@@ -3143,8 +3101,8 @@
             letterSpacing: "0.061px",
             wordBreak: "break-word"
         }]), "label:DivDesc;")
-          , Bi = (0,
-        de.A)(Ii.y, {
+          , Ri = (0,
+        pe.A)(Ni.y, {
             target: "e9zsjvj2"
         })({
             width: "100%",
@@ -3154,78 +3112,78 @@
             borderRadius: "8px",
             marginBottom: "1px"
         }, "label:StyledLinkButton;");
-        var Yi = n(11060)
-          , zi = n(75792);
-        const Hi = (0,
-        p.memo)((function({visible: e, handleClosePhoneOrEmailPopUp: t}) {
+        var Ui = n(11060)
+          , Bi = n(75792);
+        const Yi = (0,
+        u.memo)((function({visible: e, handleClosePhoneOrEmailPopUp: t}) {
             const n = (0,
-            Ze.s)()
+            qe.s)()
               , {colors: o} = (0,
             l.u)()
               , r = (0,
-            Yi.W6)()
+            Ui.W6)()
               , {search: a} = r.location
               , s = (0,
-            p.useCallback)(( () => {
+            u.useCallback)(( () => {
                 t(),
                 r.push({
-                    pathname: zi.tH.linkPhone,
+                    pathname: Bi.tH.linkPhone,
                     search: a
                 })
             }
             ), [r, a, t])
               , c = (0,
-            p.useCallback)(( () => {
+            u.useCallback)(( () => {
                 t()
             }
             ), [t])
-              , u = {
+              , d = {
                 border: "none",
                 fontWeight: "400",
                 fontSize: "16px",
                 color: o.TextTertiaryAlt
             };
             return (0,
-            i.jsxs)(Ni.aF, {
+            i.jsxs)(Ai.aF, {
                 visible: e,
                 contentStyle: {
                     width: "280px",
                     padding: "24px 20px 16px"
                 },
                 children: [(0,
-                i.jsx)(Ri, {
+                i.jsx)(Di, {
                     children: n("login_fb_noLonger_LinkPhoneNumber")
                 }), (0,
-                i.jsx)(Ui, {
+                i.jsx)(Ii, {
                     children: n("login_fb_noLonger_LinkPhoneNumberReminder")
                 }), (0,
-                i.jsx)(Bi, {
+                i.jsx)(Ri, {
                     size: "medium",
                     buttonTheme: "primary",
                     onClick: s,
                     children: n("login_fb_noLonger_LinkPhone")
                 }), (0,
-                i.jsx)(Bi, {
+                i.jsx)(Ri, {
                     size: "medium",
                     buttonTheme: "default",
-                    style: u,
+                    style: d,
                     onClick: c,
                     children: n("login_fb_noLonger_notNow_cta")
                 })]
             })
         }
         ));
-        var Fi = n(8615);
-        const Ki = [n(82715).OZ.setting]
-          , Wi = function({suggestAccountBind: e}) {
+        var zi = n(8615);
+        const Hi = [n(82715).OZ.setting]
+          , Fi = function({suggestAccountBind: e}) {
             (0,
             ie.Du)(!1),
             function() {
                 const {photoSensitiveVideosSetting: e} = (0,
-                r.P)(Oi.w);
+                r.P)(xi.w);
                 (0,
-                p.useEffect)(( () => {
-                    Si._.handleRemovePhotosensitiveStatus(1 === e ? "on" : "off")
+                u.useEffect)(( () => {
+                    Ti._.handleRemovePhotosensitiveStatus(1 === e ? "on" : "off")
                 }
                 ), [])
             }(),
@@ -3234,9 +3192,9 @@
                 E.L$)((0,
                 T.W)(( () => ["user"]), []))
                   , t = (0,
-                Ci.wA)(Oi.w);
+                Oi.wA)(xi.w);
                 (0,
-                p.useEffect)(( () => {
+                u.useEffect)(( () => {
                     var n;
                     if (e) {
                         const i = null !== (n = e.photoSensitiveVideosSetting) && void 0 !== n ? n : 0;
@@ -3252,9 +3210,9 @@
             (0,
             o.$B)(),
             (0,
-            Ai.Jl)(),
+            Mi.Jl)(),
             (0,
-            Ai.Ah)(),
+            Mi.Ah)(),
             (0,
             o.Ar)(),
             function() {
@@ -3263,13 +3221,13 @@
                 c.S)(le.z)
                   , l = (0,
                 ae.Us)()
-                  , {abTestVersion: u} = null !== (e = (0,
+                  , {abTestVersion: d} = null !== (e = (0,
                 T.W)(( () => ["abTestVersion"]), [])) && void 0 !== e ? e : {}
-                  , d = null !== (t = (0,
-                se.qt)(u, "digital_wellbeing_web")) && void 0 !== t ? t : "v0"
-                  , g = null !== (n = (0,
-                se.qt)(u, "scheduled_breaks_teens")) && void 0 !== n ? n : "v0"
-                  , {user: m} = (0,
+                  , p = null !== (t = (0,
+                se.qt)(d, "digital_wellbeing_web")) && void 0 !== t ? t : "v0"
+                  , h = null !== (n = (0,
+                se.qt)(d, "scheduled_breaks_teens")) && void 0 !== n ? n : "v0"
+                  , {user: _} = (0,
                 r.P)(a.L, {
                     selector: e => {
                         var t;
@@ -3280,10 +3238,10 @@
                     ,
                     dependencies: []
                 })
-                  , _ = Boolean(m);
+                  , g = Boolean(_);
                 (0,
-                p.useEffect)(( () => {
-                    if ("v0" === d || !_)
+                u.useEffect)(( () => {
+                    if ("v0" === p || !g)
                         return;
                     const e = new Date
                       , t = (0,
@@ -3347,20 +3305,20 @@
                 }
                 ), []),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.isPageHidden && o.isOpenDailySTM && s.uploadScreenTime()
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.isPageHidden && o.isOpenDailySTM && s.uploadScreenTime()
                 }
                 ), [o.isPageHidden]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.isOpenDailySTM && !o.isPageHidden && (s.startMonitorDayChange(),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.isOpenDailySTM && !o.isPageHidden && (s.startMonitorDayChange(),
                     s.startMonitorTimeLimit(),
                     s.startUploadSTMEveryTenMinutes(),
                     s.startAccumulateActiveTime())
                 }
                 ), [o.isOpenDailySTM, o.isPageHidden]),
                 (0,
-                p.useEffect)(( () => {
+                u.useEffect)(( () => {
                     if (!o.isOpenDailySTM || o.isPageHidden)
                         return;
                     const e = o.userSTMLimit;
@@ -3376,11 +3334,11 @@
                 }) {
                     const {immediate: i} = n
                       , o = (0,
-                    p.useRef)()
+                    u.useRef)()
                       , r = (0,
-                    p.useRef)(!1);
+                    u.useRef)(!1);
                     (0,
-                    p.useEffect)(( () => {
+                    u.useEffect)(( () => {
                         const n = () => t(o.current);
                         r.current ? n() : (r.current = !0,
                         i && n()),
@@ -3389,68 +3347,68 @@
                     ), [e])
                 }(null === (i = l.appContext) || void 0 === i ? void 0 : i.user, (e => {
                     var t, n;
-                    "v0" !== d && _ && (!e && Boolean(null === (t = l.appContext) || void 0 === t ? void 0 : t.user) ? (s.init(),
+                    "v0" !== p && g && (!e && Boolean(null === (t = l.appContext) || void 0 === t ? void 0 : t.user) ? (s.init(),
                     s.setLogin()) : e && !Boolean(null === (n = l.appContext) || void 0 === n ? void 0 : n.user) && (s.uploadScreenTime(),
                     s.setNotLogin()))
                 }
                 )),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && (s.uploadScreenTimeWhenDayChange(),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && (s.uploadScreenTimeWhenDayChange(),
                     s.init())
                 }
                 ), [o.dayChange]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.tenMinutesInterval && s.uploadScreenTime()
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.tenMinutesInterval && s.uploadScreenTime()
                 }
                 ), [o.tenMinutesInterval]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.defaultDailySTMPopup && (s.setIsDisplayOtherPopupWhenTimeBreak(!0),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.defaultDailySTMPopup && (s.setIsDisplayOtherPopupWhenTimeBreak(!0),
                     s.uploadScreenTime({
                         uploadType: 5
                     }))
                 }
                 ), [o.defaultDailySTMPopup]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && (2 === o.userIdentity || 4 === o.userIdentity && o.isFpTeenOpenDailySTM) && s.getParentInfo({})
+                u.useEffect)(( () => {
+                    "v0" !== p && g && (2 === o.userIdentity || 4 === o.userIdentity && o.isFpTeenOpenDailySTM) && s.getParentInfo({})
                 }
                 ), [o.userIdentity, o.isFpTeenOpenDailySTM]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && (o.isOpenSleepReminder && !1 === o.isPageHidden ? (s.stopSleepReminder$(),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && (o.isOpenSleepReminder && !1 === o.isPageHidden ? (s.stopSleepReminder$(),
                     s.openSleepReminder()) : s.stopSleepReminder$())
                 }
                 ), [o.isOpenSleepReminder, o.isPageHidden]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.sleepReminderPopup && !o.isPageHidden && s.setIsDisplayOtherPopupWhenTimeBreak(!0)
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.sleepReminderPopup && !o.isPageHidden && s.setIsDisplayOtherPopupWhenTimeBreak(!0)
                 }
                 ), [o.sleepReminderPopup, o.isPageHidden]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && o.durationReminder && !o.isPageHidden && (s.stopTimeBreak$(),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && o.durationReminder && !o.isPageHidden && (s.stopTimeBreak$(),
                     s.processTimeBreak())
                 }
                 ), [o.durationReminder, o.isPageHidden]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && localStorage.setItem(re.o4, JSON.stringify({
+                u.useEffect)(( () => {
+                    "v0" !== p && g && localStorage.setItem(re.o4, JSON.stringify({
                         event: "upload",
                         value: o.lastUploadTime
                     }))
                 }
                 ), [o.lastUploadTime]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" === g && o.shouldShowScheduledBreak && s.disableScheduledBreak()
+                u.useEffect)(( () => {
+                    "v0" === h && o.shouldShowScheduledBreak && s.disableScheduledBreak()
                 }
-                ), [g, o.shouldShowScheduledBreak]),
+                ), [h, o.shouldShowScheduledBreak]),
                 (0,
-                p.useEffect)(( () => {
-                    "v0" !== d && _ && "v0" !== g && !o.isPageHidden && o.scheduledBreakEnabled && (s.scheduledBreakProcess(),
+                u.useEffect)(( () => {
+                    "v0" !== p && g && "v0" !== h && !o.isPageHidden && o.scheduledBreakEnabled && (s.scheduledBreakProcess(),
                     s.stopScheduleBreak$(),
                     s.startScheduledBreakTimer())
                 }
@@ -3458,16 +3416,16 @@
             }();
             const {handlePopupHide: t, handlePopupShow: n} = function() {
                 const [e,t] = (0,
-                p.useState)(0)
+                u.useState)(0)
                   , n = (0,
-                p.useCallback)(( () => {
+                u.useCallback)(( () => {
                     t(0)
                 }
                 ), []);
                 return {
                     popupHeight: e,
                     handlePopupShow: (0,
-                    p.useCallback)((e => {
+                    u.useCallback)((e => {
                         t(e)
                     }
                     ), []),
@@ -3475,10 +3433,10 @@
                 }
             }()
               , [s,l] = (0,
-            p.useState)(!1)
-              , u = function() {
+            u.useState)(!1)
+              , d = function() {
                 const e = (0,
-                ue._S)(D.gM)
+                de._S)(D.gM)
                   , t = new Date;
                 if (e) {
                     const n = new Date(parseInt(e, 10));
@@ -3487,52 +3445,52 @@
                 }
                 return !1
             }()
-              , d = (0,
-            pe.ZO)()
-              , {appContext: g} = (0,
+              , p = (0,
+            ue.ZO)()
+              , {appContext: h} = (0,
             r.P)(a.L)
-              , m = (0,
-            Yi.W5)(Ki)
               , _ = (0,
-            Yi.W6)();
+            Ui.W5)(Hi)
+              , g = (0,
+            Ui.W6)();
             (0,
-            p.useEffect)(( () => {
-                if (!u && e && d) {
+            u.useEffect)(( () => {
+                if (!d && e && p) {
                     l(!0),
-                    Fi._.handleLinkPhoneOrEmailPopupShow({
+                    zi._.handleLinkPhoneOrEmailPopupShow({
                         enterMethod: "periodic"
                     });
                     const e = new Date;
                     (0,
-                    ue.AP)(D.gM, e.getTime().toString())
+                    de.AP)(D.gM, e.getTime().toString())
                 }
             }
             ), []);
-            const h = (0,
-            p.useCallback)(( () => {
+            const m = (0,
+            u.useCallback)(( () => {
                 l(!1)
             }
             ), [l]);
             return (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
-                i.jsx)(Li, {}), (0,
-                i.jsx)(et, {}), (0,
-                i.jsx)(ot, {}), (0,
-                i.jsx)(ct, {}), (0,
-                i.jsx)(gt, {}), (0,
-                i.jsx)(pi, {
+                i.jsx)(ji, {}), (0,
+                i.jsx)(Ze, {}), (0,
+                i.jsx)(nt, {}), (0,
+                i.jsx)(st, {}), (0,
+                i.jsx)(dt, {}), (0,
+                i.jsx)(li, {
                     onShow: n,
                     onHide: t
                 }), (0,
-                i.jsx)(Hi, {
+                i.jsx)(Yi, {
                     visible: s,
-                    handleClosePhoneOrEmailPopUp: h
-                }), !m && (0,
-                i.jsx)(Ti, {
+                    handleClosePhoneOrEmailPopUp: m
+                }), !_ && (0,
+                i.jsx)(Ei, {
                     onSettingClick: () => {
-                        const e = null == g ? void 0 : g.language;
-                        _.push({
+                        const e = null == h ? void 0 : h.language;
+                        g.push({
                             pathname: "setting",
                             search: `?${e ? `lang=${e}&` : ""}activeTab=screen-time-branch`
                         })
@@ -3542,7 +3500,7 @@
                 })]
             })
         }
-          , $i = () => {
+          , Vi = () => {
             var e, t;
             const {appContext: n} = (0,
             r.P)(a.L, {
@@ -3560,7 +3518,7 @@
             })
               , c = (0,
             o.cf)()
-              , p = null !== (t = null === (e = null == n ? void 0 : n.user) || void 0 === e ? void 0 : e.suggestAccountBind) && void 0 !== t && t;
+              , u = null !== (t = null === (e = null == n ? void 0 : n.user) || void 0 === e ? void 0 : e.suggestAccountBind) && void 0 !== t && t;
             return (0,
             i.jsxs)(i.Fragment, {
                 children: [(0,
@@ -3577,10 +3535,674 @@
                 i.jsx)(ne, {
                     appContext: n
                 }), (0,
-                i.jsx)(Wi, {
-                    suggestAccountBind: p
+                i.jsx)(Fi, {
+                    suggestAccountBind: u
                 })]
             })
+        }
+    }
+    ,
+    59782: (e, t, n) => {
+        n.d(t, {
+            dQ: () => p,
+            dk: () => d,
+            oA: () => u
+        });
+        var i = n(24643)
+          , o = n(57432)
+          , r = n.n(o)
+          , a = n(40099)
+          , s = n(2827);
+        const l = {
+            currentIndex: 0
+        };
+        function c() {
+            const e = {
+                swiper: null,
+                setSwiper(t) {
+                    e.swiper = t
+                },
+                _handleSlideChangeStart: r(),
+                _handleSlideChangeEnd: r(),
+                _handleTransitionEnd: r(),
+                _handleSlideChange: r(),
+                _handleSliderMove: r(),
+                _handleActiveIndexChange: r(),
+                handleSlideChangeStart(...t) {
+                    e._handleSlideChangeStart(...t)
+                },
+                handleSlideChangeEnd(...t) {
+                    e._handleSlideChangeEnd(...t)
+                },
+                handleTransitionEnd() {
+                    e._handleTransitionEnd()
+                },
+                handleSlideChange() {
+                    e._handleSlideChange()
+                },
+                handleSliderMove() {
+                    e._handleSliderMove()
+                },
+                handleActiveIndexChange(...t) {
+                    e._handleActiveIndexChange(...t)
+                },
+                bindHandleSlideChangeStart(t) {
+                    e._handleSlideChangeStart = t
+                },
+                bindHandleSlideChangeEnd(t) {
+                    e._handleSlideChangeEnd = t
+                },
+                bindHandleTransitionEnd(t) {
+                    e._handleTransitionEnd = t
+                },
+                bindHandleSlideChange(t) {
+                    e._handleSlideChange = t
+                },
+                bindHandleSliderMove(t) {
+                    e._handleSliderMove = t
+                },
+                bindHandleActiveIndexChange(t) {
+                    e._handleActiveIndexChange = t
+                },
+                setCurrentIndex: r(),
+                state: l
+            };
+            return e
+        }
+        const u = (0,
+        a.createContext)(c())
+          , d = (0,
+        a.createContext)(l)
+          , p = e => {
+            const [t,n] = (0,
+            s.$)(l)
+              , o = (0,
+            a.useRef)(c())
+              , r = (0,
+            a.useRef)(!0);
+            return r.current && (o.current.setCurrentIndex = e => n(Object.assign(Object.assign({}, t), {
+                currentIndex: e
+            })),
+            r.current = !1),
+            (0,
+            i.jsx)(u.Provider, {
+                value: o.current,
+                children: (0,
+                i.jsx)(d.Provider, {
+                    value: t,
+                    children: e.children
+                })
+            })
+        }
+    }
+    ,
+    2827: (e, t, n) => {
+        n.d(t, {
+            $: () => a
+        });
+        var i = n(35626)
+          , o = n.n(i)
+          , r = n(40099);
+        function a(e) {
+            const t = (0,
+            r.useRef)(e)
+              , [n,i] = (0,
+            r.useState)(e);
+            return [n, (0,
+            r.useCallback)((e => {
+                let n;
+                n = "function" == typeof e ? e(t.current) : e,
+                o()(t.current, n) || i(n),
+                t.current = n
+            }
+            ), [])]
+        }
+    }
+    ,
+    93240: (e, t, n) => {
+        n.d(t, {
+            Ah: () => N,
+            Jl: () => L,
+            Iv: () => A,
+            Fg: () => M,
+            dP: () => j
+        });
+        var i, o, r = n(67518), a = n(13392), s = n(40099), l = n(59952), c = n(49057), u = n(40173), d = n(60484), p = n(18072), h = n(30721), _ = n(58305), g = n(45297), m = n(49677), f = n(11983), b = n(93129), v = n(59782), y = n(24643), P = n(96370), k = n(71334), E = n(80752), x = n(96973);
+        !function(e) {
+            e[e.Reported = 1] = "Reported",
+            e[e.Dislike = 2] = "Dislike",
+            e[e.General = 3] = "General",
+            e[e.Photosensitive = 4] = "Photosensitive"
+        }(i || (i = {})),
+        function(e) {
+            e.GeneralSensitive = "general",
+            e.PhotoSensitive = "photosensitive",
+            e.PhotoSensitiveDenied = "photosensitive_denied",
+            e.M3AgeRestricted = "m3_age_restricted"
+        }(o || (o = {}));
+        const T = {
+            general: "masklayer_general_title",
+            photosensitive: "photosensitive_settings_title",
+            photosensitive_denied: "photosensitive_masklayer_removed",
+            m3_age_restricted: "cc_webapp_age_video_details_title"
+        }
+          , O = {
+            general: ["masklayer_general_body"],
+            photosensitive: ["photosensitive_masklayer_body1", "photosensitive_masklayer_body2"],
+            photosensitive_denied: ["photosensitive_masklayer_removed_body1", "photosensitive_masklayer_removed_body2"],
+            m3_age_restricted: ["cc_webapp_age_video_details_body"]
+        }
+          , S = {
+            general: "masklayer_general_skip",
+            photosensitive: "photosensitive_masklayer_watch",
+            photosensitive_denied: ""
+        }
+          , C = {
+            general: "masklayer_general_watch",
+            photosensitive: "photosensitive_masklayer_skipall",
+            photosensitive_denied: ""
+        }
+          , w = {
+            general: (0,
+            y.jsx)(k.A, {
+                width: 36,
+                height: 36,
+                fill: "rgba(255, 255, 255, .75)"
+            }),
+            photosensitive: (0,
+            y.jsx)(E.A, {
+                width: 32,
+                height: 32,
+                fill: "#fff"
+            }),
+            photosensitive_denied: (0,
+            y.jsx)(x.A, {
+                width: 48,
+                height: 48,
+                fill: "#0BE09B"
+            }),
+            m3_age_restricted: (0,
+            y.jsx)(P.A, {
+                fontSize: 72,
+                color: "rgba(255, 255, 255, 0.34)"
+            })
+        }
+          , j = e => {
+            var t, n;
+            const i = (0,
+            u.s)()
+              , {user: o} = null !== (t = (0,
+            c.W)(( () => ["user"]), [])) && void 0 !== t ? t : {}
+              , p = ( () => {
+                var e, t;
+                const {photoSensitiveVideosSetting: n, loginStatePhotoSensitiveVideosSetting: i} = (0,
+                a.Ph)(l.w, {
+                    selector: e => ({
+                        photoSensitiveVideosSetting: e.photoSensitiveVideosSetting,
+                        loginStatePhotoSensitiveVideosSetting: e.loginStatePhotoSensitiveVideosSetting
+                    }),
+                    dependencies: []
+                })
+                  , {user: o} = null !== (e = (0,
+                c.W)(( () => ["user"]), [])) && void 0 !== e ? e : {};
+                return o ? void 0 === i ? null !== (t = null == o ? void 0 : o.photoSensitiveVideosSetting) && void 0 !== t ? t : 0 : i : null != n ? n : 0
+            }
+            )()
+              , h = (0,
+            a.Ph)(l.w, {
+                selector: e => e.hasClosedVideoMask,
+                dependencies: []
+            })
+              , _ = null === (n = e.item) || void 0 === n ? void 0 : n.isContentClassified
+              , g = (0,
+            r.u)();
+            return (0,
+            s.useMemo)(( () => {
+                const {item: t} = e
+                  , {maskType: n, author: r} = (0,
+                d.L$)(t)
+                  , a = o && (null == o ? void 0 : o.uniqueId) === r;
+                if (!(_ || !h && (3 === n || 4 === n && 2 !== p && !a || 4 === n && 0 === p && a)))
+                    return {
+                        showVideoMask: !1
+                    };
+                let s, l = {};
+                return _ ? (s = "m3_age_restricted",
+                l = {
+                    backgroundColor: g.colors.ConstBGInverse
+                }) : s = 3 === n ? "general" : 1 === p ? "photosensitive_denied" : "photosensitive",
+                {
+                    showVideoMask: !0,
+                    videoMaskType: s,
+                    videoMaskTitle: i(T[s]),
+                    videoMaskDesc: i(O[s][0]),
+                    icon: w[s],
+                    upperBtnText: i(S[s]),
+                    lowerBtnText: i(C[s]),
+                    maskStyle: l
+                }
+            }
+            ), [e, o, _, h, p, i, g.colors.ConstBGInverse])
+        }
+          , M = e => {
+            var t, n;
+            const {item: i, list: o=[], onClose: r} = e
+              , {length: d} = o
+              , p = (0,
+            u.s)()
+              , h = (0,
+            s.useContext)(v.oA)
+              , _ = (0,
+            s.useContext)(v.dk)
+              , g = (0,
+            a.wA)(l.w)
+              , {user: b} = null !== (t = (0,
+            c.W)(( () => ["user"]), [])) && void 0 !== t ? t : {}
+              , {currentIndex: y} = _
+              , P = null !== (n = o[y]) && void 0 !== n ? n : ""
+              , k = j({
+                item: i
+            })
+              , {videoMaskType: E} = k
+              , x = (0,
+            s.useCallback)(( () => {
+                "photosensitive" === E && g.setSkipPhotoSensitive({
+                    skip: !1,
+                    hasLogin: Boolean(b)
+                }),
+                g.setHasClosedMask(!0),
+                m._.handleMaskLayerClickWatch({
+                    scenario: E,
+                    group_id: P
+                })
+            }
+            ), [P, g, E, b])
+              , T = (0,
+            s.useCallback)(( () => {
+                var e, t;
+                "photosensitive" === E && g.setSkipPhotoSensitive({
+                    skip: !0,
+                    hasLogin: Boolean(b)
+                }),
+                m._.handleMaskLayerClickSkip({
+                    scenario: E,
+                    group_id: P
+                }),
+                f.F.destroy(),
+                f.F.open({
+                    content: p("photosensitive_skepped_toast"),
+                    duration: 3
+                }),
+                y < d - 1 ? null === (e = h.swiper) || void 0 === e || e.slideNext() : y > 0 ? null === (t = h.swiper) || void 0 === t || t.slidePrev() : null == r || r()
+            }
+            ), [y, P, d, r, h.swiper, p, g, E, b])
+              , O = (0,
+            s.useCallback)(( () => {
+                "photosensitive" === E ? x() : T()
+            }
+            ), [T, x, E])
+              , S = (0,
+            s.useCallback)(( () => {
+                "photosensitive" === E ? T() : x()
+            }
+            ), [E, T, x]);
+            return (0,
+            s.useEffect)(( () => {
+                g.setHasClosedMask(!1)
+            }
+            ), [y]),
+            Object.assign(Object.assign({}, k), {
+                handleUpperBtnClick: O,
+                handleLowerBtnClick: S,
+                handleSkipVideo: T,
+                groupId: P
+            })
+        }
+          , A = ({itemOriginalMute: e=!1, itemCopyrightMute: t=!1, playMode: n=0}) => {
+            const i = (0,
+            p.M2)() || e
+              , o = (0,
+            a.Ph)(b.i)
+              , r = (0,
+            s.useMemo)(( () => o.showPlayBtn || 2 === n), [o.showPlayBtn, n])
+              , l = (0,
+            s.useMemo)(( () => !t && (i || o.showUnMuteBtn)), [t, i, o.showUnMuteBtn]);
+            return {
+                muted: i,
+                showUnMuteBtn: l,
+                showPlayBtn: r
+            }
+        }
+          , L = () => {
+            const [{bottomModalCtaShowing: e},t] = (0,
+            a.Su)(b.i)
+              , {mobileDefaultMute: n, forcePause: i} = (0,
+            p.bn)()
+              , o = (0,
+            s.useRef)(e)
+              , {isSmartPlayer: r} = (0,
+            h.Qt)()
+              , l = (0,
+            p._B)();
+            (0,
+            s.useEffect)(( () => {
+                r || (o.current && !e ? (t.setShowPlayBtn(!1),
+                t.setShowUnmuteBtn(!1),
+                l.setMobileDefaultMute(!1),
+                l.setForcePause(!1),
+                l.setCanRetry(!1)) : !o.current && e ? (t.setShowUnmuteBtn(!1),
+                t.setShowPlayBtn(!1),
+                l.setForcePause(!0)) : i ? l.setMobileDefaultMute(!1) : t.setShowUnmuteBtn(n),
+                o.current = e)
+            }
+            ), [e, n, t, i])
+        }
+          , N = () => {
+            const e = (0,
+            p._B)();
+            (0,
+            s.useEffect)(( () => {
+                !(0,
+                _.Hd)(g.iJ) || e.setCanRetry(!0)
+            }
+            ), [])
+        }
+    }
+    ,
+    87802: (e, t, n) => {
+        n.d(t, {
+            Jz: () => a,
+            R4: () => u,
+            S4: () => s,
+            i3: () => c
+        });
+        var i = n(71111)
+          , o = n(31209);
+        const r = (0,
+        i.atom)({
+            mute: !0,
+            playing: !0,
+            volume: 0,
+            currentCaption: null,
+            enableCaption: !1
+        })
+          , {useServiceState: a, useServiceDispatchers: s, useAtomService: l} = (0,
+        o.i)(r, ( (e, t) => ({
+            setMute(e) {
+                t(r, (t => Object.assign(Object.assign({}, t), {
+                    mute: e
+                })))
+            },
+            setVolume(e) {
+                t(r, (t => Object.assign(Object.assign({}, t), {
+                    volume: Math.min(Math.max(0, e), 1)
+                })))
+            },
+            setPlaying(e) {
+                t(r, (t => Object.assign(Object.assign({}, t), {
+                    playing: e
+                })))
+            },
+            setCurrentCaption(e) {
+                t(r, (t => Object.assign(Object.assign({}, t), {
+                    currentCaption: e
+                })))
+            },
+            setEnableCaption(e) {
+                t(r, (t => Object.assign(Object.assign({}, t), {
+                    enableCaption: e
+                })))
+            }
+        })))
+          , c = () => a((e => e.mute))
+          , u = () => a((e => e.volume))
+    }
+    ,
+    67169: (e, t, n) => {
+        n.d(t, {
+            ah: () => _,
+            iJ: () => p,
+            jj: () => h
+        });
+        var i = n(40099)
+          , o = n(48578)
+          , r = n(58305)
+          , a = n(40173)
+          , s = n(88920)
+          , l = n(16469)
+          , c = n(11983)
+          , u = n(42983)
+          , d = n(87802);
+        function p({loadingThreshold: e=1e3, isCurrentVideo: t}) {
+            const [n,o] = (0,
+            i.useState)(!1)
+              , r = (0,
+            i.useRef)(0)
+              , a = (0,
+            i.useCallback)(( () => {
+                r.current && window.clearTimeout(r.current),
+                o(!1)
+            }
+            ), [])
+              , s = (0,
+            i.useCallback)(( () => {
+                e ? (r.current && window.clearTimeout(r.current),
+                r.current = window.setTimeout(( () => {
+                    o(!0)
+                }
+                ), e)) : o(!0)
+            }
+            ), [e]);
+            return (0,
+            i.useEffect)(( () => (t || (window.clearTimeout(r.current),
+            o(!1)),
+            () => window.clearTimeout(r.current))), [t]),
+            {
+                loading: n,
+                handleCanPlayWithLoading: a,
+                handlePauseWithLoading: a,
+                handlePlayingWithLoading: a,
+                handleErrorWithLoading: a,
+                handleWaitingWithLoading: s
+            }
+        }
+        function h() {
+            const [e,t] = (0,
+            i.useState)(!0)
+              , n = (0,
+            i.useCallback)(( () => {
+                t(!1)
+            }
+            ), [])
+              , o = (0,
+            i.useCallback)(( () => {
+                t(!0)
+            }
+            ), []);
+            return (0,
+            i.useEffect)(( () => {
+                const e = (0,
+                r.Gz)(n, o);
+                return () => {
+                    null == e || e()
+                }
+            }
+            ), [o, n]),
+            e
+        }
+        function _({playMode: e, itemMute: t=!1}) {
+            const n = (0,
+            a.s)()
+              , {mute: r, volume: p} = (0,
+            u.yw)()
+              , h = t || r
+              , _ = (0,
+            d.S4)()
+              , g = (0,
+            s.W4)()
+              , m = (0,
+            i.useCallback)(( (i, r="click", a, s) => {
+                if (t || s)
+                    return c.F.destroy(),
+                    c.F.open({
+                        content: n("music_detail_unavailable_1"),
+                        duration: 3,
+                        widthType: "half"
+                    }),
+                    !1;
+                if (o.p.handleSwitchSound(Object.assign(Object.assign({}, a), {
+                    muted: i,
+                    playMode: e,
+                    enter_method: r
+                })),
+                o.p.handleVolumeChange({
+                    volume_to: p,
+                    click_mute: !0
+                }),
+                l.lA.setItem("muted", i),
+                _.setMute(i),
+                !i && 0 === l.lA.getItem("volume")) {
+                    let e = .6;
+                    "v2" === g ? e = .7 : "v3" === g ? e = .75 : "v4" === g ? e = .5 : "v5" === g && (e = .4),
+                    l.lA.setItem("volume", e),
+                    _.setVolume(e)
+                }
+                return !0
+            }
+            ), [_, e, g, p, n, t]);
+            return {
+                mute: h,
+                volume: p,
+                setMute: m
+            }
+        }
+        n(56268)
+    }
+    ,
+    42983: (e, t, n) => {
+        n.d(t, {
+            O2: () => r,
+            yw: () => o
+        });
+        var i = n(87802);
+        const o = () => ({
+            mute: (0,
+            i.i3)(),
+            volume: (0,
+            i.R4)()
+        })
+          , r = e => {
+            const {mute: t, volume: n, playing: o} = (0,
+            i.Jz)((t => ({
+                mute: e || t.mute,
+                volume: t.volume,
+                playing: t.playing
+            })));
+            return {
+                mute: t,
+                volume: n,
+                playing: o
+            }
+        }
+    }
+    ,
+    49677: (e, t, n) => {
+        n.d(t, {
+            _: () => r
+        });
+        var i, o = n(16891);
+        !function(e) {
+            e.General = "general",
+            e.Photosensitive = "photosensitive",
+            e.LoggedOut = "logged_out",
+            e.AgeRestriction = "age_restriction"
+        }(i || (i = {}));
+        const r = {
+            handleRemovePhotosensitiveStatus: e => {
+                o.f.sendEvent("tns_remove_photosensitive_status", {
+                    status: e
+                })
+            }
+            ,
+            handleShowMaskLayer: e => {
+                o.f.sendEvent("tns_show_mask_layer", e)
+            }
+            ,
+            handleShowPhotosensitiveRemoved: e => {
+                o.f.sendEvent("tns_show_photosensitive_removed", e)
+            }
+            ,
+            handleMaskLayerClickSkip: e => {
+                o.f.sendEvent("tns_mask_layer_click_skip", e)
+            }
+            ,
+            handleMaskLayerClickWatch: e => {
+                o.f.sendEvent("tns_mask_layer_click_watch", e)
+            }
+            ,
+            handleCCMaskShow: e => {
+                o.f.sendEvent("cc_mask_show", e)
+            }
+            ,
+            handleClickLogInCCMask: e => {
+                o.f.sendEvent("click_log_in_cc_mask", e)
+            }
+        }
+    }
+    ,
+    48578: (e, t, n) => {
+        n.d(t, {
+            p: () => r
+        });
+        var i = n(16891);
+        const o = {
+            0: "one-column",
+            1: "three-column",
+            2: "browser-mode",
+            3: "swiper_mode",
+            4: "video-detail",
+            6: "pip",
+            5: "fullscreen",
+            7: "creator_tab",
+            8: "mini_player",
+            9: "immersive_player"
+        }
+          , r = {
+            handleSwitchSound: e => {
+                const {muted: t, playMode: n, enter_method: r="click", volume_from: a, volume_to: s, aweme_type: l, pic_cnt: c} = e;
+                void 0 !== a && void 0 !== s ? i.f.sendEvent("switch_sound", {
+                    sound_mode: s > a ? "adjust_up" : "adjust_down",
+                    play_mode: o[n],
+                    enter_method: r,
+                    volume_from: a,
+                    volume_to: s,
+                    aweme_type: null != l ? l : 0,
+                    pic_cnt: c
+                }) : i.f.sendEvent("switch_sound", {
+                    sound_mode: t ? "off" : "on",
+                    play_mode: o[n],
+                    enter_method: r,
+                    aweme_type: null != l ? l : 0,
+                    pic_cnt: c
+                })
+            }
+            ,
+            handleVideoUnmuteButtonShow: () => {
+                i.f.sendEvent("unmute_show")
+            }
+            ,
+            handleVideoUnmuteButtonClicked: () => {
+                i.f.sendEvent("unmute_click")
+            }
+            ,
+            handleVolumeChange: e => {
+                const {volume_from: t=0, volume_to: n=0, click_mute: o=!1} = e;
+                i.f.sendEvent("volume_change", {
+                    volume_change: o ? 0 : Number((n - t).toFixed(4)),
+                    volume_level: n,
+                    click_mute: o
+                })
+            }
         }
     }
 }]);

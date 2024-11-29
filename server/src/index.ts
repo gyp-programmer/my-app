@@ -275,14 +275,14 @@ router.get("/mssdk/web/ping", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           ctx.body = body;
           resolve(true);
         } else {
@@ -322,14 +322,14 @@ router.post("/mssdk/web/report", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           ctx.body = body;
           resolve(true);
         } else {
@@ -369,14 +369,14 @@ router.post("/mssdk/web/common", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           ctx.body = body;
           resolve(true);
         } else {
@@ -414,14 +414,14 @@ router.get("/mssdk/web/resource", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           ctx.body = body;
           resolve(true);
         } else {
@@ -460,14 +460,14 @@ router.get("/api/recommend/item_list/", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           // node处理方式
           // 相关域名全部替换为根域名，转发
           // https://v16-webapp-prime.tiktok.com
@@ -535,16 +535,23 @@ router.post("/api/global-footer/graphql", (ctx: any) => {
 
 router.post("/ttwid/check/", (ctx: any) => {
   const targetUrl = "https://www.tiktok.com";
+
   const options = {
     headers: {
-      cookie: ctx.request.header["cookie"],
-      "user-agent": ctx.request.header["user-agent"],
+      ...ctx.request.header,
+      host: targetUrl.replace("https://", ""),
+      origin: ctx.request.header["origin"].replace(
+        /gyp\.mytiktok\.com/,
+        targetUrl.replace("https://", ""),
+      ),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        targetUrl.replace("https://", ""),
+      ),
     },
     proxy,
     method: "POST",
-    body: JSON.stringify({
-      ...ctx.request.body,
-    }),
+    body: ctx.request.rawBody,
     url: targetUrl + "/ttwid/check/",
   };
 
@@ -562,15 +569,16 @@ router.post("/ttwid/check/", (ctx: any) => {
         /** 设置cookies */
         const cookies = response.headers["set-cookie"]
           ? response.headers["set-cookie"].map((o: string) => {
-              return o
-                .replace(/domain=tiktok.com;/g, "")
-                .replace(/Domain=tiktok.com;/g, "");
+              return (
+                o
+                  .replace(/domain=tiktok.com;/g, "")
+                  .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+              );
             })
           : [];
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-        });
+        ctx.set("set-cookie", cookies);
+        ctx.set("access-control-allow-origin", "*");
         ctx.body = body;
         resolve(true);
       } else {
@@ -578,6 +586,72 @@ router.post("/ttwid/check/", (ctx: any) => {
         ctx.body = {
           status: 502,
           result: "forbidden",
+        };
+        resolve(true);
+      }
+    });
+  });
+});
+
+router.post("/passport/web/send_code/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const qs = querystring.parse(originUrl.query);
+  const targetUrl = qs["domain"];
+  const host = "www.tiktok.com";
+  const formData = Object.entries(ctx.request.body)
+    .map(([key, value]) => {
+      return `${key}=${value}`;
+    })
+    .join("&");
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: targetUrl.replace("https://", ""),
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+    method: "POST",
+    body: formData,
+    url:
+      targetUrl +
+      "/passport/web/send_code/?" +
+      originUrl.query
+        .replace(/gyp\.mytiktok\.com/, host)
+        .replace(/domain=([^&]+)/, "")
+        .replace(
+          /%22root_referer%22:%22http:%2F%2F\w+\.\w+\.\w+:\d+%2F%22,/,
+          "",
+        ), // 生产需要替换为host
+  };
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) {
+        console.log(error);
+        reject(error);
+      }
+      if (!error && response && response.statusCode === 200) {
+        // response.headers 中的 全部都要带上
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        /** 设置cookies */
+        const cookies = response.headers["set-cookie"].map((o: string) => {
+          return (
+            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
+        });
+        ctx.set("set-cookie", cookies);
+        ctx.set("access-control-allow-origin", "*");
+        ctx.body = body;
+        resolve(true);
+      } else {
+        ctx.body = {
+          message: "发送验证码失败",
+          code: 500,
         };
         resolve(true);
       }
@@ -614,13 +688,15 @@ router.post("/passport/web/store_region/", (ctx: any) => {
       "/passport/web/store_region/?" +
       originUrl.query
         .replace(/gyp\.mytiktok\.com/, host)
-        .replace(/domain=([^&]+)/, ""), // 生产需要替换为host
+        .replace(/domain=([^&]+)/, "")
+        .replace(
+          /%22root_referer%22:%22http:%2F%2F\w+\.\w+\.\w+:\d+%2F%22,/,
+          "",
+        ), // 生产需要替换为host
   };
-
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
       if (error) reject(error);
-      console.log(response, "response");
       if (!error && response.statusCode === 200) {
         // response.headers 中的 全部都要带上
         Object.keys(response.headers).forEach(key => {
@@ -632,9 +708,8 @@ router.post("/passport/web/store_region/", (ctx: any) => {
             o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
           );
         });
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", o);
-        });
+        ctx.set("set-cookie", cookies);
+        ctx.set("access-control-allow-origin", "*");
         ctx.body = body;
         resolve(true);
       } else {
@@ -675,7 +750,13 @@ router.post("/passport/web/region/", (ctx: any) => {
     url:
       targetUrl +
       "/passport/web/region/?" +
-      originUrl.query.replace(/domain=([^&]+)/, ""),
+      originUrl.query
+        .replace(/domain=([^&]+)/, "")
+        .replace(/gyp\.mytiktok\.com/, host)
+        .replace(
+          /%22root_referer%22:%22http:%2F%2F\w+\.\w+\.\w+:\d+%2F%22,/,
+          "",
+        ),
   };
 
   return new Promise((resolve, reject) => {
@@ -688,14 +769,14 @@ router.post("/passport/web/region/", (ctx: any) => {
         });
         /** 设置cookies */
         const cookies = response.headers["set-cookie"].map((o: string) => {
-          return o
-            .replace(/domain=tiktok.com;/g, "")
-            .replace(/Domain=tiktok.com;/g, "");
+          return (
+            o
+              .replace(/domain=tiktok.com;/g, "")
+              .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", o);
-        });
+        ctx.set("set-cookie", cookies);
         ctx.body = body;
         resolve(true);
       } else {
@@ -731,6 +812,72 @@ router.post("/passport/web/auth_broadcast/", (ctx: any) => {
     url:
       targetUrl +
       "/passport/web/auth_broadcast/?" +
+      originUrl.query
+        .replace(/domain=([^&]+)/, "")
+        .replace(
+          /%22root_referer%22:%22http:%2F%2F\w+\.\w+\.\w+:\d+%2F%22,/,
+          "",
+        ),
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) reject(error);
+      if (!error && response.statusCode === 200) {
+        // response.headers 中的 全部都要带上
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        /** 设置cookies */
+        const cookies = response.headers["set-cookie"].map((o: string) => {
+          return (
+            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
+        });
+        /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+        ctx.set("set-cookie", cookies);
+        ctx.set("access-control-allow-origin", "*");
+        ctx.body = body;
+        resolve(true);
+      } else {
+        console.log(response, "error");
+        ctx.body = {
+          message: "fail",
+          body,
+        };
+        resolve(true);
+      }
+    });
+  });
+});
+
+router.post("/passport/web/email/register_verify_login/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const qs = querystring.parse(originUrl.query);
+  const targetUrl = qs["domain"];
+  const host = "www.tiktok.com";
+  const formData = Object.entries(ctx.request.body)
+    .map(([key, value]) => {
+      return `${key}=${value}`;
+    })
+    .join("&");
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: targetUrl.replace("https://", ""),
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+      "accept-encoding": "",
+    },
+    proxy,
+    method: "POST",
+    body: formData,
+    url:
+      targetUrl +
+      "/passport/web/email/register_verify_login/?" +
       originUrl.query.replace(/domain=([^&]+)/, ""),
   };
 
@@ -749,16 +896,131 @@ router.post("/passport/web/auth_broadcast/", (ctx: any) => {
           );
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", o);
-        });
+        ctx.set("set-cookie", cookies);
         ctx.body = body;
         resolve(true);
       } else {
         console.log(response, "error");
         ctx.body = {
-          message: "fail",
-          body,
+          status: 502,
+        };
+        resolve(true);
+      }
+    });
+  });
+});
+
+router.post("/passport/web/email/send_code/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const qs = querystring.parse(originUrl.query);
+  const targetUrl = qs["domain"];
+  const host = "www.tiktok.com";
+  const formData = Object.entries(ctx.request.body)
+    .map(([key, value]) => {
+      return `${key}=${value}`;
+    })
+    .join("&");
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: targetUrl.replace("https://", ""),
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+      "accept-encoding": "",
+    },
+    proxy,
+    method: "POST",
+    body: formData,
+    url:
+      targetUrl +
+      "/passport/web/email/send_code/?" +
+      originUrl.query.replace(/domain=([^&]+)/, ""),
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) reject(error);
+      if (!error && response.statusCode === 200) {
+        // response.headers 中的 全部都要带上
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        /** 设置cookies */
+        const cookies = response.headers["set-cookie"].map((o: string) => {
+          return (
+            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
+        });
+        /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+        ctx.set("set-cookie", cookies);
+        ctx.body = body;
+        resolve(true);
+      } else {
+        console.log(response, "error");
+        ctx.body = {
+          status: 502,
+        };
+        resolve(true);
+      }
+    });
+  });
+});
+
+router.post("/passport/web/user/check_email_registered", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const qs = querystring.parse(originUrl.query);
+  const targetUrl = qs["domain"];
+  const host = "www.tiktok.com";
+  const formData = Object.entries(ctx.request.body)
+    .map(([key, value]) => {
+      return `${key}=${value}`;
+    })
+    .join("&");
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: targetUrl.replace("https://", ""),
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+      "accept-encoding": "",
+    },
+    proxy,
+    method: "POST",
+    body: formData,
+    url:
+      targetUrl +
+      "/passport/web/user/check_email_registered?" +
+      originUrl.query.replace(/domain=([^&]+)/, ""),
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) reject(error);
+      if (!error && response.statusCode === 200) {
+        // response.headers 中的 全部都要带上
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        /** 设置cookies */
+        const cookies = response.headers["set-cookie"].map((o: string) => {
+          return (
+            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
+        });
+        /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+        ctx.set("set-cookie", cookies);
+        ctx.body = body;
+        resolve(true);
+      } else {
+        console.log(response, "error");
+        ctx.body = {
+          status: 502,
         };
         resolve(true);
       }
@@ -793,9 +1055,10 @@ router.post("/passport/web/user/login/", (ctx: any) => {
     url:
       targetUrl +
       "/passport/web/user/login/?" +
-      originUrl.query.replace(/domain=([^&]+)/, ""),
+      originUrl.query
+        .replace(/domain=([^&]+)/, "")
+        .replace(/gyp\.mytiktok\.com/, host),
   };
-
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
       if (error) reject(error);
@@ -806,12 +1069,13 @@ router.post("/passport/web/user/login/", (ctx: any) => {
         });
         /** 设置cookies */
         const cookies = response.headers["set-cookie"].map((o: string) => {
-          return o.replace(/Domain=tiktok.com;/g, "");
+          return (
+            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", o);
-        });
+        ctx.set("set-cookie", cookies);
+        ctx.set("access-control-allow-origin", "*");
         ctx.body = body;
         resolve(true);
       } else {
@@ -895,6 +1159,205 @@ router.get("/api/compliance/settings/", (ctx: any) => {
     );
   });
 });
+router.post("/consent/api/record/create/sync/v2", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+    body: JSON.stringify(ctx.request.body),
+    method: "POST",
+  };
+
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl + "/consent/api/record/create/sync/v2?" + originUrl.query,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的 全部都要带上
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          ctx.body = body;
+          resolve(true);
+        } else {
+          console.log(response, "error");
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
+router.get("/api/user/detail/self/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+  };
+
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl + "/api/user/detail/self/?" + originUrl.query,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的 全部都要带上
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          /** 设置cookies */
+          const cookies = response.headers["set-cookie"].map((o: string) => {
+            return (
+              o
+                .replace(/Domain=tiktok.com;/g, "")
+                .replace(/domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
+          });
+          /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+          ctx.set("set-cookie", cookies);
+          ctx.body = body;
+          resolve(true);
+        } else {
+          console.log(response, "error");
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
+router.get("/api/uniqueid/check/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+  };
+
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl + "/api/uniqueid/check/?" + originUrl.query,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的 全部都要带上
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          /** 设置cookies */
+          const cookies = response.headers["set-cookie"].map((o: string) => {
+            return (
+              o
+                .replace(/Domain=tiktok.com;/g, "")
+                .replace(/domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
+          });
+          /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+          ctx.set("set-cookie", cookies);
+          ctx.body = body;
+          resolve(true);
+        } else {
+          console.log(response, "error");
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
+router.get("/api/item/availability/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+  };
+
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl + "/api/item/availability/?" + originUrl.query,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的 全部都要带上
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          /** 设置cookies */
+          const cookies = response.headers["set-cookie"].map((o: string) => {
+            return (
+              o
+                .replace(/Domain=tiktok.com;/g, "")
+                .replace(/domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
+          });
+          /** 为cookies中的每个key/value增加 SameSite=None; Secure */
+          ctx.set("set-cookie", cookies);
+          ctx.body = body;
+          resolve(true);
+        } else {
+          console.log(response, "error");
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
 // https://www.tiktok.com/login/?enter_method=enter_personal_homepage&enter_from=personal_homepage&launch_type=0&lang=en&redirect_url=https%3A%2F%2Fgyp.mytiktok.com%2Fprofile
 const getPage = (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
@@ -929,6 +1392,7 @@ const getPage = (ctx: any) => {
           "Set-Cookie": cookies,
           "reporting-endpoints": "",
           "content-security-policy": "",
+          "x-frame-options": "",
           link: "",
         });
         let newBody = body;
@@ -937,62 +1401,72 @@ const getPage = (ctx: any) => {
         if (body.indexOf("webapp-mobile-islands.") > 0) {
           newBody = newBody.replace(
             /<script[^>]*src="[^"]*webapp-mobile-islands\.[^"]*"[^>]*><\/script>/,
-            '<script data-chunk="webapp-mobile-islands" async src="https://gyp3.mytiktok.com:8080/webapp-mobile-islands.js"></script>',
+            '<script data-chunk="webapp-mobile-islands" async src="https://gyp3.mytiktok.com/webapp-mobile-islands.js"></script>',
           );
           newBody = newBody.replace(
             /<link[^>]*href="[^"]*webapp-mobile-islands\.[^"]*"[^>]*>/,
-            '<link data-chunk="webapp-mobile-islands" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/webapp-mobile-islands.js">',
+            '<link data-chunk="webapp-mobile-islands" rel="preload" as="script" href="https://gyp3.mytiktok.com/webapp-mobile-islands.js">',
           );
 
           if (newBody.indexOf("runtime.") > 0) {
-            // newBody = newBody.replace(
-            //   /<script[^>]*src="[^"]*runtime\.[^"]*"[^>]*><\/script>/,
-            //   '<script data-chunk="webapp-mobile-islands" async src="https://gyp3.mytiktok.com:8080/runtime-islands.js"></script>',
-            // );
-            // newBody = newBody.replace(
-            //   /<link[^>]*href="[^"]*runtime\.[^"]*"[^>]*>/,
-            //   '<link data-chunk="webapp-mobile-islands" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/runtime-islands.js">',
-            // );
+            newBody = newBody.replace(
+              /<script[^>]*src="[^"]*runtime\.[^"]*"[^>]*><\/script>/,
+              '<script data-chunk="webapp-mobile-islands" async src="https://gyp3.mytiktok.com/runtime-islands.js"></script>',
+            );
+            newBody = newBody.replace(
+              /<link[^>]*href="[^"]*runtime\.[^"]*"[^>]*>/,
+              '<link data-chunk="webapp-mobile-islands" rel="preload" as="script" href="https://gyp3.mytiktok.com/runtime-islands.js">',
+            );
+          }
+          if (newBody.indexOf("vendor-ba62aadc.") > 0) {
+            newBody = newBody.replace(
+              /<script[^>]*src="[^"]*vendor-ba62aadc\.[^"]*"[^>]*><\/script>/,
+              '<script data-chunk="webapp-mobile-islands" async src="https://gyp3.mytiktok.com/vendor-ba62aadc.js"></script>',
+            );
+            newBody = newBody.replace(
+              /<link[^>]*href="[^"]*vendor-ba62aadc\.[^"]*"[^>]*>/,
+              '<link data-chunk="webapp-mobile-islands" rel="preload" as="script" href="https://gyp3.mytiktok.com/vendor-ba62aadc.js">',
+            );
           }
         }
 
         if (newBody.indexOf("webapp-mobile.") > 0) {
           newBody = newBody.replace(
             /<script[^>]*src="[^"]*webapp-mobile\.[^"]*"[^>]*><\/script>/,
-            '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com:8080/webapp-mobile.js"></script>',
+            '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com/webapp-mobile.js"></script>',
           );
           newBody = newBody.replace(
             /<link[^>]*href="[^"]*webapp-mobile\.[^"]*"[^>]*>/,
-            '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/webapp-mobile.js">',
+            '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com/webapp-mobile.js">',
           );
           if (newBody.indexOf("multi-cluster-domain.") > 0) {
             newBody = newBody.replace(
               /<script[^>]*src="[^"]*multi-cluster-domain\.[^"]*"[^>]*><\/script>/,
-              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com:8080/multi-cluster-domain.js"></script>',
+              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com/multi-cluster-domain.js"></script>',
             );
             newBody = newBody.replace(
               /<link[^>]*href="[^"]*multi-cluster-domain\.[^"]*"[^>]*>/,
-              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/multi-cluster-domain.js">',
+              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com/multi-cluster-domain.js">',
             );
           }
           if (newBody.indexOf("vendor.") > 0) {
             newBody = newBody.replace(
               /<script[^>]*src="[^"]*vendor\.[^"]*"[^>]*><\/script>/,
-              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com:8080/verdor.js"></script>',
+              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com/verdor.js"></script>',
             );
             newBody = newBody.replace(
               /<link[^>]*href="[^"]*vendor\.[^"]*"[^>]*>/,
-              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/verdor.js">',
+              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com/verdor.js">',
             );
           }
           if (newBody.indexOf("runtime.") > 0) {
             newBody = newBody.replace(
               /<script[^>]*src="[^"]*runtime\.[^"]*"[^>]*><\/script>/,
-              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com:8080/runtime.js"></script>',
+              '<script data-chunk="webapp-mobile" async src="https://gyp3.mytiktok.com/runtime.js"></script>',
             );
             newBody = newBody.replace(
               /<link[^>]*href="[^"]*runtime\.[^"]*"[^>]*>/,
-              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/runtime.js">',
+              '<link data-chunk="webapp-mobile" rel="preload" as="script" href="https://gyp3.mytiktok.com/runtime.js">',
             );
           }
         }
@@ -1000,73 +1474,84 @@ const getPage = (ctx: any) => {
         // if (newBody.indexOf("3152.") > 0) {
         //   newBody = newBody.replace(
         //     /<script[^>]*src="[^"]*3152\.[^"]*"[^>]*><\/script>/,
-        //     '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com:8080/3152.js"></script>',
+        //     '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com/3152.js"></script>',
         //   );
         //   newBody = newBody.replace(
         //     /<link[^>]*href="[^"]*3152\.[^"]*"[^>]*>/,
-        //     '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/3152.js">',
+        //     '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com/3152.js">',
         //   );
         // }
 
         if (newBody.indexOf("webapp-login-page.") > 0) {
           newBody = newBody.replace(
             /<script[^>]*src="[^"]*webapp-login-page\.[^"]*"[^>]*><\/script>/,
-            '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com:8080/weapp-login-page.js"></script>',
+            '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com/weapp-login-page.js"></script>',
           );
           newBody = newBody.replace(
             /<link[^>]*href="[^"]*webapp-login-page\.[^"]*"[^>]*>/,
-            '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/weapp-login-page.js">',
+            '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com/weapp-login-page.js">',
           );
 
           if (newBody.indexOf("vendor.") > 0) {
             newBody = newBody.replace(
               /<script[^>]*src="[^"]*vendor\.[^"]*"[^>]*><\/script>/,
-              '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com:8080/verdor-islands.js"></script>',
+              '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com/verdor-islands.js"></script>',
             );
             newBody = newBody.replace(
               /<link[^>]*href="[^"]*vendor\.[^"]*"[^>]*>/,
-              '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/verdor-islands.js">',
+              '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com/verdor-islands.js">',
             );
           }
           if (newBody.indexOf("runtime.") > 0) {
             newBody = newBody.replace(
               /<script[^>]*src="[^"]*runtime\.[^"]*"[^>]*><\/script>/,
-              '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com:8080/runtime.login.js"></script>',
+              '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com/runtime.login.js"></script>',
             );
             newBody = newBody.replace(
               /<link[^>]*href="[^"]*runtime\.[^"]*"[^>]*>/,
-              '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/runtime.login.js">',
+              '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com/runtime.login.js">',
+            );
+          }
+          if (newBody.indexOf("multi-cluster-domain.") > 0) {
+            // multi-cluster-domain.ad80dc92453bdfac77ec.js
+            newBody = newBody.replace(
+              /<script[^>]*src="[^"]*multi-cluster-domain\.[^"]*"[^>]*><\/script>/,
+              '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com/multi-cluster-domain.login.js"></script>',
+            );
+            newBody = newBody.replace(
+              /<link[^>]*href="[^"]*multi-cluster-domain\.[^"]*"[^>]*>/,
+              '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com/multi-cluster-domain.login.js">',
             );
           }
         }
         // if (newBody.indexOf("webapp-login-page.") > 0) {
         //   newBody = newBody.replace(
         //     /<script[^>]*src="[^"]*webapp-login-page\.[^"]*"[^>]*><\/script>/,
-        //     '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com:8080/weapp-login-page.js"></script>',
+        //     '<script data-chunk="user-login" async src="https://gyp3.mytiktok.com/weapp-login-page.js"></script>',
         //   );
         //   newBody = newBody.replace(
         //     /<link[^>]*href="[^"]*webapp-login-page\.[^"]*"[^>]*>/,
-        //     '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/weapp-login-page.js">',
+        //     '<link data-chunk="user-login" rel="preload" as="script" href="https://gyp3.mytiktok.com/weapp-login-page.js">',
         //   );
 
         //   if (newBody.indexOf("vendor.") > 0) {
         //     newBody = newBody.replace(
         //       /<script[^>]*src="[^"]*vendor\.[^"]*"[^>]*><\/script>/,
-        //       '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com:8080/verdor-islands.js"></script>',
+        //       '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com/verdor-islands.js"></script>',
         //     );
         //     newBody = newBody.replace(
         //       /<link[^>]*href="[^"]*vendor\.[^"]*"[^>]*>/,
-        //       '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/verdor-islands.js">',
+        //       '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com/verdor-islands.js">',
         //     );
         //   }
         //   if (newBody.indexOf("runtime.") > 0) {
         //     newBody = newBody.replace(
         //       /<script[^>]*src="[^"]*runtime\.[^"]*"[^>]*><\/script>/,
-        //       '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com:8080/runtime.login.js"></script>',
+        //       '<script data-chunk="webapp-login-page" async src="https://gyp3.mytiktok.com/runtime.login.js"></script>',
         //     );
         //     newBody = newBody.replace(
         //       /<link[^>]*href="[^"]*runtime\.[^"]*"[^>]*>/,
-        //       '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com:8080/runtime.login.js">',
+        //       '<link data-chunk="webapp-login-page" rel="preload" as="script" href="https://gyp3.mytiktok.com/runtime.login.js">',
         //     );
         //   }
         // }
@@ -1130,13 +1615,20 @@ router.get("/proxy-two", (ctx: any) => {
 });
 
 router.post("/tea/service/2/abtest_config/", (ctx: any) => {
-  const teaUrl = "https://libraweb-sg.tiktok.com";
+  const teaUrl = "https://mcs-va.tiktokv.com";
+  const originUrl = "https://www.tiktok.com";
   const options = {
     headers: {
-      "user-agent": ctx.request.header["user-agent"],
-      "content-type": ctx.request.header["content-type"],
-      origin: "https://www.tiktok.com",
-      referer: "https://www.tiktok.com/",
+      ...ctx.request.header,
+      origin: ctx.request.header["origin"].replace(
+        "https://gyp.mytiktok.com",
+        originUrl,
+      ),
+      referer: ctx.request.header["referer"].replace(
+        "https://gyp.mytiktok.com",
+        originUrl,
+      ),
+      host: "mcs-va.tiktokv.com",
     },
     proxy,
     method: "POST",
@@ -1163,6 +1655,49 @@ router.post("/tea/service/2/abtest_config/", (ctx: any) => {
   });
 });
 
+router.post("/ttwid/register/", (ctx: any) => {
+  const originUrl = "https://www.tiktok.com";
+
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      origin: ctx.request.header["origin"].replace(
+        "https://gyp.mytiktok.com",
+        originUrl,
+      ),
+      referer: ctx.request.header["referer"].replace(
+        "https://gyp.mytiktok.com",
+        originUrl,
+      ),
+      host: "www.tiktok.com",
+    },
+    proxy,
+    method: "POST",
+    body: ctx.request.rawBody,
+    url: originUrl + "/ttwid/register/",
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) reject(error);
+      if (!error && response.statusCode === 200) {
+        // response.headers 中的
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        ctx.set("access-control-allow-origin", "*");
+        ctx.body = body;
+        resolve(true);
+      } else {
+        ctx.body = {
+          status: 502,
+          result: "forbidden",
+        };
+        resolve(true);
+      }
+    });
+  });
+});
 router.post("/tea/v1/list", (ctx: any) => {
   const teaUrl = "https://mcs.tiktokw.us";
   const options = {
@@ -1308,62 +1843,32 @@ router.get("/favicon.ico", (ctx: any) => {
   });
 });
 
-const getTtCsrfToken = (lang: string) => {
-  const options = {
-    headers: {
-      "user-agent":
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
-    },
-    proxy,
-  };
-  // 2.代发请求
-
-  return new Promise((resolve, reject) => {
-    request(
-      "https://www.tiktok.com/node-webapp/api/common-app-context?lang" + lang,
-      options,
-      (error: any, response: any, body: any) => {
-        if (error) reject(error);
-        if (!error && response.statusCode === 200) {
-          resolve(body);
-        } else {
-          resolve({});
-        }
-      },
-    );
-  });
-};
-
 router.post("/api/v3/register/verification/age/", async (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
-  const qs = querystring.parse(originUrl.query);
-  const lang = qs["app_language"];
   const host = "www.tiktok.com";
-  const csrfTOken = (await getTtCsrfToken(lang)) as any;
-  const csrfToken = JSON.parse(csrfTOken)["csrfToken"];
-  console.log(csrfToken, "kjkjk");
+  const formData = Object.entries(ctx.request.body)
+    .map(([key, value]) => {
+      return `${key}=${value}`;
+    })
+    .join("&");
   const options = {
     headers: {
       ...ctx.request.header,
       host,
       origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
-      referer: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
-      cookie: ctx.request.header["cookie"].replace(
-        ctx.request.body["tt_csrf_token"],
-        csrfToken,
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
       ),
+      "accept-encoding": "",
     },
     proxy,
     method: "POST",
-    body: JSON.stringify({
-      ...ctx.request.body,
-      tt_csrf_token: csrfToken,
-    }),
+    body: formData,
     url:
       "https://www.tiktok.com/api/v3/register/verification/age/?" +
-      originUrl.query.replace(/gyp\.mytiktok\.com/, host), // 生产需要替换为host
+      originUrl.query,
   };
-  console.log(options, "kkkjk");
 
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
@@ -1375,12 +1880,12 @@ router.post("/api/v3/register/verification/age/", async (ctx: any) => {
         });
         /** 设置cookies */
         const cookies = response.headers["set-cookie"].map((o: string) => {
-          return o.replace(/domain=\.tiktok.com;/g, "");
+          return (
+            o.replace(/domain=\.tiktok.com;/g, "") + ";SameSite=None; Secure"
+          );
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-        cookies.forEach((o: string) => {
-          ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-        });
+        ctx.set("set-cookie", cookies);
         ctx.body = body;
         resolve(true);
       } else {
@@ -1394,46 +1899,93 @@ router.post("/api/v3/register/verification/age/", async (ctx: any) => {
   });
 });
 
-router.get(
-  "/straling/check_and_get_text/5dc26cf008d511e9b571e1bc0c9e23b5/normal/Webapp",
-  (ctx: any) => {
-    const originUrl = url.parse(ctx.req.url);
+router.get(/^\/straling\/check_and_get_text\/.*$/, async (ctx: any) => {
+  const defaultUrl = "https://starling-va.tiktokv.com";
+  const secondUrl = "https://starling-ttp2.tiktokv.us";
+  const path = ctx.request.url.replace("/straling", "");
 
-    const options = {
-      headers: {
-        "user-agent":
-          "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: "starling-va.tiktokv.com",
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        "www.tiktok.com",
+      ),
+      "accept-encoding": "",
+    },
+    proxy,
+  };
+  // 2.代发请求
+  /** 按照不同的域名发送请求 */
+  const p1 = new Promise((resolve, reject) => {
+    request(
+      `${defaultUrl}${path}`,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error)
+          reject({
+            status: 500,
+            result: "fail",
+          });
+        if (!error && response.statusCode === 200) {
+          resolve({
+            response,
+            body,
+          });
+        } else {
+          reject({
+            status: 500,
+            result: "fail",
+          });
+        }
       },
-      proxy,
-    };
-    // 2.代发请求
+    );
+  });
+  const p2 = new Promise((resolve, reject) => {
+    options.headers.host = "starling-ttp2.tiktokv.us";
+    request(
+      `${secondUrl}${path}`,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error)
+          reject({
+            status: 500,
+            result: "fail",
+          });
+        if (!error && response.statusCode === 200) {
+          resolve({
+            response,
+            body,
+          });
+        } else {
+          reject({
+            status: 500,
+            result: "fail",
+          });
+        }
+      },
+    );
+  });
 
-    return new Promise((resolve, reject) => {
-      request(
-        `https://starling-ttp2.tiktokv.us/check_and_get_text/5dc26cf008d511e9b571e1bc0c9e23b5/normal/Webapp/?${originUrl.query}`,
-        options,
-        (error: any, response: any, body: any) => {
-          if (error) reject(error);
-          if (!error && response.statusCode === 200) {
-            // response.headers 中的 全部都要带上
-            Object.keys(response.headers).forEach(key => {
-              ctx.set(key, response.headers[key]);
-            });
-            ctx.set("timing-allow-origin", "*");
-            ctx.body = body;
-            resolve(true);
-          } else {
-            ctx.body = {
-              status: response.statusCode,
-              result: "forbidden",
-            };
-            resolve(true);
-          }
-        },
-      );
+  try {
+    const { response, body } = (await Promise.race([p1, p2])) as any;
+    // response.headers 中的 全部都要带上
+    Object.keys(response.headers).forEach(key => {
+      ctx.set(key, response.headers[key]);
     });
-  },
-);
+    ctx.set("timing-allow-origin", "*");
+    ctx.body = body;
+  } catch (e: any) {
+    ctx.body =
+      e && e.result
+        ? e
+        : {
+            status: 500,
+            result: "fail",
+          };
+  }
+});
 
 router.get("/node-webapp/api/importmap", (ctx: any) => {
   const options = {
@@ -1540,11 +2092,15 @@ router.get("/node-webapp/api/biz-context", (ctx: any) => {
 });
 
 const getVideoBuffer = (ctx: any, targetUrl: string, path: string) => {
+  const originUrl = "https://www.tiktok.com";
   const options = {
     headers: {
-      "user-agent": ctx.request.header["user-agent"],
-      range: ctx.request.header["range"],
-      cookie: ctx.request.header["cookie"],
+      ...ctx.request.header,
+      referer: ctx.request.header["referer"].replace(
+        "https://gyp.mytiktok.com",
+        originUrl,
+      ),
+      host: targetUrl.replace("https://", ""),
     },
     proxy,
     encoding: null, // 将 encoding 设置为 null，以获取响应内容的 Buffer
@@ -1556,7 +2112,10 @@ const getVideoBuffer = (ctx: any, targetUrl: string, path: string) => {
       options,
       (error: any, response: any, body: any) => {
         if (error) reject(error);
-        if (response.statusCode === 206 || response.statusCode === 200) {
+        if (
+          (response && response.statusCode === 206) ||
+          (response && response.statusCode === 200)
+        ) {
           ctx.res.writeHead(206, {
             ...response.headers,
             "access-control-allow-origin": "*",
@@ -1593,7 +2152,45 @@ router.get(/^\/video\/tos\/.*$/, (ctx: any) => {
   const path = ctx.request.url;
   return getVideoBuffer(ctx, targetUrl, path);
 });
+router.get("/api/item/availability/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host: "www.tiktok.com",
+      referer: ctx.request.header["referer"].replace(
+        "https://gyp.mytiktok.com",
+        targetUrl,
+      ),
+    },
+    proxy,
+  };
 
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl + "/api/item/availability/?" + originUrl.query,
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          ctx.body = body;
+          resolve(true);
+        } else {
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
 router.get("/api/discover/user/", (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
   const targetUrl = "https://www.tiktok.com";
@@ -1656,14 +2253,14 @@ router.get("/api/preload/item_list/", (ctx: any) => {
           });
           /** 设置cookies */
           const cookies = response.headers["set-cookie"].map((o: string) => {
-            return o
-              .replace(/domain=tiktok.com;/g, "")
-              .replace(/Domain=tiktok.com;/g, "");
+            return (
+              o
+                .replace(/domain=tiktok.com;/g, "")
+                .replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+            );
           });
           /** 为cookies中的每个key/value增加 SameSite=None; Secure */
-          cookies.forEach((o: string) => {
-            ctx.set("set-cookie", `${o} ;SameSite=None; Secure`);
-          });
+          ctx.set("set-cookie", cookies);
           // node处理方式
           // 相关域名全部替换为根域名，转发
           // https://v16-webapp-prime.tiktok.com

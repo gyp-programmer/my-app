@@ -195,7 +195,7 @@
                     // 代理 1636 资源
                     var n;
                     if (t === 978) {
-                        n  = 'https://gyp3.mytiktok.com:8080/zti.js';
+                        n  = 'https://gyp3.mytiktok.com/zti.js';
                     } else {
                         n = d.p + d.u(t);
                     }

@@ -14,8 +14,8 @@ module.exports = {
       script: "app.js",
       cwd: "./dist",
       // watch: true,
-      // exec_mode: "cluster",
-      // instances: 4,
+      exec_mode: "cluster",
+      instances: 4,
       // 自定义应用程序的错误日志文件(错误日志文件)
       error_file: "./logs/app-err.log",
       // 自定义应用程序日志文件(正常日志文件)

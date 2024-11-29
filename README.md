@@ -132,38 +132,90 @@ git commit --amend --no-edit
    ```
 
    - 10693 ${location.origin}
+   - enter_homepage_message 搜索，然后更改location.href的值 为 location.origin
+   - 方法 10447: 更改域名为 location.origin
 
 3. webapp-mobile.js
 
    - 替换domain domain: "www.tiktok.com" -> domain: location.origin
    - 替换domain domain: ".tiktok.com" -> domain: location.origin
    - 13720 ${location.origin}
+   - enter_homepage_message 搜索，然后更改location.href的值 为 location.origin
+   - 方法 10447: 更改域名为 location.origin
 
 4. verdor.js
 
    - 12348行 `location.origin + "/api/global-footer"`
    - 14128行 `location.origin + "/api/v1/web-cookie-privacy/config"`
+   - /ttwid/register/ 这个接口的域名设置为 location.origin (暂时不处理)
 
-5. verdor-islands.js
+5. vendor-ba62aadc.js
+
+   - /api/global-footer" 接口的域名更改为 location.origin
+   - pi/v1/web-cookie-privacy/config 接口的域名更改为 location.origin
+
+6. verdor-islands.js
    - 39929行 `${location.origin}/api/v1/web-cookie-privacy/config`
    - 1001 `location.origin + "/api/global-footer"`
-6. weapp-login-page.js
+7. weapp-login-page.js
    - 57808行 `this.fetch.post(`${location.origin}/passport/web/region/?domain=${e}``
    - 57868行 `this.fetch.post(`新的服务/passport/web/store_region/?domain=${e}`,
    - "/api/compliance/settings/" 替换为 `${location.origin}/api/compliance/settings/`
    - 57676行 `${location.origin}/passport/web/auth_broadcast/?domain=${t}`
    - initAccountSdkInstance方法中，getDynamicConfig方法里面的baseURL 改为 location.origin 并且param增加domain: t
    - domain: location.origin 涉及到fpCookieOption这个配置的domain 全局搜索 fpCookieOption
-7. 3152.js
+   - 38748行 更改接口的域名为location.origin
+   - /consent/api/record/create/sync 这个接口的域名 设置为location.origin
+   - api/user/detail/self/ 这个接口的域名 设置为location.origin
+   - /api/uniqueid/check/ 这个接口的域名 设置为location.origin
+   - 22639 ${location.origin}/foryou?lang=${s}`, 把tiktok的域名替换
+   - https://www.tiktok.com/foryou 这个链接的域名 设置为location.origin
+8. 3152.js
    - 286行 ${location.origin}
-8. headSideEffect.island.js
+9. headSideEffect.island.js
    - 2817行 apiDomain: location.origin,
-9. runtime.js
-   - 421行 替换js的加载地址
-10. zti.js
+10. runtime.js
+    - 421行 替换js的加载地址
+    ```js
+    // 代理 1636 资源
+    var b;
+    if (a === 1636) {
+      b = "https://gyp3.mytiktok.com/headSideEffect.island.js";
+    } else {
+      b = t.p + t.u(a);
+    }
+    ```
+11. runtime.login.js
+    ```js
+    // 代理 978 资源
+    var n;
+    if (t === 978) {
+      n = "https://gyp3.mytiktok.com/zti.js";
+    } else {
+      n = d.p + d.u(t);
+    }
+    ```
+12. zti.js
 
     - 3623行 location.hostname 改为 ‘www.tiktok.com’
     - 3300 行 location.hostname 改为 ‘www.tiktok.com’
+
+13. runtime.islands.js
+    - 代理资源
+    ```js
+    var f;
+    if (a === 1636) {
+      f = "https://gyp3.mytiktok.com/headSideEffect.island.js";
+    } else {
+      f = t.p + t.u(a);
+    }
+    ```
+14. headSideEffect.js
+    - 2767行 apiDomain: location.origin,
+15. multi-cluster-domain.login.js
+    - 替换域名 同其他
+16. 3152.islands.js
+    - login/? 搜索 然后更改域名 为 location.origin
 
 待办事项：
 npm-d801507b.d4925c9ee893afeaaf0c.js 文件需要更换

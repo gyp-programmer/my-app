@@ -1,5 +1,5 @@
 "use strict";
-// webapp-mobile-islands.c9409f1c315b5cbfd47f.js
+// webapp-mobile-islands.d9392fe718d067b65db7.js
 (self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([[4834], {
     99814: (e, t, n) => {
         n.d(t, {
@@ -5359,8 +5359,8 @@
             aW: () => o,
             l1: () => i
         });
-        const i = "https://www.tiktok.com"
-          , o = "https://www.tiktok.com/login"
+        const i = location.origin
+          , o = location.origin+"/login"
     }
     ,
     50007: (e, t, n) => {
@@ -21748,6 +21748,9 @@
             name: "kep_click_opt_phase2",
             vid: ["v0", "v1", "v2", "v3"]
         }, {
+            name: "mobile_android_jump_optimization",
+            vid: ["v0", "v1", "v2"]
+        }, {
             name: "guest_mode_interest",
             vid: ["v0", "v1", "v2"]
         }]
@@ -22628,13 +22631,13 @@
             imFrontier: "wss://im-ws-va.tiktok.com/ws/v2",
             mTApi: "https://m.tiktok.com",
             rootApi: location.origin,
-            secSDK: "",
-            slardar: "mon.tiktokv.com",
             starling: location.origin + '/straling',
             tea: location.origin + '/tea',
+            libraWebSDK: location.origin | '/abtea',
+            secSDK: "",
+            slardar: "mon.tiktokv.com",
             teaChannel: "va",
             teaChannelType: "tcpy",
-            libraWebSDK: location.origin | '/abtea',
             webcastApi: "https://webcast.tiktok.com",
             webcastRootApi: "https://webcast.tiktok.com",
             pipoApi: "https://f-p.sgsnssdk.com",
