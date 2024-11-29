@@ -217,5 +217,30 @@ git commit --amend --no-edit
 16. 3152.islands.js
     - login/? 搜索 然后更改域名 为 location.origin
 
-待办事项：
-npm-d801507b.d4925c9ee893afeaaf0c.js 文件需要更换
+---
+
+## 本地开发
+
+1. 本地开发时，需要把本地的资源代理到线上的资源，需要用到whistle
+
+增加whistle的规则配置：
+
+```bash
+https://gyp3.mytiktok.com https://127.0.0.1:8080
+https://gyp4.mytiktok.com https://127.0.0.1:8888
+```
+
+2.  使用谷歌浏览器
+
+    - 配置插件 switchyOmega - 翻墙配置：
+      | 代理名称 | 协议 | 代理服务器 | 端口 |
+      | ---- | ---- | ---- | ---- |
+      | 翻墙 | http | 127.0.0.1 | 8899 |
+      | whistle | http | 127.0.0.1 | 7890 |
+
+    - 自动配置
+      | 条件类型 | 条件设置 | 情景模式 |
+      | ---- | ---- | ---- |
+      | 域名通配符 | \*mytiktok.com | whistle |
+      | 域名通配符 | \* | 翻墙 |
+      | 默认情景 | | 直接连接 |
