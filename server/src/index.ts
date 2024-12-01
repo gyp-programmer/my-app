@@ -25,6 +25,95 @@ const proxy = {
   port: 7890, //端口
 };
 
+/** 点赞 */
+router.post("/tiktok/v1/kids/commit/item/digg/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    method: "POST",
+    url:
+      targetUrl +
+      "/tiktok/v1/kids/commit/item/digg/?" +
+      originUrl.query.replace(/gyp\.mytiktok\.com/, host),
+    proxy,
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (error: any, response: any, body: any) => {
+      if (error) reject(error);
+      if (!error && response.statusCode === 200) {
+        // response.headers 中的
+        Object.keys(response.headers).forEach(key => {
+          ctx.set(key, response.headers[key]);
+        });
+        ctx.set("access-control-allow-origin", "*");
+        ctx.body = body;
+        resolve(true);
+      } else {
+        ctx.body = {
+          status: 502,
+          result: "forbidden",
+        };
+        resolve(true);
+      }
+    });
+  });
+});
+/** 个人中心 */
+router.get("/tiktok/v1/kids/aweme/favorite/", (ctx: any) => {
+  const originUrl = url.parse(ctx.req.url);
+  const targetUrl = "https://www.tiktok.com";
+  const host = "www.tiktok.com";
+  const options = {
+    headers: {
+      ...ctx.request.header,
+      host,
+      origin: ctx.request.header["origin"].replace(/gyp\.mytiktok\.com/, host),
+      referer: ctx.request.header["referer"].replace(
+        /gyp\.mytiktok\.com/,
+        host,
+      ),
+    },
+    proxy,
+  };
+
+  return new Promise((resolve, reject) => {
+    request(
+      targetUrl +
+        "/tiktok/v1/kids/aweme/favorite/?" +
+        originUrl.query.replace(/gyp\.mytiktok\.com/, host),
+      options,
+      (error: any, response: any, body: any) => {
+        if (error) reject(error);
+        if (!error && response.statusCode === 200) {
+          // response.headers 中的
+          Object.keys(response.headers).forEach(key => {
+            ctx.set(key, response.headers[key]);
+          });
+          ctx.body = body;
+          resolve(true);
+        } else {
+          ctx.body = {
+            status: 502,
+            result: "forbidden",
+          };
+          resolve(true);
+        }
+      },
+    );
+  });
+});
+
 router.get("/api/inbox/notice_count/", (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
   const targetUrl = "https://www.tiktok.com";
@@ -1048,6 +1137,7 @@ router.post("/passport/web/user/login/", (ctx: any) => {
         host,
       ),
       "accept-encoding": "",
+      "sec-fetch-site": "same-site",
     },
     proxy,
     method: "POST",
@@ -1068,11 +1158,13 @@ router.post("/passport/web/user/login/", (ctx: any) => {
           ctx.set(key, response.headers[key]);
         });
         /** 设置cookies */
-        const cookies = response.headers["set-cookie"].map((o: string) => {
-          return (
-            o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
-          );
-        });
+        const cookies = response.headers["set-cookie"]
+          ? response.headers["set-cookie"].map((o: string) => {
+              return (
+                o.replace(/Domain=tiktok.com;/g, "") + ";SameSite=None; Secure"
+              );
+            })
+          : [];
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
         ctx.set("access-control-allow-origin", "*");
@@ -1771,8 +1863,12 @@ router.post("/answer", (ctx: any) => {
 router.get("/manifest.json", (ctx: any) => {
   const options = {
     headers: {
-      "user-agent":
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+      ...ctx.request.header,
+      referer: ctx.request.header["referer"].replace(
+        "https://gyp.mytiktok.com",
+        "https://www.tiktok.com",
+      ),
+      host: "www.tiktok.com",
     },
     proxy,
   };
@@ -1789,12 +1885,11 @@ router.get("/manifest.json", (ctx: any) => {
           Object.keys(response.headers).forEach(key => {
             ctx.set(key, response.headers[key]);
           });
-          ctx.set("content-type", "application/json; charset=utf-8");
           ctx.body = body;
           resolve(true);
         } else {
           ctx.body = {
-            status: response.statusCode,
+            status: response ? response.statusCode : 500,
             result: "forbidden",
           };
           resolve(true);
