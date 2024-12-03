@@ -17,17 +17,12 @@ const fs = require("fs");
 const https = require("https");
 /** 设置cookie域 */
 const cookieDomain = {
-  domain: "domain=mytiktok.com;",
-  Domain: "Domain=mytiktok.com;",
+  domain: "domain=tiktoksa.com;",
+  Domain: "Domain=tiktoksa.com;",
 };
-
 const app = new Koa();
 const router = new Router();
 
-const proxy = {
-  host: "http://127.0.0.1", //代理服务器地址
-  port: 7890, //端口
-};
 router.post("/passport/web/user/login/", (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
   const qs = querystring.parse(originUrl.query);
@@ -43,14 +38,13 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       ...ctx.request.header,
       host: targetUrl.replace("https://", ""),
       origin: ctx.request.header["origin"]
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(/demo\.tiktoksa\.com/, host)
+        .replace("login.tiktoksa.com", host),
       referer: ctx.request.header["referer"]
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(/demo\.tiktoksa\.com/, host)
+        .replace("login.tiktoksa.com", host),
       "accept-encoding": "",
     },
-    proxy,
     method: "POST",
     body: formData,
     url:
@@ -58,8 +52,8 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       "/passport/web/user/login/?" +
       originUrl.query
         .replace(/domain=([^&]+)/, "")
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(/demo\.tiktoksa\.com/, host)
+        .replace("login.tiktoksa.com", host),
   };
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
@@ -75,7 +69,7 @@ router.post("/passport/web/user/login/", (ctx: any) => {
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
-        ctx.set("access-control-allow-origin", "https://gyp.mytiktok.com");
+        ctx.set("access-control-allow-origin", "https://demo.tiktoksa.com");
         ctx.body = body;
         resolve(true);
       } else {
@@ -100,21 +94,20 @@ const handleRequest = async (ctx: any) => {
       ...ctx.request.header,
       host: targetUrl.replace("https://", ""),
       origin: ctx.request.header["origin"]
-        .replace("gyp2.mytiktok.com", host)
-        .replace(/gyp\.mytiktok\.com/, host),
+        .replace("login.tiktoksa.com", host)
+        .replace(/demo\.tiktoksa\.com/, host),
       referer: ctx.request.header["referer"]
-        .replace("gyp2.mytiktok.com", host)
-        .replace(/gyp\.mytiktok\.com/, host),
+        .replace("login.tiktoksa.com", host)
+        .replace(/demo\.tiktoksa\.com/, host),
     },
-    proxy,
     method: "OPTIONS",
     url:
       targetUrl +
       "/passport/web/user/login/?" +
       originUrl.query
         .replace(/domain=([^&]+)/, "")
-        .replace("gyp2.mytiktok.com", host)
-        .replace(/gyp\.mytiktok\.com/, host),
+        .replace("login.tiktoksa.com", host)
+        .replace(/demo\.tiktoksa\.com/, host),
   };
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, _body: any) => {
@@ -130,7 +123,7 @@ const handleRequest = async (ctx: any) => {
         });
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
-        ctx.set("Access-Control-Allow-Origin", "https://gyp.mytiktok.com");
+        ctx.set("Access-Control-Allow-Origin", "https://demo.tiktoksa.com");
         ctx.set(
           "Access-Control-Allow-Headers",
           "htc6j8njvn-a,htc6j8njvn-b,htc6j8njvn-c,htc6j8njvn-d,htc6j8njvn-f,htc6j8njvn-z,tt-ticket-guard-iteration-version,tt-ticket-guard-public-key,tt-ticket-guard-version,tt-ticket-guard-web-version,x-mssdk-info,x-tt-passport-csrf-token,x-tt-passport-ttwid-ticket",
@@ -170,12 +163,12 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 // 监听端口
-const port = 8888;
+const port = 443;
 // 1.创建代理服务
 // 读取 SSL 证书文件+
 const options = {
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
+  key: fs.readFileSync("login.tiktoksa.com.key"),
+  cert: fs.readFileSync("login.tiktoksa.com_bundle.pem"),
 };
 
 // 创建 HTTPS 服务器

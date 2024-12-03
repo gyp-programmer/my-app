@@ -63,6 +63,7 @@ export default [
       "src/utils/XMLToJson.js",
       "**/*.test.js",
       "**/dist",
+      "**/z-static",
     ],
   },
   /** 加入settings配置，用于eslint-plugin-react 中的读取 */

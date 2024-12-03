@@ -34888,7 +34888,7 @@
                     errorCb: () => {}
                     ,
                     fpCookieOption: {
-                        domain: '.mytiktok.com',
+                        domain: '.tiktoksa.com',
                         sameSite: "None",
                         secure: !0
                     }
@@ -34956,7 +34956,7 @@
                             },
                             captchaOptions: {
                                 fpCookieOption: {
-                                    domain: '.mytiktok.com',
+                                    domain: '.tiktoksa.com',
                                     sameSite: "None",
                                     secure: !0
                                 }
@@ -56562,7 +56562,7 @@
                         captchaHost: _,
                         captchaOptions: {
                             fpCookieOption: {
-                                domain: this.phoenix ? "www.tiktok.in" : '.mytiktok.com',
+                                domain: this.phoenix ? "www.tiktok.in" : '.tiktoksa.com',
                                 sameSite: "None",
                                 secure: !0
                             }
@@ -56574,11 +56574,11 @@
                                 const i = this.userRegion.getRegionDomain()
                                   , o = this.userRegion.getTtWid();
                                 this.requestInfo = Object.assign(Object.assign({}, t), {
-                                    baseURL: 'https://gyp2.mytiktok.com'
+                                    baseURL: 'https://login.tiktoksa.com'
                                 });
                                 const r = navigator.userAgent
                                   , a = {
-                                    baseURL: 'https://gyp2.mytiktok.com',
+                                    baseURL: 'https://login.tiktoksa.com',
                                     params: {
                                         domain: i,
                                         target_aid: this.targetAid,

@@ -7711,7 +7711,7 @@
                             function(e) {
                                 try {
                                     An().remove(Fn.n2, {
-                                        domain: '.mytiktok.com'
+                                        domain: '.tiktoksa.com'
                                     });
                                     const t = JSON.stringify({
                                         expireTimestamp: (0,
@@ -7721,7 +7721,7 @@
                                     An().set(Fn.n2, t, {
                                         secure: !0,
                                         expires: 5,
-                                        domain: '.mytiktok.com'
+                                        domain: '.tiktoksa.com'
                                     })
                                 } catch (e) {
                                     console.warn(`[Cookie] Set Feed Cache Cookie Error: ${e}`)
@@ -20488,7 +20488,7 @@
                     errorCb: () => {}
                     ,
                     fpCookieOption: {
-                        domain: '.mytiktok.com',
+                        domain: '.tiktoksa.com',
                         sameSite: "None",
                         secure: !0
                     }
@@ -20556,7 +20556,7 @@
                             },
                             captchaOptions: {
                                 fpCookieOption: {
-                                    domain: '.mytiktok.com',
+                                    domain: '.tiktoksa.com',
                                     sameSite: "None",
                                     secure: !0
                                 }

@@ -115,7 +115,7 @@ git commit --amend --no-edit
 2. webapp-mobile-islands.js
    修改部分：
 
-   - 替换domain domain: "www.tiktok.com" -> domain: location.origin
+   - 替换domain domain: "www.tiktok.com" -> domain: '.mytiktok.com'
    - 22630行 更改内容为
      ```js
        rootApi: location.origin,
@@ -137,8 +137,8 @@ git commit --amend --no-edit
 
 3. webapp-mobile.js
 
-   - 替换domain domain: "www.tiktok.com" -> domain: location.origin
-   - 替换domain domain: ".tiktok.com" -> domain: location.origin
+   - 替换domain domain: "www.tiktok.com" -> domain: '.mytiktok.com'
+   - 替换domain domain: ".tiktok.com" -> domain: '.mytiktok.com'
    - 13720 ${location.origin}
    - enter_homepage_message 搜索，然后更改location.href的值 为 location.origin
    - 方法 10447: 更改域名为 location.origin
@@ -163,7 +163,7 @@ git commit --amend --no-edit
    - "/api/compliance/settings/" 替换为 `${location.origin}/api/compliance/settings/`
    - 57676行 `${location.origin}/passport/web/auth_broadcast/?domain=${t}`
    - initAccountSdkInstance方法中，getDynamicConfig方法里面的baseURL 改为 location.origin 并且param增加domain: t
-   - domain: location.origin 涉及到fpCookieOption这个配置的domain 全局搜索 fpCookieOption
+   - domain: '二级域名'如‘.mytiktok.com’ 涉及到fpCookieOption这个配置的domain 全局搜索 fpCookieOption
    - 38748行 更改接口的域名为location.origin
    - /consent/api/record/create/sync 这个接口的域名 设置为location.origin
    - api/user/detail/self/ 这个接口的域名 设置为location.origin

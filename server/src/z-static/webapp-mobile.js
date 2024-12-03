@@ -2487,7 +2487,7 @@
                     Jt.A.set(Yt.WU, e, {
                         secure: !0,
                         expires: 300,
-                        domain: '.mytiktok.com'
+                        domain: '.tiktoksa.com'
                     }),
                     window.location.replace(t)
                 }({
@@ -9252,7 +9252,7 @@
                             function(e) {
                                 try {
                                     Pi().remove(Vi, {
-                                        domain: '.mytiktok.com'
+                                        domain: '.tiktoksa.com'
                                     });
                                     const t = JSON.stringify({
                                         expireTimestamp: Bi(e),
@@ -9261,7 +9261,7 @@
                                     Pi().set(Vi, t, {
                                         secure: !0,
                                         expires: 5,
-                                        domain: '.mytiktok.com'
+                                        domain: '.tiktoksa.com'
                                     })
                                 } catch (e) {
                                     console.warn(`[Cookie] Set Feed Cache Cookie Error: ${e}`)
@@ -38769,7 +38769,7 @@
           , O = {
             secure: !0,
             expires: 300,
-            domain: '.mytiktok.com'
+            domain: '.tiktoksa.com'
         };
         var j;
         !function(e) {
@@ -53321,7 +53321,7 @@
                     errorCb: () => {}
                     ,
                     fpCookieOption: {
-                        domain: '.mytiktok.com',
+                        domain: '.tiktoksa.com',
                         sameSite: "None",
                         secure: !0
                     }
@@ -53389,7 +53389,7 @@
                             },
                             captchaOptions: {
                                 fpCookieOption: {
-                                    domain: '.mytiktok.com',
+                                    domain: '.tiktoksa.com',
                                     sameSite: "None",
                                     secure: !0
                                 }
