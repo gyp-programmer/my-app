@@ -1684,8 +1684,10 @@ router.post("/answer", (ctx: any) => {
 router.get("/manifest.json", (ctx: any) => {
   const options = {
     headers: {
-      "user-agent":
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+      ...ctx.request.header,
+      referer: ctx.request.header["referer"].replace(regHost, "www.tiktok.com"),
+      host: "www.tiktok.com",
+      "accept-encoding": "",
     },
   };
   // 2.代发请求
@@ -1701,7 +1703,6 @@ router.get("/manifest.json", (ctx: any) => {
           Object.keys(response.headers).forEach(key => {
             ctx.set(key, response.headers[key]);
           });
-          ctx.set("content-type", "application/json; charset=utf-8");
           ctx.body = body;
           resolve(true);
         } else {
@@ -2205,8 +2206,8 @@ app.use(router.allowedMethods());
 // 1.创建代理服务
 // 读取 SSL 证书文件+
 const options = {
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
+  key: fs.readFileSync("demo.tiktoksa.com.key"),
+  cert: fs.readFileSync("demo.tiktoksa.com_bundle.pem"),
 };
 
 // 创建 HTTPS 服务器

@@ -53,7 +53,8 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       originUrl.query
         .replace(/domain=([^&]+)/, "")
         .replace(/demo\.tiktoksa\.com/, host)
-        .replace("login.tiktoksa.com", host),
+        .replace("login.tiktoksa.com", host) +
+      "&reg_store_region=SG",
   };
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
@@ -107,8 +108,10 @@ const handleRequest = async (ctx: any) => {
       originUrl.query
         .replace(/domain=([^&]+)/, "")
         .replace("login.tiktoksa.com", host)
-        .replace(/demo\.tiktoksa\.com/, host),
+        .replace(/demo\.tiktoksa\.com/, host) +
+      "&reg_store_region=SG",
   };
+  const acceptHeader = ctx.request.header["access-control-request-headers"];
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, _body: any) => {
       if (error) reject(error);
@@ -124,10 +127,7 @@ const handleRequest = async (ctx: any) => {
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
         ctx.set("Access-Control-Allow-Origin", "https://demo.tiktoksa.com");
-        ctx.set(
-          "Access-Control-Allow-Headers",
-          "htc6j8njvn-a,htc6j8njvn-b,htc6j8njvn-c,htc6j8njvn-d,htc6j8njvn-f,htc6j8njvn-z,tt-ticket-guard-iteration-version,tt-ticket-guard-public-key,tt-ticket-guard-version,tt-ticket-guard-web-version,x-mssdk-info,x-tt-passport-csrf-token,x-tt-passport-ttwid-ticket",
-        );
+        ctx.set("Access-Control-Allow-Headers", acceptHeader);
         ctx.set("Access-Control-Allow-Methods", "POST");
         ctx.set("Access-Control-Allow-Credentials", true);
         ctx.body = 200;

@@ -1124,7 +1124,6 @@ router.post("/passport/web/user/login/", (ctx: any) => {
         host,
       ),
       "accept-encoding": "",
-      "sec-fetch-site": "same-site",
     },
     proxy,
     method: "POST",
@@ -1817,6 +1816,7 @@ router.get("/manifest.json", (ctx: any) => {
         "https://www.tiktok.com",
       ),
       host: "www.tiktok.com",
+      "accept-encoding": "",
     },
     proxy,
   };

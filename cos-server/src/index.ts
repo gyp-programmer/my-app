@@ -64,15 +64,19 @@ router.post("/passport/web/user/login/", (ctx: any) => {
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
       if (error) reject(error);
+      // console.log(response, "登录登录");
       if (!error && response.statusCode === 200) {
         // response.headers 中的 全部都要带上
         Object.keys(response.headers).forEach(key => {
           ctx.set(key, response.headers[key]);
         });
         /** 设置cookies */
-        const cookies = response.headers["set-cookie"].map((o: string) => {
-          return o.replace(/Domain=tiktok.com;/g, cookieDomain.Domain);
-        });
+        /** 设置cookies */
+        const cookies = response.headers["set-cookie"]
+          ? response.headers["set-cookie"].map((o: string) => {
+              return o.replace(/Domain=tiktok.com;/g, cookieDomain.Domain);
+            })
+          : [];
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
         ctx.set("access-control-allow-origin", "https://gyp.mytiktok.com");
@@ -116,6 +120,7 @@ const handleRequest = async (ctx: any) => {
         .replace("gyp2.mytiktok.com", host)
         .replace(/gyp\.mytiktok\.com/, host),
   };
+  const acceptHeader = ctx.request.header["access-control-request-headers"];
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, _body: any) => {
       if (error) reject(error);
@@ -131,10 +136,7 @@ const handleRequest = async (ctx: any) => {
         /** 为cookies中的每个key/value增加 SameSite=None; Secure */
         ctx.set("set-cookie", cookies);
         ctx.set("Access-Control-Allow-Origin", "https://gyp.mytiktok.com");
-        ctx.set(
-          "Access-Control-Allow-Headers",
-          "htc6j8njvn-a,htc6j8njvn-b,htc6j8njvn-c,htc6j8njvn-d,htc6j8njvn-f,htc6j8njvn-z,tt-ticket-guard-iteration-version,tt-ticket-guard-public-key,tt-ticket-guard-version,tt-ticket-guard-web-version,x-mssdk-info,x-tt-passport-csrf-token,x-tt-passport-ttwid-ticket",
-        );
+        ctx.set("Access-Control-Allow-Headers", acceptHeader);
         ctx.set("Access-Control-Allow-Methods", "POST");
         ctx.set("Access-Control-Allow-Credentials", true);
         ctx.body = 200;
