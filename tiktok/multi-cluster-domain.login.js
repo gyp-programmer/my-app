@@ -18,9 +18,9 @@
             tea: location.origin + '/tea',
             teaChannel: "va",
             teaChannelType: "tcpy",
-            libraWebSDK: location.origin | '/abtea',
-            webcastApi: "https://webcast.tiktok.com",
-            webcastRootApi: "https://webcast.tiktok.com",
+            libraWebSDK: location.origin + '/abtea',
+            webcastApi: location.origin + '/webcast',
+            webcastRootApi: location.origin + '/webcast',
             tcc: "https://sf-tcc-config.tiktokcdn.com/obj/tcc-config-web-maliva/",
             locationApi: "https://location-va.tiktokv.com"
         };

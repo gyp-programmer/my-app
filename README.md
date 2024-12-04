@@ -216,6 +216,12 @@ git commit --amend --no-edit
     - 替换域名 同其他
 16. 3152.islands.js
     - login/? 搜索 然后更改域名 为 location.origin
+17. 8899.js
+    - 2858 apiDomin: location.origin,
+18. npm-d801507b.js
+    - impression? 搜索这个关键词 然后更改域名 为 location.origin
+19. multi-cluster-domain.foryou.js
+    - 同其他
 
 ---
 

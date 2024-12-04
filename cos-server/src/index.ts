@@ -28,6 +28,8 @@ const proxy = {
   host: "http://127.0.0.1", //代理服务器地址
   port: 7890, //端口
 };
+const regHost = /gyp\.mytiktok\.com/g;
+const regLoginHost = /gyp2\.mytiktok\.com/g;
 router.post("/passport/web/user/login/", (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
   const qs = querystring.parse(originUrl.query);
@@ -43,11 +45,11 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       ...ctx.request.header,
       host: targetUrl.replace("https://", ""),
       origin: ctx.request.header["origin"]
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
       referer: ctx.request.header["referer"]
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
       "accept-encoding": "",
     },
     proxy,
@@ -57,14 +59,13 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       targetUrl +
       "/passport/web/user/login/?" +
       originUrl.query
-        .replace(/domain=([^&]+)/, "")
-        .replace(/gyp\.mytiktok\.com/, host)
-        .replace("gyp2.mytiktok.com", host),
+        .replace(/domain=([^&]+)&$/, "")
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
   };
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
       if (error) reject(error);
-      // console.log(response, "登录登录");
       if (!error && response.statusCode === 200) {
         // response.headers 中的 全部都要带上
         Object.keys(response.headers).forEach(key => {
@@ -116,9 +117,9 @@ const handleRequest = async (ctx: any) => {
       targetUrl +
       "/passport/web/user/login/?" +
       originUrl.query
-        .replace(/domain=([^&]+)/, "")
-        .replace("gyp2.mytiktok.com", host)
-        .replace(/gyp\.mytiktok\.com/, host),
+        .replace(/domain=([^&]+)&$/, "")
+        .replace(regLoginHost, host)
+        .replace(regHost, host),
   };
   const acceptHeader = ctx.request.header["access-control-request-headers"];
   return new Promise((resolve, reject) => {

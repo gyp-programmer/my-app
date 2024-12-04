@@ -22,7 +22,8 @@ const cookieDomain = {
 };
 const app = new Koa();
 const router = new Router();
-
+const regHost = /demo\.tiktoksa\.com/g;
+const regLoginHost = /login\.tiktoksa\.com/g;
 router.post("/passport/web/user/login/", (ctx: any) => {
   const originUrl = url.parse(ctx.req.url);
   const qs = querystring.parse(originUrl.query);
@@ -38,11 +39,11 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       ...ctx.request.header,
       host: targetUrl.replace("https://", ""),
       origin: ctx.request.header["origin"]
-        .replace(/demo\.tiktoksa\.com/, host)
-        .replace("login.tiktoksa.com", host),
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
       referer: ctx.request.header["referer"]
-        .replace(/demo\.tiktoksa\.com/, host)
-        .replace("login.tiktoksa.com", host),
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
       "accept-encoding": "",
     },
     method: "POST",
@@ -51,10 +52,9 @@ router.post("/passport/web/user/login/", (ctx: any) => {
       targetUrl +
       "/passport/web/user/login/?" +
       originUrl.query
-        .replace(/domain=([^&]+)/, "")
-        .replace(/demo\.tiktoksa\.com/, host)
-        .replace("login.tiktoksa.com", host) +
-      "&reg_store_region=SG",
+        .replace(/domain=([^&]+)&$/, "")
+        .replace(regHost, host)
+        .replace(regLoginHost, host),
   };
   return new Promise((resolve, reject) => {
     request(options, (error: any, response: any, body: any) => {
@@ -95,21 +95,20 @@ const handleRequest = async (ctx: any) => {
       ...ctx.request.header,
       host: targetUrl.replace("https://", ""),
       origin: ctx.request.header["origin"]
-        .replace("login.tiktoksa.com", host)
-        .replace(/demo\.tiktoksa\.com/, host),
+        .replace(regLoginHost, host)
+        .replace(regHost, host),
       referer: ctx.request.header["referer"]
-        .replace("login.tiktoksa.com", host)
-        .replace(/demo\.tiktoksa\.com/, host),
+        .replace(regLoginHost, host)
+        .replace(regHost, host),
     },
     method: "OPTIONS",
     url:
       targetUrl +
       "/passport/web/user/login/?" +
       originUrl.query
-        .replace(/domain=([^&]+)/, "")
-        .replace("login.tiktoksa.com", host)
-        .replace(/demo\.tiktoksa\.com/, host) +
-      "&reg_store_region=SG",
+        .replace(/domain=([^&]+)&$/, "")
+        .replace(regLoginHost, host)
+        .replace(regHost, host),
   };
   const acceptHeader = ctx.request.header["access-control-request-headers"];
   return new Promise((resolve, reject) => {

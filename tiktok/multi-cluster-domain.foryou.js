@@ -1,18 +1,9 @@
-/*
- * @Todo: 请补充模块描述
- * 
- * @Author: grayson<grayson.gao@bvox.com>
- * @Date: 2024-12-03 10:49:41
- * 
- * Copyright © 2019-2024 bvox.com. All Rights Reserved.
- */
-
-// multi-cluster-domain.ad80dc92453bdfac77ec.js
+// multi-cluster-domain.093e2c7e80fb16f36171.js
 "use strict";
 (self.__LOADABLE_LOADED_CHUNKS__ = self.__LOADABLE_LOADED_CHUNKS__ || []).push([[844], {
-    34099: (t, o, i) => {
+    25573: (t, o, i) => {
         i.d(o, {
-            V: () => s
+            V: () => a
         });
         const c = {
             kind: "m",
@@ -30,13 +21,14 @@
             libraWebSDK: location.origin + '/abtea',
             webcastApi: location.origin + '/webcast',
             webcastRootApi: location.origin + '/webcast',
+            pipoApi: "https://f-p.sgsnssdk.com",
             tcc: "https://sf-tcc-config.tiktokcdn.com/obj/tcc-config-web-maliva/",
             locationApi: "https://location-va.tiktokv.com"
         };
-        let a = null;
-        const s = () => {
-            if (a)
-                return a;
+        let s = null;
+        const a = () => {
+            if (s)
+                return s;
             try {
                 return c
             } catch (t) {
@@ -45,4 +37,3 @@
         }
     }
 }]);
-
