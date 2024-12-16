@@ -97,7 +97,7 @@ export function genRandomColor() {
 export function previewLoadImg(url: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.crossOrigin = "anonymous";
+    // img.crossOrigin = "anonymous";
     img.src = url;
     img.onload = function () {
       resolve(img);
