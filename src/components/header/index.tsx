@@ -9,21 +9,37 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Segmented } from "antd";
+import { ThemeMode, useThemeMode } from "antd-style";
 import "./index.scss";
 
 interface IProps {
   name: string;
 }
 
+const options = [
+  { label: "跟随系统", value: "auto" },
+  { label: "亮色", value: "light" },
+  { label: "暗色", value: "dark" },
+];
+
 function Header(props: IProps) {
   const { name } = props;
+  const { themeMode, setThemeMode } = useThemeMode();
 
   return (
     <div className="header">
       <Link className="back" to="/">
         返回
       </Link>
-      <h1>{name}</h1>
+      <div className="right">
+        <Segmented
+          value={themeMode}
+          onChange={v => setThemeMode(v as ThemeMode)}
+          options={options}
+        />
+        <h1>{name}</h1>
+      </div>
     </div>
   );
 }

@@ -29,6 +29,7 @@
 - three.js 的案例和学习
   - 1. 实现一个机器人，会跳舞
   - 2. 更新一个类似[小米su7](https://gamemcu.com/su7/)的动画
+- 使用antd-style实现主题切换功能
 
 # 待办项
 

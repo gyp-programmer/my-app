@@ -109,7 +109,6 @@ function Byte() {
         >
           <div className="demo-logo-vertical" />
           <Menu
-            theme="dark"
             mode="inline"
             defaultSelectedKeys={["1"]}
             items={items}

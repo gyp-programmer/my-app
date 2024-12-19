@@ -8,6 +8,7 @@
  */
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "antd-style";
 import "./index.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -29,25 +30,23 @@ if ("serviceWorker" in navigator) {
 
 root.render(
   // <StrictMode>
-  <BrowserRouter>
-    <Routes>
-      {routers.map(item => (
-        <Route
-          key={item.path}
-          path={item.path}
-          element={
-            <AuthRouter>
-              <item.element />
-            </AuthRouter>
-          }
-        />
-      ))}
-      {/* 嵌套路由 */}
-      {/* <Route path="/" element={<Home />}>
-          <Route path="/about" element={<About />} />
-        </Route> */}
-    </Routes>
-  </BrowserRouter>,
+  <ThemeProvider defaultThemeMode="auto">
+    <BrowserRouter>
+      <Routes>
+        {routers.map(item => (
+          <Route
+            key={item.path}
+            path={item.path}
+            element={
+              <AuthRouter>
+                <item.element />
+              </AuthRouter>
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>,
   // </StrictMode>
 );
 
