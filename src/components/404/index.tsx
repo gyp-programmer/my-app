@@ -10,21 +10,37 @@
 import React from "react";
 import { Button, Result } from "antd";
 import { useNavigate } from "react-router-dom";
+import { ResultStatusType } from "antd/es/result";
 
-function NotFound() {
+interface IProps {
+  subTitle?: string;
+  title?: string;
+  status?: ResultStatusType;
+  extra?: React.ReactNode;
+}
+
+function NotFound(props: IProps) {
+  const {
+    subTitle = "Sorry, the page you visited does not exist.",
+    title = "404",
+    status = "404",
+    extra,
+  } = props;
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/");
   };
   return (
     <Result
-      status="404"
-      title="404"
-      subTitle="Sorry, the page you visited does not exist."
+      status={status}
+      title={title}
+      subTitle={subTitle}
       extra={
-        <Button type="primary" onClick={handleClick}>
-          Back Home
-        </Button>
+        extra || (
+          <Button type="primary" onClick={handleClick}>
+            Back Home
+          </Button>
+        )
       }
     />
   );

@@ -22,6 +22,7 @@ import Three from "./three";
 import Three2 from "./three/index2";
 import TikTok from "./byte-dance/get-variable";
 import Tesseract from "./tesseract";
+import GoValidate from "./validate";
 
 export {
   BVideo,
@@ -40,4 +41,5 @@ export {
   Three2,
   TikTok,
   Tesseract,
+  GoValidate,
 };

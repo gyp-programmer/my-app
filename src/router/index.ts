@@ -22,6 +22,7 @@ import {
   Three2,
   TikTok,
   Tesseract,
+  GoValidate,
 } from "../components";
 import LoadImage from "../practice/load-image";
 import AuthRouter from "./auth-router";
@@ -86,6 +87,10 @@ const routers = [
   {
     path: "/tesseract",
     element: Tesseract,
+  },
+  {
+    path: "/validate",
+    element: GoValidate,
   },
   {
     path: "*",
