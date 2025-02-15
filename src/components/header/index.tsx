@@ -33,12 +33,16 @@ function Header(props: IProps) {
         返回
       </Link>
       <div className="right">
+        <h1>{name}</h1>
         <Segmented
           value={themeMode}
-          onChange={v => setThemeMode(v as ThemeMode)}
+          onChange={v => {
+            document.documentElement.setAttribute("data-theme", v);
+            localStorage.setItem("theme", v);
+            setThemeMode(v as ThemeMode);
+          }}
           options={options}
         />
-        <h1>{name}</h1>
       </div>
     </div>
   );

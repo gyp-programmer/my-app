@@ -72,6 +72,9 @@ function App() {
           <Link to="/three-demo2">
             <span className="App-link">3D案例-机器人</span>
           </Link>
+          <Link to="/tesseract">
+            <span className="App-link">OCR的插件使用</span>
+          </Link>
         </div>
 
         <div className="test">

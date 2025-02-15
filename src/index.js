@@ -21,6 +21,17 @@ import "../mock";
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+// 设置主题dataset
+if (!localStorage.getItem("theme")) {
+  document.documentElement.setAttribute("data-theme", "dark");
+  localStorage.setItem("theme", "dark");
+} else {
+  document.documentElement.setAttribute(
+    "data-theme",
+    localStorage.getItem("theme") || "dark",
+  );
+}
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js");
   navigator.serviceWorker.ready.then(reg => {
@@ -30,7 +41,11 @@ if ("serviceWorker" in navigator) {
 
 root.render(
   // <StrictMode>
-  <ThemeProvider defaultThemeMode="auto">
+  <ThemeProvider
+    // @ts-ignore
+    defaultThemeMode={localStorage.getItem("theme") || "dark"}
+    theme={{ cssVar: true }}
+  >
     <BrowserRouter>
       <Routes>
         {routers.map(item => (

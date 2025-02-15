@@ -130,3 +130,27 @@ export const checkWebGLCompatibility = (): IWebGLCompatibility => {
     warning: WebGL.getWebGL2ErrorMessage(),
   };
 };
+
+/**
+ * 复制功能的参数接口
+ */
+interface ICopyCallback {
+  /** 复制成功回调 */
+  success: () => void;
+  /** 失败回调 */
+  error?: (e: any) => void;
+}
+
+/**
+ * 复制功能
+ *
+ * @param text 复制文本
+ */
+export async function copyToClipboard(text: string, options?: ICopyCallback) {
+  try {
+    await navigator.clipboard.writeText(text);
+    options?.success();
+  } catch (err) {
+    options?.error?.(err);
+  }
+}

@@ -1,0 +1,15 @@
+.tesseract-main {
+  height: 100%;
+  background-color: var(--ant-color-bg-base);
+}
+.my-tesseract {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ant-color-text-base);
+
+  .loading-container {
+    height: 350px;
+  }
+}

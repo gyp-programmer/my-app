@@ -30,7 +30,7 @@ function About() {
   }, []);
 
   return (
-    <div>
+    <div className="about-main">
       <Header name="关于我们" />
       <div className="about">
         <List

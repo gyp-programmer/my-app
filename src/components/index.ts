@@ -21,6 +21,7 @@ import ownComponent from "./own-component";
 import Three from "./three";
 import Three2 from "./three/index2";
 import TikTok from "./byte-dance/get-variable";
+import Tesseract from "./tesseract";
 
 export {
   BVideo,
@@ -38,4 +39,5 @@ export {
   Three,
   Three2,
   TikTok,
+  Tesseract,
 };
